@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "MEGACORP",
+    "slug": "tycoon-game",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "tycoon-game",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#070D1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.castroafp08.tycoongame"
+    },
+    "android": {
+      "backgroundColor": "#070D1A",
+      "edgeToEdgeEnabled": true,
+      "package": "com.castroa.tycoongame",
+      "versionCode": 2
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://replit.com/"
+      },
+      "eas": {
+        "projectId": "45dbf2bc-2c50-435f-9fc0-1da5005a6321"
+      }
+    }
+  }
+}
