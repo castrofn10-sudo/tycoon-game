@@ -1,0 +1,91 @@
+You must implement a rare "Legendary Company Revival" system for AI competitors.
+
+HARD RULES:
+- DO NOT change UI layout
+- DO NOT break existing AI systems
+- DO NOT modify player progression
+- DO NOT make this event frequent
+- ONLY add this system as a rare dynamic event
+- Keep system stable and balanced
+
+GOAL:
+Create a rare and impactful event where a failing company is acquired and can rise again.
+
+----------------------------------------
+PART 1 — CRISIS DETECTION
+----------------------------------------
+
+A company enters "crisis state" when:
+- very low reputation
+- multiple failed game releases
+- continuous financial losses
+
+Mark these companies as potential targets.
+
+----------------------------------------
+PART 2 — RARE ACQUISITION EVENT
+----------------------------------------
+
+- Randomly trigger a rare event where a crisis company is acquired
+- This must be uncommon and feel special
+
+Generate news:
+- "Company X has been acquired after financial struggles"
+
+----------------------------------------
+PART 3 — REBUILD PHASE
+----------------------------------------
+
+After acquisition:
+- partially reset reputation (not full reset)
+- apply temporary growth boost
+- increase risk-taking behavior
+
+----------------------------------------
+PART 4 — ASCENSION CHANCE
+----------------------------------------
+
+During a limited period:
+- increase chance of:
+  - high quality games
+  - better market performance
+
+Generate news examples:
+- "Company X is making a strong comeback"
+- "Unexpected success after acquisition"
+
+----------------------------------------
+PART 5 — OUTCOME VARIATION
+----------------------------------------
+
+- Success is NOT guaranteed
+
+Possible outcomes:
+- company becomes strong competitor
+- company fails again and declines
+
+----------------------------------------
+PART 6 — LIMITS
+----------------------------------------
+
+- Only allow a very small number of active revival companies at once (example: 1–2)
+- Do not allow constant repetition
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not affect:
+  - player stats
+  - core gameplay systems
+  - financial systems
+- Only extend AI behavior and news system
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- explain how crisis detection works
+- explain how rare event is triggered
+- explain how growth boost works
+- confirm no existing systems were broken

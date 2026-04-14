@@ -1,0 +1,80 @@
+You must enhance the Acquisitions system by adding resale mechanics and a dynamic sponsorship system, without breaking balance or existing systems.
+
+HARD RULES:
+- DO NOT change core gameplay systems
+- DO NOT create guaranteed profit mechanics
+- DO NOT break economic balance
+- DO NOT remove existing acquisition features
+- ONLY extend behavior with realistic logic
+- Keep all systems stable and scalable
+
+GOAL:
+Allow players to sell acquisitions dynamically and introduce a flexible sponsorship system with realistic risk/reward.
+
+IMPLEMENTATION:
+
+1. Resale system for acquisitions:
+- All acquisitions (except Charity) can be sold
+- Selling price must be dynamic and based on:
+  - performance over time
+  - market conditions
+  - internal success/failure logic
+
+2. Resale behavior:
+- Possible outcomes:
+  - profit (sell above purchase price)
+  - loss (sell below purchase price)
+- Variation must feel realistic and not random-only
+- Each category behaves differently:
+  - Sports teams: based on performance
+  - Mobile companies: growth or decline cycles
+  - Cinema/media: tied to success of releases
+  - Technology: more stable valuation
+  - Charity: cannot be sold
+
+3. Sponsorship system:
+- Generate dynamic sponsorship opportunities across the game
+- Types of events may include:
+  - tournaments
+  - tech expos
+  - gaming events
+  - cultural festivals
+  - global launches
+  - award shows
+
+4. Sponsorship investment:
+- Player chooses how much to invest (up to 50M)
+
+5. Sponsorship outcomes:
+- Profit range: +1% to +12%
+- Loss range: -1% to -30%
+- Results depend on:
+  - event scale
+  - timing
+  - market conditions
+  - light randomness
+
+6. Event scaling:
+- Larger events:
+  - higher potential profit
+  - higher risk
+- Smaller events:
+  - lower profit
+  - more stable outcomes
+
+7. UI behavior:
+- Add "Sell" option to acquisition cards
+- Show estimated value range before selling
+- Sponsorship events appear as opportunities (similar to events/news)
+
+8. Balance:
+- No guaranteed profit systems
+- Maintain risk vs reward in all categories
+- Ensure economy remains stable over long gameplay
+
+AFTER:
+- confirm resale system is active
+- confirm values change over time
+- confirm sponsorship system generates dynamic events
+- confirm no system became overpowered
+- confirm economy balance is preserved

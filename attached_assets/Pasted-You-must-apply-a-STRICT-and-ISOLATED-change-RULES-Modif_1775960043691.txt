@@ -1,0 +1,60 @@
+You must apply a STRICT and ISOLATED change.
+
+RULES:
+- Modify ONLY the sales scaling by era.
+- DO NOT refactor unrelated systems.
+- DO NOT change awards, rivals logic, economy structure, UI layout, save/load, news, or online systems.
+- DO NOT add unrelated mechanics.
+- Keep minimal safe changes only.
+
+GOAL:
+Make game and console sales volumes scale realistically with market era/year, so older eras have lower sales ceilings and later eras can reach much higher numbers.
+
+REQUIREMENTS:
+
+1. Add era-based market scaling to product sales
+- Sales potential must grow with the year / era
+- Early years should have much lower possible sales
+- Later years should allow much larger sales numbers
+
+2. Apply this to BOTH:
+- games
+- consoles
+
+3. Keep sales dynamic
+- Do NOT hardcode fixed outcomes like "level 5 always sells 5 million"
+- Let the existing quality / hype / reputation / demand logic still calculate sales
+- Only add realistic year-based scaling multipliers or ceilings/floors
+
+4. Suggested era progression (can be tuned, but keep the spirit)
+- 1970s: low volume market
+- 1980s: growing market
+- 1990s: large market
+- 2000s+: massive market
+
+5. Very strong products in later eras should be able to sell:
+- hundreds of thousands
+- millions
+- and in exceptional cases several million
+But only if product quality / hype / market conditions justify it
+
+6. Weak products should still perform poorly even in late eras
+- do not make everything sell well just because the year is higher
+
+7. Preserve balance
+- keep the game's existing quality and hype logic meaningful
+- only scale the total market opportunity by era
+
+8. Do NOT change unrelated formulas or systems
+- no changes to awards logic
+- no changes to rivals behavior
+- no changes to company acquisition
+- no UI redesign
+
+9. After completing, explain clearly:
+- which file(s) were changed
+- how era scaling was implemented
+- how games and consoles now scale from early years to late years
+- confirm no unrelated systems were changed
+
+If anything is outside this scope, do not change it.

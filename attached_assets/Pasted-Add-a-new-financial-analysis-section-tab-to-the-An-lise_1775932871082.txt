@@ -1,0 +1,80 @@
+Add a new financial analysis section/tab to the "Análise da Empresa" screen and improve the money gain/loss system across the game.
+
+Requirements:
+
+1. In the "Análise da Empresa" screen, add a new section or tab called:
+   "Balanço Financeiro"
+
+2. This new financial section must display:
+   - Caixa atual
+   - Receita mensal
+   - Despesas mensais
+   - Lucro / Prejuízo mensal
+   - Receita acumulada
+   - Despesas acumuladas
+   - Margem de lucro
+   - Tendência financeira (crescendo / estável / em queda)
+
+3. Add a simple financial history system:
+   - store monthly finance snapshots
+   - show at least the latest 12 months
+   - each snapshot should include:
+     year
+     month
+     revenue
+     expenses
+     profit
+     cash
+
+4. Improve the money system in gameplay:
+   - income and losses should feel more realistic
+   - revenue must come from actual sources like:
+     game sales
+     console sales
+     sponsorship/contracts if present
+     other market income if already implemented
+   - expenses must include:
+     employee costs
+     development costs
+     marketing costs
+     production/support costs
+     other active systems if present
+
+5. Add proper monthly result calculation:
+   netIncome = totalRevenue - totalExpenses
+
+6. Balance the economy:
+   - high revenue should not automatically mean absurd profit
+   - low-quality or poorly managed products should hurt finances more
+   - support, marketing, production and employees should matter financially
+   - growth should feel earned, not automatic
+
+7. In the UI, make the new financial section visually consistent with the current analysis page:
+   - use compact cards
+   - clean labels
+   - bars or small indicators where helpful
+   - dark theme consistent with the rest of the app
+
+8. Optional but recommended:
+   - add a small chart or progress-style visual for monthly profit trend
+   - add color states:
+     green = healthy
+     yellow = warning
+     red = loss/crisis
+
+9. Keep save/load compatibility:
+   - persist finance history safely
+   - do not break existing saves
+
+10. Do not refactor unrelated systems.
+Only update what is necessary for:
+   - financial analysis UI
+   - finance history
+   - monthly financial calculation
+   - balance of money gain/loss
+
+11. Explain clearly after changes:
+   - which files were changed
+   - where the new "Balanço Financeiro" section was added
+   - how monthly finance is calculated
+   - how the new economy balancing works

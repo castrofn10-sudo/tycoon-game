@@ -1,0 +1,79 @@
+Rework the console/game market competition and annual award system to make it far more realistic, immersive, and competitive, inspired by serious game company tycoon gameplay.
+
+STRICT RULES:
+- Do not refactor architecture broadly
+- Do not redesign unrelated UI
+- Keep minimal structural changes
+- Focus only on market competition, sales realism, rival strength, and annual awards logic
+
+PROBLEMS TO FIX:
+1. Weak products can still win major annual awards
+2. Very low yearly sales (example: around 100 units) can become "best-selling console", which is unrealistic
+3. Rival companies are not competitive enough
+4. Office/research progression does not strongly gate product competitiveness
+5. The market does not feel like a real war between companies
+
+GOALS:
+Create a more immersive and realistic game-company competition system where consoles and games compete in a meaningful market.
+
+REQUIREMENTS:
+
+1. Strengthen rival companies
+- Rival companies must evolve more aggressively over time
+- They should improve technology, innovation, finances, and market share
+- Some rivals should have strong years and dominate the market
+- Rivals should regularly threaten the player in both consoles and games
+
+2. Make office and research progression matter more
+- Product competitiveness must depend more strongly on:
+  - office level
+  - research unlocks
+  - innovation
+  - development quality
+- Weak offices and poor research should heavily limit product quality and market success
+
+3. Make console/game sales more realistic
+- Increase realism of yearly market scale
+- Ensure absolute sales numbers are meaningful for the era
+- A product with extremely low sales must not be treated as market-dominating
+- Sales ranking should reflect actual competition against rivals
+
+4. Rework annual awards
+- Annual awards must compare all products from all companies
+- Add proper ranking: 1st, 2nd, 3rd
+- The player should not win by default
+- Low-quality or low-sales products must not win major awards
+- Add minimum thresholds for "best-selling" awards
+- If no product reaches a credible threshold, do not grant a major winner title
+
+5. Add better award evaluation logic
+Use a weighted score combining:
+- quality
+- innovation
+- sales
+- reputation
+- market impact
+- small randomness factor
+
+6. Add realistic thresholds
+- Prevent tiny sales numbers from winning “Console of the Year” or “Best-Selling Console”
+- Add era-aware scaling if needed
+- Example: expected market size in 1972 should still make 100 units feel tiny, not dominant
+
+7. Make the market feel like a true company war
+- Stronger rivalry for games and consoles
+- Real competition for yearly rankings
+- More variation in winners between years
+- Some years the player should win nothing
+- Some years player should place 2nd or 3rd
+- Some years rivals should fully dominate
+
+8. Keep current save/load compatibility
+- Persist any new ranking/award fields safely
+
+9. Explain clearly after changes:
+- which files were changed
+- how rival competition was improved
+- how office/research now affects competitiveness
+- how annual award ranking now works
+- what thresholds were added to prevent unrealistic winners

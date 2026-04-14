@@ -1,0 +1,199 @@
+OBJETIVO:
+Implementar um sistema completo de FUNDADORES que impactam diretamente o gameplay, com fundadores prontos + opção de criação personalizada, mantendo balanceamento e sem quebrar a lógica atual do jogo.
+
+NÃO alterar sistemas principais do jogo (economia, IA, eventos).
+APENAS adicionar/modular o sistema de fundadores.
+
+---
+
+1. ESTRUTURA GERAL
+
+---
+
+Na Etapa 3 (Empresa e Fundador), implementar:
+
+Escolha entre:
+(•) Fundador Pronto
+( ) Criar Meu Fundador
+
+Alternância deve mostrar/esconder conteúdos sem quebrar layout.
+
+---
+
+2. FUNDADORES PRONTOS
+
+---
+
+Implementar os seguintes perfis com efeitos reais:
+
+RYU TANAKA — Engenheiro
+
+- Técnica: +8%
+- Bugs: -6%
+- Pesquisa tecnológica: +6%
+- Marketing: -4%
+- Criatividade: -2%
+
+SLOANE PIERCE — Marketing
+
+- Marketing: +8%
+- Vendas iniciais: +6%
+- Ganho de fãs: +6%
+- Técnica: -3%
+- Bugs: +4%
+
+KAI OKAFOR — Criativo
+
+- Criatividade: +8%
+- Chance de nota alta: +6%
+- Inovação: +6%
+- Tempo de desenvolvimento: +5%
+- Custos: +4%
+
+JORDAN PARK — Equilibrado
+
+- Todos atributos: +2%
+- Sem penalidades
+
+---
+
+3. FUNDADOR PERSONALIZADO
+
+---
+
+Adicionar:
+
+Input:
+
+- Nome do fundador
+
+Sistema de pontos:
+
+Total: 10 pontos
+Máximo por atributo: 4
+Mínimo: 0
+
+Atributos:
+
+- Criatividade
+- Técnica
+- Negócios
+- Marketing
+- Velocidade
+
+---
+
+4. CONVERSÃO DE ATRIBUTOS
+
+---
+
+Cada ponto = +2% no atributo
+
+Exemplo:
+4 pontos = +8%
+
+---
+
+5. SISTEMA DE TRADE-OFF (OBRIGATÓRIO)
+
+---
+
+Aplicar penalidades automáticas:
+
+Criatividade ↑ → Técnica ↓
+Técnica ↑ → Marketing ↓
+Negócios ↑ → Criatividade ↓
+Marketing ↑ → Técnica ↓
+Velocidade ↑ → Qualidade ↓
+
+Conversão:
+
+Penalidade = -1% por ponto aplicado
+
+---
+
+6. LIMITES DE BALANCEAMENTO
+
+---
+
+NUNCA permitir:
+
+- atributos acima de +8%
+- penalidades abaixo de -6%
+- combinação perfeita (sem fraqueza)
+
+---
+
+7. APLICAÇÃO NO JOGO
+
+---
+
+Aplicar efeitos em:
+
+DESENVOLVIMENTO:
+
+- qualidade final
+- chance de bugs
+- tempo de desenvolvimento
+
+MARKETING:
+
+- ganho de fãs
+- impacto de lançamento
+
+PESQUISA:
+
+- velocidade de progresso
+
+ECONOMIA:
+
+- custo de produção
+- margem de lucro
+
+---
+
+8. IMPLEMENTAÇÃO BASE (EXEMPLO)
+
+---
+
+const effects = {
+creativity: points.creativity * 2,
+tech: points.tech * 2,
+business: points.business * 2,
+marketing: points.marketing * 2,
+speed: points.speed * 2,
+}
+
+const penalties = {
+tech: -points.creativity,
+marketing: -points.tech,
+creativity: -points.business,
+quality: -points.speed,
+}
+
+---
+
+9. UX
+
+---
+
+- Mostrar visualmente os atributos (barras ou sliders)
+- Atualizar valores em tempo real
+- Mostrar bônus e penalidades antes de iniciar partida
+- Não usar textos longos
+
+---
+
+10. RESULTADO FINAL
+
+---
+
+Sistema de fundadores deve:
+
+- influenciar gameplay real
+- criar estilos diferentes de jogo
+- aumentar rejogabilidade
+- manter equilíbrio
+- impedir builds apelonas
+
+FIM

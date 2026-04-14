@@ -1,0 +1,173 @@
+STOP.
+
+Do NOT modify core engine logic deeply.
+
+This feature must be:
+- lightweight
+- isolated
+- safe
+- event-based only
+
+----------------------------------------
+
+GOAL:
+
+Introduce GLOBAL ECONOMIC EVENTS based on decades.
+
+----------------------------------------
+
+RULES:
+
+1. NO continuous simulation
+2. NO loops scanning the entire game
+3. NO new heavy systems
+
+Events must be:
+- rare
+- triggered occasionally
+- applied as small temporary modifiers
+
+----------------------------------------
+
+STEP 1 — CREATE DECADE SYSTEM
+
+Create a helper function:
+
+getDecade(year):
+- 1980 → "80s"
+- 1995 → "90s"
+- 2003 → "2000s"
+
+Store current decade in game state.
+
+----------------------------------------
+
+STEP 2 — DEFINE EVENTS (DATA ONLY)
+
+Create a simple array:
+
+const globalEvents = [
+  {
+    id: "tech_boom_90s",
+    decade: "90s",
+    type: "positive",
+    effect: {
+      researchSpeed: +0.02,
+      marketingEfficiency: +0.01
+    },
+    durationMonths: 24
+  },
+  {
+    id: "dotcom_crash",
+    decade: "2000s",
+    type: "negative",
+    effect: {
+      marketingEfficiency: -0.02,
+      sales: -0.015
+    },
+    durationMonths: 18
+  },
+  {
+    id: "financial_crisis",
+    decade: "2000s",
+    type: "negative",
+    effect: {
+      income: -0.03
+    },
+    durationMonths: 12
+  },
+  {
+    id: "nextgen_console_wave",
+    decade: "2010s",
+    type: "positive",
+    effect: {
+      productQuality: +0.015,
+      sales: +0.02
+    },
+    durationMonths: 12
+  }
+];
+
+----------------------------------------
+
+STEP 3 — TRIGGER SYSTEM (SAFE)
+
+At month tick:
+
+- small chance to trigger event (1%–2%)
+- only if no active event
+
+Store:
+activeEvent
+eventRemainingMonths
+
+----------------------------------------
+
+STEP 4 — APPLY EFFECTS (VERY IMPORTANT)
+
+Apply effects:
+
+- ONLY once per tick
+- ONLY as small multipliers
+- stack safely with existing systems
+
+Example:
+finalValue = baseValue * (1 + eventModifier)
+
+----------------------------------------
+
+STEP 5 — HOLDINGS INTERACTION
+
+If player owns holdings:
+
+Insurance:
+- reduce negative effects by 30%
+
+Bank:
+- reduce income loss
+
+Marketing:
+- reduce marketing penalties
+
+----------------------------------------
+
+STEP 6 — NOTIFICATIONS ONLY
+
+DO NOT create popups.
+
+Instead:
+
+Send message to notification system:
+
+Examples:
+
+"📉 Global recession hits the market"
+"📈 Tech boom accelerates innovation"
+"⚠️ Financial crisis impacts revenue"
+
+----------------------------------------
+
+STEP 7 — CLEANUP
+
+Each month:
+- decrease duration
+- when 0 → remove event
+
+----------------------------------------
+
+LIMITS:
+
+- Max effect: ±3%
+- Only ONE active event at a time
+- No permanent effects
+
+----------------------------------------
+
+RESULT:
+
+A dynamic world simulation:
+- decades matter
+- events feel real
+- holdings gain strategic value
+
+WITHOUT breaking the game.

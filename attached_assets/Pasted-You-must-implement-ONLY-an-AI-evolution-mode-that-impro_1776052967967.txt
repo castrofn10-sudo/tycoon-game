@@ -1,0 +1,70 @@
+You must implement ONLY an AI evolution mode that improves rival company intelligence gradually over time, without replacing existing systems.
+
+HARD RULES:
+- DO NOT replace current AI systems
+- DO NOT rewrite current growth/decline logic
+- DO NOT modify naming, market pressure, or pivot systems
+- DO NOT change player mechanics
+- DO NOT redesign UI
+- ONLY add a progressive AI evolution layer on top of the existing behavior
+- Keep system stable and compatible
+
+GOAL:
+Make AI companies behave more intelligently as the years advance, while preserving the current systems already implemented.
+
+IMPLEMENTATION:
+
+1. Use the existing AI system as the base
+- Keep current company styles and logic
+- Keep current growth/decline structure
+- Keep current market pressure and pivot behavior
+
+2. Add era-based AI evolution
+- In early eras, AI should behave in a simpler and less optimized way
+- In later eras, AI should gradually make better strategic decisions
+- Intelligence must improve progressively with time, not instantly
+
+3. Early era behavior
+- More basic choices
+- More frequent mistakes
+- Less optimized launches
+- Less efficient investment use
+
+4. Mid era behavior
+- Better balance between risk and stability
+- More competitive launches
+- Better use of research and expansion
+- Still capable of making mistakes
+
+5. Late era behavior
+- Smarter reactions to the market
+- Better timing for launches
+- Better adaptation when losing market share
+- Higher ability to recover from decline
+- Still not perfect
+
+6. Controlled imperfection
+- AI must never become perfect
+- Even advanced AI companies must still be able to:
+  - make bad investments
+  - launch weak products
+  - lose money
+  - fail strategically
+
+7. Compatibility with current systems
+- Reuse current AI company profiles
+- Reuse current pivot logic
+- Reuse current ranking and market systems
+- Do not duplicate or overwrite those systems
+
+8. Balance
+- Keep competition fair
+- Do not create extreme instability
+- Do not make late-game AI unbeatable
+- Make progression feel natural and believable
+
+AFTER:
+- explain how AI evolution progresses through the eras
+- confirm existing AI systems were preserved
+- confirm no unrelated systems were changed
+- confirm AI becomes smarter over time without becoming perfect

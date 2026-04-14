@@ -1,0 +1,100 @@
+APLICAR ATUALIZAÇÃO INCREMENTAL — NÃO ALTERAR ESTRUTURA EXISTENTE
+NÃO REMOVER SISTEMAS ATUAIS
+APENAS POLIR A INTERFACE DE PESQUISA & DESENVOLVIMENTO
+
+----------------------------------------
+[1] REMOVER DESCRIÇÕES TÉCNICAS VISÍVEIS
+----------------------------------------
+
+Na tela de Pesquisa & Desenvolvimento:
+
+Remover da interface visível textos como:
+- -15% custo de produção
+- +0.4 rating
+- +8% vendas
+- +20% qualidade
+- qualquer explicação técnica longa do efeito
+
+IMPORTANTE:
+- o efeito da pesquisa deve continuar funcionando normalmente
+- apenas esconder ou simplificar a descrição visual
+
+----------------------------------------
+[2] EXIBIR APENAS INFORMAÇÕES ESSENCIAIS
+----------------------------------------
+
+Cada pesquisa deve mostrar somente:
+
+- nome da pesquisa
+- categoria/linha visual
+- custo
+- tempo
+- ano/era de desbloqueio (se necessário)
+
+Exemplo:
+Mostrar:
+- Design Limpo
+- $80K
+- 2m
+- Em 1978
+
+Não mostrar:
+- descrições detalhadas de bônus ou fórmulas
+
+----------------------------------------
+[3] MELHORAR A HIERARQUIA VISUAL
+----------------------------------------
+
+Ajustar o layout para dar mais destaque ao nome da pesquisa
+
+Regras:
+- nome mais legível
+- menos poluição de texto
+- mais espaço entre cards
+- evitar sensação de tela técnica demais
+
+Objetivo:
+- parecer árvore de progresso de jogo
+- não parecer planilha de stats
+
+----------------------------------------
+[4] MELHORAR O APROVEITAMENTO DE ESPAÇO
+----------------------------------------
+
+Com menos texto visível:
+
+- reorganizar os cards para ficarem mais limpos
+- melhorar alinhamento interno
+- reduzir sensação de card apertado
+- manter consistência com o visual geral do jogo
+
+----------------------------------------
+[5] NÃO ALTERAR A LÓGICA DAS PESQUISAS
+----------------------------------------
+
+NÃO mudar:
+- custo real
+- tempo real
+- desbloqueios
+- efeitos internos
+- dependências
+- progressão da árvore
+
+Apenas mudar apresentação visual
+
+----------------------------------------
+[6] SEGURANÇA
+----------------------------------------
+
+NÃO modificar:
+- sistema de desenvolvimento de jogos
+- sistema de consoles
+- sistema financeiro
+- sistema de equipe
+- sistema de eventos
+
+APENAS polir a interface de Pesquisa & Desenvolvimento
+
+----------------------------------------
+FIM DA PARTE 3
+NÃO MODIFICAR OUTRAS ÁREAS

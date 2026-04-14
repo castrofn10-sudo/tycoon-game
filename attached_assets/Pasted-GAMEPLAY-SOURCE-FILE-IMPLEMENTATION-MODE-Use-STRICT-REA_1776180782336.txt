@@ -1,0 +1,99 @@
+GAMEPLAY + SOURCE FILE IMPLEMENTATION MODE.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Corrigir e implementar de forma REAL a progressão de valores do MegaCorp Tycoon V1, garantindo que a mudança aconteça:
+1) no código/arquivos fonte
+2) no comportamento real dentro do jogo
+3) no loop de progressão ao longo do tempo
+
+PROBLEMA ATUAL:
+Tentamos implementar ontem a progressão de valores, mas ela não ficou funcional de verdade no jogo.
+Pode ter havido alteração parcial apenas em arquivos, textos, constantes soltas ou UI, sem impacto real no gameplay.
+
+OBJETIVO:
+Fazer a progressão de valores funcionar de verdade no jogo, conectada ao tempo, à economia e aos sistemas que usam esses valores.
+
+IMPORTANTE:
+Não considerar concluído se a mudança existir apenas em arquivo sem reflexo real no jogo.
+A implementação só é válida se o jogador perceber a progressão real em runtime.
+
+REGRAS:
+- não fazer mudança fake
+- não responder como concluído sem conectar a lógica ao jogo real
+- não alterar UI sem necessidade
+- não quebrar saves existentes
+- não mexer em sistemas não relacionados
+- mudança mínima, mas completa
+- preservar estabilidade do jogo
+
+ESCOPO:
+Identificar exatamente onde os valores deveriam escalar/progredir e garantir que isso aconteça no gameplay real.
+Isso pode incluir, conforme a lógica já existente do jogo:
+- custos
+- receitas
+- salários
+- pesquisas
+- marketing
+- produção
+- consoles
+- desenvolvimento
+- contratos
+- eventos
+- qualquer sistema já planejado para progressão por época/ano/escala da empresa
+
+TAREFAS OBRIGATÓRIAS:
+
+1) LOCALIZAR A FONTE DE VERDADE
+- encontrar os arquivos/funções/objetos que definem os valores base
+- encontrar onde o jogo lê esses valores em runtime
+- encontrar onde a progressão deveria acontecer e por que não está acontecendo
+
+2) IMPLEMENTAR A PROGRESSÃO REAL
+- aplicar a progressão no cálculo usado pelo jogo, não só em dados estáticos
+- garantir que os valores mudem conforme o critério correto já definido no projeto
+- se a progressão for por ano, mês, geração, porte da empresa ou fase histórica, usar isso corretamente
+
+3) CONECTAR TODOS OS PONTOS
+Garantir que a progressão esteja refletida:
+- no estado do jogo
+- nos cálculos usados pelas ações
+- nos valores mostrados ao jogador
+- nos sistemas que consomem esses números
+
+4) EVITAR IMPLEMENTAÇÃO PARCIAL
+Verificar se ontem houve algum destes problemas:
+- valor alterado só no arquivo, mas não usado no runtime
+- cálculo existe, mas não é chamado
+- constante antiga ainda está sendo usada
+- UI mostra valor diferente do usado na lógica
+- sistema usa fallback fixo e ignora progressão
+- useEffect / selector / getter / helper não está conectado
+- save carrega valor antigo e sobrescreve o novo cálculo
+
+5) VALIDAR NO JOGO REAL
+Testar no runtime cenários de progressão e confirmar que os valores realmente evoluem.
+A validação deve ocorrer dentro do comportamento do jogo, não apenas lendo arquivos.
+
+FORMATO DE IMPLEMENTAÇÃO ESPERADO:
+- alterar os arquivos necessários
+- conectar a lógica ao estado/runtime
+- confirmar onde a progressão passa a ser aplicada
+- confirmar quais sistemas passaram a consumir a nova progressão
+
+NÃO FINALIZAR DIZENDO “PRONTO” SEM:
+- identificar a causa exata do problema anterior
+- mostrar quais arquivos foram alterados
+- mostrar qual função/cálculo passou a ser usado de verdade
+- confirmar que a progressão agora afeta o jogo real
+- confirmar que não ficou apenas no arquivo
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- qual era a causa exata da falha anterior
+- onde a progressão foi implementada no código
+- onde ela passou a ser aplicada no jogo em runtime
+- quais sistemas agora usam a progressão real
+- como foi validado que a mudança não ficou só no arquivo

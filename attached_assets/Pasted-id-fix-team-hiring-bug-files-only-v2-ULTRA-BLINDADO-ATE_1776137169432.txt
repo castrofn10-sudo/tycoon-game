@@ -1,0 +1,118 @@
+id="fix-team-hiring-bug-files-only-v2-ULTRA-BLINDADO"
+
+ATENÇÃO:
+Modo ATIVO: CORREÇÃO DE BUG CRÍTICO ESPECÍFICO
+
+Existe UM ÚNICO problema a ser resolvido:
+→ A função de CONTRATAR FUNCIONÁRIOS na tela de Equipe NÃO está funcionando.
+
+O bug pode ser:
+- botão não dispara ação
+- função não executa
+- estado não atualiza
+- erro silencioso
+- referência quebrada
+- validação bloqueando indevidamente
+
+OBJETIVO:
+Localizar nos ARQUIVOS do projeto a causa real e corrigir SOMENTE esse problema.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔎 ETAPA 1 — INVESTIGAÇÃO (OBRIGATÓRIA)
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Procurar nos arquivos:
+
+- tela de Equipe (Team / Staff / Employees)
+- botão de contratar (hire / recruit / addEmployee)
+- função chamada ao clicar
+- lógica de estado (useState / store / reducer)
+- validações (dinheiro, limite, etc.)
+- ligação UI → função (onClick / onPress)
+
+Verificar:
+
+1. O botão está chamando a função correta?
+2. A função existe e está sendo importada corretamente?
+3. A função está executando ou está travada por condição?
+4. Existe bloqueio lógico (ex: dinheiro < custo)?
+5. O estado está sendo atualizado corretamente?
+6. O componente re-renderiza após contratar?
+7. Há erro silencioso no console?
+
+━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ ETAPA 2 — CORREÇÃO (MÍNIMA POSSÍVEL)
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Corrigir APENAS o ponto que está impedindo a contratação.
+
+Pode corrigir:
+- função não sendo chamada
+- import errado
+- condição bloqueando indevidamente
+- estado não atualizando
+- evento mal ligado
+- variável errada
+- falta de setState/update
+
+NÃO pode:
+- reescrever a tela inteira
+- alterar layout
+- alterar textos
+- alterar economia
+- alterar balanceamento
+- alterar rankings
+- alterar navegação
+- alterar outros sistemas
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🚫 PROIBIÇÕES ABSOLUTAS
+━━━━━━━━━━━━━━━━━━━━━━━
+
+PROIBIDO:
+- refatorar código
+- melhorar UI
+- reorganizar componentes
+- mudar nomes
+- tocar em qualquer outro sistema
+
+Se não for relacionado à contratação → NÃO MEXER
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 ETAPA 3 — VALIDAÇÃO REAL
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Após corrigir:
+
+1. Clicar em "contratar funcionário"
+2. Verificar se:
+   - funcionário é adicionado
+   - estado atualiza
+   - UI reflete a mudança
+   - não há erro no console
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📋 ETAPA 4 — RELATÓRIO OBRIGATÓRIO
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Responder EXATAMENTE com:
+
+1. Arquivo(s) alterado(s)
+2. Linha(s) do problema
+3. Causa real do bug
+4. Correção aplicada
+5. Confirmação de teste funcionando
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔒 REGRA FINAL
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Se houver dúvida:
+→ NÃO alterar nada
+→ apenas relatar
+
+Se não for necessário mudar algo:
+→ NÃO mudar
+
+FOCO TOTAL:
+FAZER O BOTÃO DE CONTRATAR FUNCIONAR.

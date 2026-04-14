@@ -1,0 +1,52 @@
+Fix only these specific issues in the current project. Do not refactor architecture, do not redesign the game, do not change unrelated systems.
+
+STRICT RULES:
+- Minimal safe fixes only
+- Do not restructure files
+- Do not rename core functions unless absolutely necessary
+- Do not change UI layout except where needed to fix button interaction
+- Do not touch unrelated gameplay systems
+
+ISSUES TO FIX:
+
+1. "Revidar" button is not working
+- Find why the "Revidar" action/button does not respond
+- Fix the full interaction flow:
+  - button press
+  - handler execution
+  - state update
+  - effect application
+  - UI refresh
+- Ensure the button is actually clickable/touchable on device
+- Check for overlay, z-index, pointerEvents, disabled state, stale closure, wrong onPress binding, or modal/card layering issues
+- After fixing, "Revidar" must apply its intended effect correctly
+
+2. "Apagar tudo" is not actually deleting all news
+- Fix the full delete-all flow:
+  - button press
+  - confirmation
+  - deletion of all news from state
+  - deletion from persistent storage
+  - immediate UI refresh
+  - counters update
+- Ensure deleted items do not reappear after navigation or reload
+
+3. News/events/attacks are too frequent
+- Reduce overall frequency of random events and attack news
+- Rival/company attacks should be significantly rarer
+- Add a randomized cooldown between 4 and 8 months for attack-type events
+- Prevent back-to-back attack events
+- Add a global cooldown for major/random negative events
+- Keep important event-driven news working, but make random spam much less frequent
+- Preserve the current news system structure; only rebalance frequency logic
+
+VALIDATION REQUIREMENTS:
+- Keep current features and current structure intact
+- Do not remove the respond/revenge system
+- Do not remove delete-all feature
+- Do not redesign the news page
+- At the end, explain:
+  - which files were changed
+  - what caused the Revidar button bug
+  - what caused the Apagar tudo bug
+  - how event frequency was reduced

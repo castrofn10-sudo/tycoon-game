@@ -1,0 +1,97 @@
+UI REFINEMENT PATCH — FINANCIAL HEADER + CONTROLS CLEANUP
+
+GOAL:
+Improve top financial display and bottom controls without breaking any game logic or existing systems.
+
+-----------------------------------
+1. TOP HEADER — FINANCIAL DISPLAY
+-----------------------------------
+
+REPLACE current "Receita Total" display with:
+
+STRUCTURE:
+
+[ +RECEITA_MENSAL ]   /   [ -DESPESAS_MENSAIS ]
+
+RULES:
+
+- Receita mensal:
+  • Color: GREEN (#22c55e or equivalent)
+  • Format: +$XXXK / +$XM
+  • Font-weight: bold
+
+- Despesas mensais:
+  • Color: RED (#ef4444 or equivalent)
+  • Format: -$XXXK / -$XM
+  • Font-weight: normal
+
+- Separator "/":
+  • Color: neutral (white with 60% opacity or soft gray)
+  • Must be centered between values
+  • Keep spacing: "value   /   value"
+
+IMPORTANT:
+- DO NOT show labels like "Receita Mensal" or "Despesas Mensais"
+- Only numbers and colors should communicate meaning
+- Keep alignment horizontal and clean
+- Must not overflow UI
+
+-----------------------------------
+2. REMOVE OLD ELEMENT
+-----------------------------------
+
+- REMOVE "Receita Total" from main dashboard
+- Keep total revenue ONLY inside financial/metrics section (do not delete data, just hide from main screen)
+
+-----------------------------------
+3. BOTTOM CONTROLS REWORK
+-----------------------------------
+
+MODIFY speed controls area:
+
+REMOVE:
+- "Avançar → mês"
+- duplicated date display
+
+KEEP:
+- Pause button
+- Speed controls (1x, 2x, 3x)
+
+STYLE UPDATE:
+
+- Convert controls into a COMPACT FLOATING BAR
+- Reduce height by ~40–50%
+- Center horizontally at bottom
+- Add slight blur or transparency (glass effect optional)
+- Rounded corners (border-radius high)
+- No heavy background block
+
+Spacing:
+- Equal spacing between buttons
+- Buttons slightly larger than text, but not bulky
+
+-----------------------------------
+4. PERFORMANCE SAFETY
+-----------------------------------
+
+- DO NOT add heavy animations
+- DO NOT change any game logic
+- DO NOT modify save system
+- DO NOT affect event systems
+- Keep everything lightweight (mobile optimized)
+
+-----------------------------------
+5. FINAL VALIDATION
+-----------------------------------
+
+Ensure:
+- No UI overlap
+- No hidden elements behind layers
+- Works on mobile resolution
+- No performance drops
+- All buttons clickable and responsive
+
+-----------------------------------
+
+RESULT:
+Cleaner, modern, professional tycoon interface with real-time financial clarity.

@@ -1,0 +1,101 @@
+AJUSTE DE BALANCEAMENTO DOS FUNDADORES
+
+OBJETIVO:
+Reduzir os bônus e penalidades dos fundadores prontos para uma faixa equilibrada de early game, sem alterar layout, sem mudar a estrutura do sistema e sem tocar em outros sistemas do jogo.
+
+REGRAS ABSOLUTAS:
+
+- NÃO modificar engine
+- NÃO modificar economia global
+- NÃO modificar sistema de vendas
+- NÃO modificar sistema de pesquisa
+- NÃO modificar sistema de rating
+- NÃO alterar UI
+- NÃO refatorar arquivos
+- APENAS ajustar os VALORES dos fundadores prontos
+
+---
+
+[1] MANTER ESTRUTURA ATUAL
+
+Manter exatamente como já está:
+
+- nomes dos fundadores
+- textos
+- layout
+- efeitos aplicados
+- sistema de seleção
+
+Somente substituir números exagerados por valores equilibrados.
+
+---
+
+[2] NOVOS VALORES BALANCEADOS
+
+RYU TANAKA
+
+- +0.4 rating base em consoles
+- -4% custo de produção
+- +12% velocidade de pesquisa
+- -8% eficácia de campanhas de marketing
+
+SLOANE PIERCE
+
+- +15% eficácia de campanhas
+- +12% fãs por lançamento
+- +6% vendas globais
+- -8% velocidade de pesquisa
+
+KAI OKAFOR
+
+- +10% receita de jogos
+- +8% velocidade de pesquisa
+- +10% fãs por lançamento
+- +4% custo de produção de hardware
+
+ALEX STERLING
+
+- +6% vendas de lançamento
+- +0.3 rating base em consoles
+- +8% fãs por lançamento
+- +5% custo de produção
+
+MORGAN VOSS
+
+- -5% todos os custos
+- -8% custo de filiais
+- -0.5% juros em empréstimos
+- -0.15 rating de produto
+
+---
+
+[3] LIMITES DE BALANCEAMENTO
+
+Garantir que:
+
+- nenhum bônus percentual ultrapasse 15%
+- nenhum bônus de rating ultrapasse 0.4
+- todo fundador tenha pelo menos 1 penalidade real
+
+---
+
+[4] NÃO FAZER
+
+- não criar novos fundadores
+- não alterar founderAttrs customizados
+- não recalcular fórmulas do jogo
+- não mexer em holdings
+- não mexer em notificações
+- não mexer em décadas
+- não mexer em IA rival
+
+---
+
+[5] RESULTADO
+
+Ao final, retornar apenas:
+
+- quais fundadores tiveram valores ajustados
+- confirmação de que só os números foram alterados
+
+FIM

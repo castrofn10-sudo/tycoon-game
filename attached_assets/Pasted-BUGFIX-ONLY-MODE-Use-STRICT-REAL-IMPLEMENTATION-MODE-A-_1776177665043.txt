@@ -1,0 +1,78 @@
+BUGFIX ONLY MODE.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Corrija um bug lógico real no MegaCorp Tycoon V1 relacionado às notícias e premiações anuais de dezembro.
+
+PROBLEMA REAL IDENTIFICADO:
+Na tela "Notícias & Eventos", no mesmo ciclo de Dez/1983, aparecem notícias dizendo que o jogador ficou:
+- #1 em vendas anuais
+- #1 em aclamação / melhor avaliado do ano
+
+Mas ao mesmo tempo outra notícia de premiação informa:
+- "Nenhum prêmio recebido este ano."
+
+Isso é uma contradição lógica.
+
+OBJETIVO:
+Fazer com que a lógica de premiações anuais use exatamente os mesmos dados reais de ranking/resultados anuais já gerados no jogo, evitando qualquer inconsistência entre:
+- ranking anual
+- notícias anuais
+- premiação anual
+
+REGRAS IMPORTANTES:
+- BUGFIX ONLY
+- não alterar UI/layout
+- não refatorar o jogo inteiro
+- não mudar economia, saves, dashboard, velocidade, menu ou loop principal além do necessário
+- não criar sistema novo paralelo
+- não inventar dados
+- usar uma única fonte de verdade para resultados anuais
+- correção mínima e cirúrgica
+
+O QUE DEVE SER FEITO:
+1) Encontrar onde são calculados:
+   - ranking anual de vendas
+   - ranking anual de crítica / avaliação
+   - notícias anuais de dezembro
+   - premiações anuais de dezembro
+
+2) Garantir que a premiação anual NÃO use cálculo separado, array separado ou estado divergente.
+   Ela deve usar exatamente os resultados finais reais do ranking anual já consolidado.
+
+3) Verificar e corrigir possíveis causas:
+   - ordem errada de execução (premiação rodando antes do ranking ficar pronto)
+   - uso de arrays diferentes
+   - comparação errada do nome da empresa do jogador
+   - mismatch de IDs/nomes dos jogos
+   - estado stale/desatualizado
+   - geração duplicada de notícias com condições conflitantes
+
+4) Regra esperada:
+   - se o jogador tiver o jogo #1 em vendas anuais, a premiação/mensagem deve reconhecer isso
+   - se o jogador tiver o jogo #1 em crítica anual, a premiação/mensagem deve reconhecer isso
+   - só exibir "Nenhum prêmio recebido este ano" se realmente não houver prêmio do jogador nas categorias avaliadas
+
+5) Se existirem múltiplas notícias anuais:
+   - evitar contradições entre elas
+   - garantir consistência textual e lógica no mesmo ano/ciclo
+
+6) Manter compatibilidade com saves existentes.
+
+VALIDAÇÃO OBRIGATÓRIA:
+Depois da correção, valide o fluxo de Dezembro com este cenário:
+- jogador em #1 de vendas anual
+- jogador em #1 de crítica anual
+
+Resultado esperado:
+- não pode aparecer "Nenhum prêmio recebido este ano"
+- as notícias de premiação devem refletir corretamente as conquistas reais do jogador
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- qual era a causa exata do bug
+- qual fonte de verdade passou a ser usada
+- como foi evitada a contradição entre ranking/notícia/premiação
+- confirmar que nenhuma outra lógica central foi alterada

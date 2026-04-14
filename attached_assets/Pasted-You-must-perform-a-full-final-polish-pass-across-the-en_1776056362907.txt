@@ -1,0 +1,79 @@
+You must perform a full final polish pass across the entire game before final APK export.
+
+HARD RULES:
+- DO NOT create new gameplay systems
+- DO NOT rebalance the economy
+- DO NOT change core progression
+- DO NOT redesign the whole game
+- DO NOT alter the overall structure of the project
+- ONLY polish, fix, test, and stabilize what already exists
+- Keep build stable and safe
+
+GOAL:
+Run a complete quality pass to improve visuals, fix bugs, verify buttons, and confirm the game structure remains intact.
+
+IMPLEMENTATION:
+
+1. Visual polish
+- Review all screens for:
+  - text overflow
+  - cut-off labels
+  - broken spacing
+  - overlapping elements
+  - inconsistent alignment
+  - poor mobile responsiveness
+- Fix only what is necessary to improve visual quality
+
+2. Button and click validation
+- Check all buttons and clickable elements
+- Confirm every button:
+  - responds correctly
+  - opens the correct screen or action
+  - does not trigger duplicate actions
+  - is not visually broken
+- Validate:
+  - confirm buttons
+  - cancel buttons
+  - back buttons
+  - tab navigation
+  - close actions
+
+3. Navigation flow test
+- Test transitions between screens
+- Test entering/exiting tabs and sections
+- Confirm no unintended resets happen
+- Confirm state remains stable when moving between sections
+
+4. Bug fixing pass
+- Fix:
+  - broken UI states
+  - stale values not updating
+  - layout glitches
+  - invisible or misplaced elements
+  - actions that fail or partially execute
+  - cards, lists, and panels that render incorrectly
+
+5. Structural protection
+- Preserve all current game systems
+- Do NOT change:
+  - core economy
+  - progression structure
+  - save/load behavior
+  - system balance unless fixing a bug strictly requires it
+
+6. Stability verification
+- Confirm existing saves still work
+- Confirm major systems still run correctly
+- Confirm no implemented features were unintentionally removed or overwritten
+
+7. Final readiness
+- Prepare the project for final packaging/build quality
+- Treat this as a final QA + polish pass before APK generation
+
+AFTER:
+- list the files reviewed and changed
+- summarize visual fixes made
+- summarize bug fixes made
+- confirm all major buttons were checked
+- confirm the overall game structure was preserved
+- confirm the project is ready for final build

@@ -1,0 +1,107 @@
+Plain text
+
+You must fix ONLY the LEGAL PROTECTION system behavior inside the Office > Executive > Jurídico section.
+
+HARD RULES:
+
+- DO NOT redesign UI
+- DO NOT change unrelated gameplay systems
+- DO NOT rebalance the whole economy
+- DO NOT modify unrelated events
+- DO NOT add new features beyond what is requested here
+- ONLY fix legal contract persistence, long-term renewal cycle, and automatic decision behavior
+- Keep build stable and safe
+
+GOAL:
+Legal protection must work as a true long-term contracted legal service.
+
+EXPECTED BEHAVIOR:
+
+1. WHEN THE PLAYER HIRES A LEGAL PLAN
+
+- The selected legal plan must remain active for a long contract period
+- It must NOT require rehiring every time an event appears
+- It must be saved in game state and persist normally through progression/save/load
+
+2. CONTRACT DURATION
+
+- Legal plans must work by long-term contract duration, not constant manual rehiring
+- Each legal contract must last 10 to 15 in-game years
+- You may define a fixed duration per tier if needed for stability, for example:
+  - Basic: 10 years
+  - Professional: 12 years
+  - Elite: 15 years
+- Or use another stable logic inside the 10–15 year range
+- The duration must be visible in state/logic and expire correctly
+
+3. RENEWAL LOGIC
+
+- When the contract expires, the player must be asked whether to renew it
+- Until expiration, the legal company must stay active automatically
+- If not renewed, protection ends normally
+- Do NOT require constant rehiring before expiration
+
+4. AUTOMATIC LEGAL DECISIONS
+
+- If a legal company is active, legal/crisis/reputation/fake-news related events covered by the plan must be auto-handled in the background
+- These events must NOT interrupt the player with decision popups if they are covered by the active legal plan
+- The system should automatically apply mitigation according to the hired tier/company strength
+
+5. TIER / COMPANY STRENGTH
+
+- Basic legal company:
+  - handles minor events
+  - weaker mitigation
+  - slower/less effective defense
+- Professional legal company:
+  - handles medium events better
+  - stronger mitigation
+  - more stable protection of reputation
+- Elite legal company:
+  - handles major covered events with strongest mitigation
+  - best protection for reputation and financial damage
+  - may preserve more reputation and avoid larger losses
+- Keep the current spirit of the tier differences, but make them persistent and automatic
+
+6. BUSINESS IMPACT
+
+- Better legal firms should defend the company more effectively
+- Better defense can preserve company reputation and reduce financial losses during covered crises
+- This can indirectly help the company keep stronger long-term profits because damage is mitigated
+- Do NOT create absurd profit bonuses
+- The legal company should mainly protect and preserve value, not generate magic money
+
+7. UI STATUS
+
+- In the Jurídico screen, the active legal company must clearly show as active
+- Show remaining contract duration or expiration info if possible without redesigning the screen
+- If the same plan/company is already active, do NOT allow duplicate hiring
+- Replace repeated hiring behavior with correct active-state behavior
+- Keep existing UI style; only fix the behavior/state
+
+8. OPTIONAL PLAYER INTERRUPTION RULE
+
+- Only show a manual decision popup if the event is not covered by the active legal company
+- Covered legal events should resolve automatically without blocking gameplay
+
+9. SAVE/LOAD SAFETY
+
+- Legal contract state must remain compatible with existing saves if possible
+- Do not break current save structure
+- Add fields safely if needed
+
+DO NOT:
+
+- redesign the Office screen
+- change unrelated event rates
+- modify shareholder, holdings, marketing, global map, or launch systems
+- add new legal tiers beyond the current ones
+- add unrelated notifications or extra systems
+
+AFTER IMPLEMENTATION:
+
+- explain exactly which file(s) were changed
+- explain how legal contract persistence now works
+- explain how expiration and renewal now work
+- explain how auto-resolution now works
+- confirm no unrelated systems were changed

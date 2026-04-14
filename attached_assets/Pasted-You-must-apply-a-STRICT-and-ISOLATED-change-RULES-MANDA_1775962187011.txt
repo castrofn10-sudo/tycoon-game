@@ -1,0 +1,60 @@
+You must apply a STRICT and ISOLATED change.
+
+RULES (MANDATORY):
+- Modify ONLY the Research & Development tree screen and its presentation layer.
+- DO NOT change economy, sales, awards, rivals, consoles, save/load, online, or market systems.
+- DO NOT change research effects, numbers, progression logic, unlock years, or balancing.
+- DO NOT add new mechanics in this step.
+- Keep all current research nodes and categories intact.
+- Keep minimal safe changes only.
+
+TASK:
+Improve the Research & Development tree UI/UX so it feels cleaner, more immersive, easier to read, and more like a polished strategy/tycoon game.
+
+GOALS:
+- Make the tree easier to navigate
+- Reduce visual clutter
+- Improve hierarchy and readability
+- Make it feel more premium and game-like
+- Preserve all existing research content and unlock logic
+
+WHAT TO CHANGE:
+
+1. CLEANER CARD LAYOUT
+- Simplify each research card visually
+- Reduce text clutter
+- Make title, bonus, cost/time, and unlock year easier to scan
+- Keep the same information, but present it more cleanly
+
+2. BETTER VISUAL HIERARCHY
+- Make categories easier to distinguish
+- Improve spacing between columns and nodes
+- Make locked / available / completed states more visually obvious
+- Tier 1 / advanced / future nodes should feel visually distinct
+
+3. CATEGORY IDENTITY
+- Give each major category a clearer visual identity
+- Use subtle color coding per category while keeping the current overall theme
+- Keep it elegant, not noisy
+
+4. REDUCE BACKGROUND NOISE
+- Tone down distracting background effects behind the research tree
+- Keep the screen stylish, but easier to read
+
+5. IMPROVE NAVIGATION
+- Make horizontal category tabs easier to understand and use
+- Improve readability of column labels and node grouping
+- Keep the current structure, but make navigation feel smoother
+
+6. PRESERVE ALL CURRENT RESEARCH DATA
+- Do not remove nodes
+- Do not rename content unnecessarily
+- Do not alter years, costs, or bonuses
+- This step is presentation and usability only
+
+AFTER COMPLETION:
+- List exactly which files were modified
+- Explain what was improved in the UI
+- Confirm that no research effects, unlock logic, or unrelated systems were changed
+
+If any change is outside this scope, do not make it.

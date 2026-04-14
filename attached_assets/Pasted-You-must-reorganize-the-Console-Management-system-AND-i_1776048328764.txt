@@ -1,0 +1,136 @@
+You must reorganize the Console Management system AND implement a dynamic pricing system based on suggested price and product quality.
+
+HARD RULES:
+- DO NOT change core gameplay mechanics
+- DO NOT remove existing features
+- DO NOT break console logic
+- DO NOT modify unrelated systems
+- DO NOT redesign the entire UI
+- ONLY improve organization and pricing behavior
+- Keep system stable and compatible
+
+GOAL:
+1) Improve usability by adding a side navigation menu for console management
+2) Implement realistic pricing logic tied to quality and suggested price
+
+----------------------------------------
+PART 1 — CONSOLE SCREEN REORGANIZATION
+----------------------------------------
+
+1. Add Side Navigation Menu inside console screen
+
+Create sections:
+
+- Overview
+- Improve Console
+- Relaunch / Update
+- Strategy
+- Monetization
+- Production
+
+2. Overview
+- Keep all existing data:
+  - price
+  - sales
+  - revenue
+  - rating
+  - quality
+  - popularity
+  - production cost
+
+3. Improve Console
+- Add improvement actions:
+  - increase hardware quality
+  - optimize production cost
+  - improve efficiency
+
+4. Relaunch / Update
+- Allow relaunching the console
+- Effects:
+  - temporary sales boost
+  - extend lifecycle
+
+5. Strategy
+- Allow positioning:
+  - premium
+  - budget
+  - balanced
+
+6. Monetization
+- Allow:
+  - change price
+  - apply promotions
+
+7. Production
+- Allow:
+  - increase production
+  - decrease production
+  - stop production without deleting console
+
+8. UI Behavior
+- Smooth navigation between sections
+- No need to scroll entire screen
+- Keep current visual style
+
+----------------------------------------
+PART 2 — DYNAMIC PRICING SYSTEM
+----------------------------------------
+
+1. Suggested Price
+- Each console must have a base suggested price
+- Display clearly to the player
+
+2. Price Limits
+- Player can adjust price within a margin range
+
+Rules:
+- Maximum price = suggested price + 200
+- Minimum price = lower than suggested (allowed)
+
+3. Quality Impact
+
+Use console quality or rating:
+
+- If quality >= 50%:
+  - price has normal effect
+
+- If quality < 50%:
+  - high prices must strongly reduce sales
+
+4. Sales Logic
+
+- High price + high quality → normal sales
+- High price + low quality → heavy penalty
+- Fair price → stable sales
+- Lower price → increased volume
+
+5. Feedback System
+
+- Show:
+  - suggested price
+  - current price
+
+- If price is too high for quality:
+  - show warning (example: "Preço acima da percepção de valor")
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not modify:
+  - game development system
+  - legal system
+  - financial system core
+
+- Only affect:
+  - console management UI
+  - console pricing logic
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- explain how navigation works
+- explain each section
+- explain pricing system behavior
+- confirm no existing systems were broken

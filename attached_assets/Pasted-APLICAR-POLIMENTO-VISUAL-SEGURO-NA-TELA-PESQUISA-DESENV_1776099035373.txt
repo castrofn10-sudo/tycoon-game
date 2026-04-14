@@ -1,0 +1,133 @@
+APLICAR POLIMENTO VISUAL SEGURO NA TELA "PESQUISA & DESENVOLVIMENTO"
+
+NÃO ALTERAR LÓGICA DO JOGO
+NÃO ALTERAR SISTEMA DE PESQUISA
+NÃO MEXER EM DESBLOQUEIOS
+NÃO CRIAR NOVAS MECÂNICAS
+APENAS MELHORAR VISUAL, ESPAÇAMENTO E ORGANIZAÇÃO DA TELA
+
+----------------------------------------
+[1] OBJETIVO
+----------------------------------------
+
+Deixar a tela "Pesquisa & Desenvolvimento" com aparência mais profissional, mais limpa e mais parecida com interface de jogo, sem pesar e sem causar bugs.
+
+----------------------------------------
+[2] BARRA DE CATEGORIAS
+----------------------------------------
+
+Melhorar a barra com:
+- Design
+- Tecnologia
+- Hardware
+
+Regras:
+- manter leve e responsiva
+- usar layout horizontal limpo
+- dar mais destaque para aba ativa
+- garantir bom espaçamento entre os botões
+- evitar sobreposição com o conteúdo abaixo
+- evitar qualquer uso desnecessário de posição absoluta
+
+----------------------------------------
+[3] HIERARQUIA VISUAL
+----------------------------------------
+
+Organizar a ordem visual corretamente:
+
+1. título da tela
+2. abas principais
+3. texto auxiliar curto
+4. barra de categorias (Design / Tecnologia / Hardware)
+5. cards de pesquisa
+
+Garantir separação clara entre cada camada visual
+
+----------------------------------------
+[4] POLIMENTO DOS CARDS
+----------------------------------------
+
+Melhorar os cards de pesquisa sem mudar sua lógica:
+
+- espaçamento interno mais limpo
+- título mais legível
+- custo/tempo/ano mais organizados
+- evitar texto espremido
+- manter estilo leve
+- não usar efeitos pesados
+
+----------------------------------------
+[5] REDUZIR POLUIÇÃO VISUAL
+----------------------------------------
+
+Ajustar para:
+- menos sensação de tela lotada
+- melhor leitura rápida
+- mais respiro entre elementos
+- consistência com o restante do jogo
+
+----------------------------------------
+[6] PERFORMANCE
+----------------------------------------
+
+NÃO adicionar:
+- animações pesadas
+- sombras excessivas
+- efeitos complexos
+- transições caras
+
+Se usar animação:
+- apenas microanimações leves
+- duração curta
+- sem impacto na performance
+
+----------------------------------------
+[7] RESPONSIVIDADE
+----------------------------------------
+
+Garantir que a tela fique estável em celular:
+
+- sem cortes
+- sem sobreposição
+- sem elementos escondidos
+- com scroll funcionando corretamente
+
+----------------------------------------
+[8] SEGURANÇA
+----------------------------------------
+
+NÃO modificar:
+- lógica de pesquisas
+- progressão
+- economia
+- equipe
+- desenvolvimento de jogos
+- saves
+- eventos
+
+APENAS polir a interface visual dessa tela
+
+----------------------------------------
+[9] RESULTADO ESPERADO
+----------------------------------------
+
+A tela deve ficar:
+- mais bonita
+- mais organizada
+- mais com cara de jogo
+- mais leve visualmente
+- sem causar bugs
+- sem pesar o app
+
+----------------------------------------
+[10] APÓS A ATUALIZAÇÃO
+----------------------------------------
+
+Informar:
+- quais arquivos visuais foram ajustados
+- o que foi melhorado no layout
+- confirmar que nenhuma lógica do jogo foi alterada
+- confirmar que a tela ficou leve e estável
+
+----------------------------------------
+FIM

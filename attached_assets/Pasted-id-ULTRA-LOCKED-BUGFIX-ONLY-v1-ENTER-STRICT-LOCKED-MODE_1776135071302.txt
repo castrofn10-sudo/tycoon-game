@@ -1,0 +1,116 @@
+id="ULTRA-LOCKED-BUGFIX-ONLY-v1"
+
+ENTER STRICT LOCKED MODE.
+
+You are NOT allowed to improve, redesign, refactor, or optimize anything.
+
+You will ONLY fix the exact issues listed below.
+
+---------------------------------------
+🚫 GLOBAL RESTRICTIONS (HARD LOCK)
+---------------------------------------
+
+FORBIDDEN:
+- UI redesign
+- layout restructuring
+- changing spacing, colors, or styles
+- renaming anything unrelated
+- refactoring components
+- touching gameEngine.ts (unless absolutely required for hiring fix)
+- modifying economy, rankings, news, saves, or progression systems
+
+ALLOWED:
+- minimal surgical fixes ONLY
+
+If a change is not strictly required for the listed bugs → DO NOT TOUCH.
+
+---------------------------------------
+🎯 BUGS TO FIX (ONLY THESE)
+---------------------------------------
+
+ISSUE 1 — DUPLICATE CREATION OPTIONS
+
+- There must be ONLY ONE "Criar Jogo"
+- There must be ONLY ONE "Criar Console"
+- These must exist ONLY in the TOP section
+
+REMOVE:
+- any duplicate creation cards/buttons at the bottom or repeated sections
+
+DO NOT:
+- move layout
+- redesign menu
+- change styles
+
+---------------------------------------
+
+ISSUE 2 — WRONG LABEL
+
+- Replace ALL instances of:
+  "Poucos" → "Equipe"
+
+DO NOT change any other text.
+
+---------------------------------------
+
+ISSUE 3 — HIRING BUG (CRITICAL)
+
+Problem:
+- Hiring deducts money
+- Employee is NOT added
+
+Fix requirements:
+
+1. Ensure hiring flow:
+   click → handler → state update → UI render
+
+2. Employee MUST:
+   - be added to team state
+   - persist correctly
+   - appear immediately in UI
+
+3. Money MUST:
+   - only be deducted AFTER successful hire
+
+4. Add FAIL-SAFE:
+   - if hiring fails → DO NOT deduct money
+
+5. Fix root cause ONLY:
+   Possible causes:
+   - missing state update
+   - wrong state mutation
+   - async issue
+   - overwrite of team array
+
+6. Apply fix to ALL hiring categories
+
+---------------------------------------
+🧪 VALIDATION (MANDATORY)
+---------------------------------------
+
+After applying fixes:
+
+- Confirm NO duplicate "Criar Jogo"
+- Confirm NO duplicate "Criar Console"
+- Confirm "Equipe" appears correctly everywhere
+- Confirm hiring works:
+  → employee appears
+  → money deducted correctly
+- Confirm no new TypeScript errors
+
+---------------------------------------
+📋 OUTPUT FORMAT (STRICT)
+---------------------------------------
+
+Return ONLY:
+
+1. Files modified
+2. Exact fixes applied (short)
+3. Confirmation:
+   - UI duplicates removed
+   - label corrected
+   - hiring working
+
+DO NOT explain code.
+DO NOT suggest improvements.
+DO NOT add anything extra.

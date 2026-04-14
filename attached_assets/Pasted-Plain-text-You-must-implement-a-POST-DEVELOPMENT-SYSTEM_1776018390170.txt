@@ -1,0 +1,155 @@
+Plain text
+
+You must implement a POST-DEVELOPMENT SYSTEM with clear, strategic, and realistic decisions for each game.
+
+HARD RULES:
+
+- DO NOT redesign the current UI layout
+- DO NOT break existing systems (feedback, events, global map, etc.)
+- DO NOT modify core economy or revenue systems
+- DO NOT create exaggerated bonuses or penalties
+- ONLY add post-development decisions and logic
+- Keep system stable, simple, and lightweight
+
+GOAL:
+Make the game lifecycle deeper and more strategic.
+
+The player must be able to:
+
+- manage games after launch
+- fix mistakes
+- extend game lifespan
+- make long-term decisions about each project
+
+IMPLEMENTATION:
+
+1. ADD POST-DEVELOPMENT SECTION
+
+Add a new section inside game management:
+
+"Post-Development" (or "Ajustes")
+
+This section must be accessible:
+
+- before launch (limited options)
+- after launch (full options)
+
+2. CORE ACTIONS
+
+A) FIX BUGS
+
+Condition:
+
+- Only if bugs are present
+
+Effect:
+
+- Gradually reduces bugs (severe -> medium -> low -> none)
+- Slight improvement in player perception
+- Small cost over time
+
+B) CREATE SEQUEL
+
+Condition:
+
+- Only if game score >= 70
+
+Effect:
+
+- Next game receives:
+  - hype bonus
+  - fan carryover
+
+Risk:
+
+- If sequel performs worse than original -> small reputation loss
+
+C) RELEASE DLC
+
+Condition:
+
+- Only after release
+
+Effect:
+
+- Generates additional revenue
+- Small increase in fans
+
+Limit:
+
+- Max 2-3 DLCs per game
+
+D) CANCEL PROJECT
+
+Condition:
+
+- Only before launch
+
+Effect:
+
+- Lose 30-50% of investment
+- Avoid negative launch outcome
+
+E) STOP SUPPORT
+
+Condition:
+
+- Only after release
+
+Effect:
+
+- Removes maintenance cost
+- Gradual fan decrease
+
+F) OPTIMIZE GAME
+
+Condition:
+
+- Only after release
+
+Effect:
+
+- Small hidden boost to long-term performance
+- Does not significantly change score
+
+3. GAME STATE TRACKING
+
+Each game must store:
+
+- isReleased (true/false)
+- supportActive (true/false)
+- bugLevel
+- dlcCount
+- sequelCreated (true/false)
+
+4. UI BEHAVIOR
+
+- Use current design style
+- Show actions as simple buttons or cards
+- Keep layout clean and readable
+- DO NOT create new complex screens
+
+5. BALANCE RULES
+
+- Effects must be small to moderate
+- Avoid stacking abuse
+- Avoid exponential growth
+
+PLAYER EXPERIENCE:
+
+- Decisions must feel meaningful
+- System must increase immersion
+- Extend gameplay loop naturally
+- Avoid overwhelming the player
+
+DO NOT:
+
+- Break existing systems
+- Change core gameplay flow
+- Create heavy or complex calculations
+
+AFTER IMPLEMENTATION:
+
+- Explain how each action works
+- Explain when actions become available
+- Confirm no existing systems were modified

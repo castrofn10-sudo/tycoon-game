@@ -1,0 +1,135 @@
+You are refining the NOTIFICATION and NEWS SYSTEM.
+
+DO NOT modify gameplay systems.
+DO NOT change economy, ratings, or core engine logic.
+
+----------------------------------
+
+GOAL:
+Create a REALISTIC, LOW-FREQUENCY NEWS SYSTEM fully based on game state.
+
+----------------------------------
+
+STRICT RULES:
+
+1. NO POPUPS during normal gameplay
+
+- Do NOT show any UI blocking elements
+- Do NOT interrupt gameplay
+- All events go to notification feed
+
+----------------------------------
+
+2. USE ONLY NOTIFICATION FEED
+
+All events must be logged into:
+- news log
+- notification panel
+
+No floating alerts
+No toast messages
+No center popups
+
+----------------------------------
+
+3. LOW FREQUENCY SYSTEM
+
+Events must be RARE and IMPORTANT
+
+Allowed events:
+
+- major console releases
+- major game releases
+- high-rated games (e.g. >85)
+- major failures (low rating <50)
+- bankrupt companies
+- major bugs affecting games
+- strong market trends
+
+Forbidden:
+
+- repetitive spam
+- minor updates
+- frequent trivial events
+
+----------------------------------
+
+4. ENGINE-BASED NEWS (CRITICAL)
+
+All news must be generated from REAL GAME DATA:
+
+- game ratings
+- sales performance
+- company finances
+- releases
+- failures
+
+DO NOT create random fake news
+
+----------------------------------
+
+5. NEWS STYLE
+
+Make messages feel realistic:
+
+Examples:
+
+"Sonex launches new console 'PlayBox X'"
+
+"Super Plumber Bros becomes a global hit"
+
+"Segato struggles after poor game release"
+
+"Microhard reports massive growth this quarter"
+
+----------------------------------
+
+6. CRISIS SYSTEM (RARE)
+
+Only allow popups when:
+
+- bankruptcy
+- major legal issues
+- extreme financial collapse
+
+----------------------------------
+
+7. LAWYER SYSTEM INTEGRATION
+
+If legal/advocacy system is active:
+
+- auto-resolve crisis
+- NO popup
+- log result in news feed only
+
+Example:
+
+"Legal team successfully handled company crisis"
+
+----------------------------------
+
+8. IMPLEMENTATION SAFETY
+
+- Do NOT modify existing event systems
+- Do NOT refactor core logic
+- Only extend notification handling
+- Keep everything modular
+
+----------------------------------
+
+9. RESULT
+
+System must:
+
+- feel realistic
+- be non-intrusive
+- show only meaningful events
+- enhance immersion
+- never annoy the player
+
+----------------------------------
+
+Return summary of:
+- what was added
+- what triggers events
+- confirmation no core systems were changed

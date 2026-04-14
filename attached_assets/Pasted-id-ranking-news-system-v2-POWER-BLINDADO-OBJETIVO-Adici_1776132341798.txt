@@ -1,0 +1,179 @@
+id="ranking-news-system-v2-POWER-BLINDADO"
+
+OBJETIVO:
+Adicionar sistema completo de ranking (Top 5) e notícias imersivas integrando player e IA, sem alterar sistemas existentes.
+
+CRÍTICO:
+Este sistema deve ser ADITIVO.
+NÃO substituir sistemas existentes.
+NÃO refatorar engine.
+NÃO alterar economia.
+NÃO alterar UI principal.
+NÃO alterar lógica de jogos ou consoles.
+
+---
+
+[1] ESCOPO PERMITIDO
+
+Permitir apenas:
+
+- criação de novos arquivos (ex: ranking.ts, news.ts)
+- leitura de dados existentes
+- integração leve no fluxo de tempo (ano/mês)
+
+PROIBIDO:
+
+- refatorar gameEngine
+- alterar cálculo de vendas
+- alterar cálculo de rating
+- alterar sistema de fãs
+- alterar sistema de dinheiro
+
+---
+
+[2] SISTEMA DE RANKING DE JOGOS
+
+Criar dois rankings anuais:
+
+1. Top 5 mais vendidos
+
+- baseado em unidades vendidas
+
+2. Top 5 melhor avaliados
+
+- baseado em rating
+- desempate por vendas
+
+INCLUIR:
+
+- jogos do player
+- jogos da IA
+
+REGRA:
+Se rating ≥ 90 → deve entrar no ranking
+
+---
+
+[3] SISTEMA DE RANKING DE CONSOLES
+
+Criar:
+
+1. Top 5 consoles mais vendidos
+
+- baseado em vendas totais
+
+2. Top 5 consoles do ano
+
+- baseado em:
+  - vendas
+  - biblioteca de jogos
+  - desempenho geral
+
+INCLUIR:
+
+- consoles do player
+- consoles da IA
+
+---
+
+[4] DETECÇÃO DE FRACASSOS
+
+Criar sistema simples:
+
+JOGOS:
+
+- rating ≤ 50
+  OU
+- vendas muito baixas
+
+CONSOLES:
+
+- vendas muito abaixo da média
+  OU
+- prejuízo
+
+---
+
+[5] SISTEMA DE NOTÍCIAS
+
+Criar feed de notícias NÃO intrusivo.
+
+Eventos:
+
+SUCESSO:
+
+- entrada no Top 5
+- rating ≥ 90
+- vendas altas
+
+FRACASSO:
+
+- flop
+- críticas negativas
+- bugs graves
+
+IA:
+
+- lançamentos importantes
+- domínio de mercado
+
+---
+
+[6] INTEGRAÇÃO PLAYER + IA
+
+CRÍTICO:
+
+- rankings usam lista combinada (player + IA)
+- notícias consideram ambos
+- nenhum sistema separado
+
+---
+
+[7] FREQUÊNCIA DE EVENTOS
+
+- eventos raros
+- evitar spam
+- agrupar notícias do mesmo tipo
+
+---
+
+[8] GATILHO DE ATUALIZAÇÃO
+
+Ranking deve atualizar:
+
+- ao final de cada ano
+
+Notícias:
+
+- ao lançar jogo
+- ao atingir marco relevante
+
+---
+
+[9] ESTRUTURA SEGURA
+
+Criar funções isoladas:
+
+- generateYearlyRankings()
+- generateNewsEvent()
+
+NÃO modificar funções existentes.
+
+---
+
+[10] VALIDAÇÃO FINAL
+
+Confirmar:
+
+✔ jogos do player aparecem no ranking
+✔ IA aparece junto
+✔ top 5 funcionando
+✔ fracassos aparecem nas notícias
+✔ sistema não interfere no jogo atual
+
+---
+
+RESULTADO ESPERADO:
+Sistema de ranking e notícias funcionando como camada adicional, sem quebrar o jogo.
+
+FIM

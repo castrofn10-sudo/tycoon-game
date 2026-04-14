@@ -1,0 +1,68 @@
+You must improve ONLY the navigation and organization of the "Desenvolvimento de Jogos" screen.
+
+HARD RULES:
+- DO NOT redesign the whole game screen
+- DO NOT change gameplay logic
+- DO NOT change revenue, score, DLC, sequel, or support systems
+- DO NOT modify game balance
+- DO NOT change existing card data or calculations
+- ONLY add a simple tab navigation to organize the current game lists
+- Keep build stable and safe
+
+GOAL:
+Make the "Desenvolvimento de Jogos" screen easier to use on mobile by separating content into clear tabs.
+
+IMPLEMENTATION:
+
+1. Add a tab bar at the top of the "Desenvolvimento de Jogos" screen
+- Keep the current visual style
+- Add simple tabs for:
+  - Jogos em criação
+  - Jogos lançados
+  - Histórico
+
+2. Jogos em criação tab
+- Show only games currently being developed
+- Keep current development card behavior unchanged
+
+3. Jogos lançados tab
+- Show only released games
+- Keep all existing controls exactly working as they do now:
+  - DLC
+  - sequência
+  - otimizar
+  - parar suporte
+  - desativar
+  - suporte pós-lançamento
+
+4. Histórico tab
+- Show older/inactive/completed game history in a cleaner separated area
+- If there is already an existing history source, reuse it
+- Do NOT invent a totally new gameplay system
+- This tab is only for organization and easier navigation
+
+5. Navigation behavior
+- Switching tabs must not reset game data
+- Switching tabs must not break state
+- Preserve current save/load behavior
+
+6. Mobile usability
+- Reduce the need to scroll through all game types mixed together
+- Make it easier to quickly identify:
+  - what is in development
+  - what is launched
+  - what belongs to historical records
+
+7. UI scope
+- Keep the same screen identity
+- Only add a clean top tab filter/selector
+- Do NOT redesign the cards themselves unless required for tab separation
+
+8. Safety
+- Do not touch unrelated screens
+- Do not affect office, market, global map, events, legal, or revenue systems
+
+AFTER:
+- say which files were changed
+- explain how each tab works
+- confirm no gameplay systems were changed

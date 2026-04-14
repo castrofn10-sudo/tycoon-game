@@ -1,0 +1,109 @@
+Refactor the "Pesquisa & Desenvolvimento" screen to solve the layout overlap issue once and for all.
+
+CRITICAL PROBLEM:
+In the "Árvore P&D" tab, the "Identidade da Empresa" block is still occupying valuable vertical space and is making the research tree/buttons harder to see and interact with.
+The current layout is still overlapping/compressing the research options.
+
+GOAL:
+Move the "Identidade da Empresa" content out of the "Árvore P&D" tab and create a separate dedicated tab for it.
+
+====================================
+1. CREATE A NEW TAB
+====================================
+
+Inside "Pesquisa & Desenvolvimento", add a new tab:
+
+- Árvore P&D
+- Exclusivos
+- Identidade da Empresa  ← NEW
+
+====================================
+2. REMOVE THE IDENTITY BLOCK FROM ÁRVORE P&D
+====================================
+
+- Remove the entire "Identidade da Empresa" summary block from the top of the "Árvore P&D" tab
+- Remove any leftover spacing from it
+- Do not leave empty gaps
+
+This space must be fully reclaimed for the research tree/cards
+
+====================================
+3. KEEP ÁRVORE P&D CLEAN
+====================================
+
+In the "Árvore P&D" tab:
+- show the research tree/cards higher on the screen
+- improve visibility of research options
+- ensure no top blocks overlap or compress the buttons
+- make research cards easier to tap and read on mobile
+
+The priority is:
+- more visible cards
+- less clutter
+- better usability
+
+====================================
+4. NEW TAB: IDENTIDADE DA EMPRESA
+====================================
+
+Create a dedicated "Identidade da Empresa" tab and move the identity-related content there.
+
+Include existing identity attributes such as:
+- Hardware
+- Premium
+- Jogos
+- Inovação
+- Online
+- Negócios
+
+====================================
+5. MAKE THE NEW IDENTITY TAB MORE INTERESTING
+====================================
+
+Do not make it a simple stats page only.
+Turn it into a more interesting strategic panel.
+
+Add useful/game-like features such as:
+- company identity profile summary
+- strongest traits
+- weakest traits
+- current company style/personality
+- small flavor descriptions
+- possible future identity evolution hints
+- visual identity score or specialization emphasis
+
+Examples of interesting additions:
+- "Sua empresa é vista como inovadora, premium e agressiva"
+- "Foco atual: hardware e negócios"
+- "Ponto fraco atual: presença online"
+- "Traço dominante: visão futurista"
+
+Keep it elegant and useful, not bloated.
+
+====================================
+6. MOBILE-FIRST REQUIREMENTS
+====================================
+
+- Ensure tabs are easy to tap
+- Ensure the new layout works well on smaller screens
+- Ensure the research tree is no longer visually blocked
+- Avoid overlapping UI
+- Avoid large empty spaces
+
+====================================
+7. DO NOT CHANGE CORE GAME LOGIC
+====================================
+
+- This is mainly a layout / UX restructure
+- Keep the P&D system working
+- Keep research unlock logic intact
+
+====================================
+8. FINAL CHECK
+====================================
+
+After changes:
+- Árvore P&D must be visually cleaner
+- research buttons/cards must appear earlier and more clearly
+- no overlap from company identity block
+- new "Identidade da Empresa" tab must work and feel meaningful

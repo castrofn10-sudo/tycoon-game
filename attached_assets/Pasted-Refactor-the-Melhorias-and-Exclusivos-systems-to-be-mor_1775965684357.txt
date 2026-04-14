@@ -1,0 +1,161 @@
+Refactor the “Melhorias” and “Exclusivos” systems to be more realistic, balanced, and simulation-oriented, WITHOUT introducing new effect types or modifying any core game logic.
+
+========================
+🔒 HARD RULES (MANDATORY)
+========================
+
+- DO NOT create new effect types
+- ONLY use existing effect types already implemented in the game
+- DO NOT modify:
+  - economy system
+  - research system
+  - combo system
+  - save/load logic
+  - progression logic
+  - market / competitors
+- DO NOT refactor backend structure
+- DO NOT change data schema
+
+Allowed changes ONLY:
+- adjust numerical values
+- update descriptions (UI text)
+
+========================
+🎯 DESIGN GOAL
+========================
+
+Transform improvements into:
+- subtle
+- realistic
+- cumulative
+- grounded in simulation
+
+Remove arcade-style progression (no exaggerated bonuses).
+
+========================
+⚙️ VALUE BALANCING RULES
+========================
+
+Adjust all improvement and exclusive values:
+
+EARLY GAME:
+- between 0.01 and 0.03
+
+MID GAME:
+- up to 0.04 or 0.05
+
+LATE GAME:
+- max between 0.06 and 0.08
+
+STRICT RULES:
+- No large spikes (e.g. 10%+ bonuses)
+- No instant advantage mechanics
+- No exponential stacking
+- Effects must feel incremental and realistic
+
+========================
+🧩 MELHORIAS (IMPLEMENTATION)
+========================
+
+For every existing improvement:
+
+1. KEEP:
+   - same ID
+   - same structure
+   - same effect types
+
+2. ADJUST:
+   - reduce values if above target ranges
+   - normalize to balanced scaling
+
+3. UPDATE DESCRIPTION:
+   - use professional, grounded language
+   - explain the operational improvement
+   - avoid exaggerated wording
+
+Example:
+
+Before:
++15% revenue
+-20% research time
+
+After (same effect types):
++0.02 revenue
+-0.02 researchTime
+
+Description:
+"Improves internal operational efficiency and resource allocation, slightly increasing output consistency."
+
+========================
+💎 EXCLUSIVOS (IMPLEMENTATION)
+========================
+
+Apply same logic:
+
+- KEEP existing effect types
+- REDUCE values to moderate range
+- ENSURE no system-breaking advantage
+
+Optional (ONLY if already supported by system):
+- introduce small trade-offs using existing effects
+
+Example:
+
+Before:
++18% sales
++10% fans
+
+After:
++0.03 sales
++0.02 fans
+
+Description:
+"Unique strategic positioning that enhances product reach and brand perception over time."
+
+========================
+🖥 UI TEXT RULES
+========================
+
+Rewrite all descriptions to be:
+
+- concise
+- professional
+- realistic
+- system-focused (not hype-based)
+
+Avoid:
+- "massive boost"
+- "huge gains"
+- "instant growth"
+
+Prefer:
+- "incremental improvement"
+- "efficiency optimization"
+- "long-term impact"
+
+========================
+🚫 DO NOT TOUCH
+========================
+
+- research.tsx logic
+- combo logic
+- engine mechanics
+- financial calculations
+- save system
+- unlock conditions
+
+========================
+✅ FINAL CHECK
+========================
+
+After applying:
+
+- Confirm NO new effect types were created
+- Confirm ALL values are within defined ranges
+- Confirm NO core system was modified
+- Confirm build has ZERO new errors
+
+Return a short summary of:
+- how many improvements were adjusted
+- how many exclusivos were adjusted
+- confirmation that system integrity is preserved

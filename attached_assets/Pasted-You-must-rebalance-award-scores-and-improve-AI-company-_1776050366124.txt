@@ -1,0 +1,98 @@
+You must rebalance award scores and improve AI company behavior to create a more realistic and dynamic game world.
+
+HARD RULES:
+- DO NOT change UI layout
+- DO NOT remove award system
+- DO NOT break game logic
+- DO NOT modify player progression systems
+- ONLY adjust score ranges and AI behavior
+
+GOAL:
+Make awards realistic and AI competitors more human-like with successes and failures.
+
+----------------------------------------
+PART 1 — AWARD SCORE BALANCING
+----------------------------------------
+
+Adjust award score ranges:
+
+1st place:
+- score between 86 and 100
+
+2nd place:
+- score between 72 and 86
+
+3rd place:
+- score between 52 and 74
+
+----------------------------------------
+PART 2 — RANDOMIZATION
+----------------------------------------
+
+- Scores must be randomly generated within each range
+- Avoid fixed or repeated values
+- Ensure variation between years
+
+----------------------------------------
+PART 3 — REALISTIC DIFFERENCES
+----------------------------------------
+
+- Keep small differences between positions
+- Avoid extreme gaps (ex: 98 vs 70)
+- Typical difference should feel competitive
+
+----------------------------------------
+PART 4 — AI COMPANY IMPROVEMENT
+----------------------------------------
+
+AI companies must no longer be perfect.
+
+Add behavior variation:
+
+- Sometimes release bad games
+- Sometimes have low ratings
+- Sometimes lose money
+- Sometimes fail projects
+- Sometimes delay releases
+- Sometimes make poor strategic decisions
+
+----------------------------------------
+PART 5 — MARKET EVENTS
+----------------------------------------
+
+Generate more dynamic news:
+
+Examples:
+- "Game launch failed"
+- "Company lost reputation"
+- "Major financial loss"
+- "Unexpected success"
+- "Critical bug backlash"
+- "Studio layoffs"
+
+----------------------------------------
+PART 6 — VARIABILITY
+----------------------------------------
+
+- Not all companies should perform equally
+- Some should dominate temporarily
+- Others should decline or struggle
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not affect:
+  - player stats
+  - core gameplay loop
+  - financial system logic
+  - UI structure
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- confirm new score ranges
+- confirm randomness is active
+- confirm AI can fail and succeed
+- confirm news system reflects events

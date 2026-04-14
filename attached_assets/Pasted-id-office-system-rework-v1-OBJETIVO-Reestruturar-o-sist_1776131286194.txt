@@ -1,0 +1,137 @@
+id="office-system-rework-v1"
+
+OBJETIVO:
+Reestruturar o sistema de Escritório para torná-lo estratégico, informativo e escalável.
+
+IMPORTANTE:
+- NÃO alterar lógica global do jogo
+- NÃO quebrar saves existentes
+- NÃO modificar sistemas de economia base
+- APENAS melhorar exibição, organização e impacto percebido
+
+----------------------------------------
+[1] MELHORAR VISUALIZAÇÃO DOS SETORES
+----------------------------------------
+
+Para cada setor (Design, Desenvolvimento, Marketing, Operações, Segurança, Executivo):
+
+Adicionar descrição de impacto direto no jogo.
+
+Exemplo:
+
+Design:
++X% qualidade final dos jogos
++X% avaliação crítica
+
+Desenvolvimento:
++X% velocidade de produção
+- X% tempo de desenvolvimento
+
+Marketing:
++X% fãs por lançamento
++X% eficiência de campanhas
+
+Operações:
+- X% custo geral
++X% eficiência de produção
+
+Segurança:
+- X% risco de eventos negativos
++X% estabilidade da empresa
+
+Executivo:
++X% decisões estratégicas
++X% bônus globais leves
+
+Os valores devem escalar suavemente conforme nível (ex: 1% a cada 2 níveis).
+
+----------------------------------------
+[2] SISTEMA DE PROGRESSÃO POR MARCOS
+----------------------------------------
+
+A cada 5 níveis em um setor:
+
+Desbloquear bônus adicional visível.
+
+Exemplo:
+Nível 5:
++ bônus extra pequeno
+
+Nível 10:
++ bônus secundário
+
+Nível 15+:
++ bônus estratégico leve
+
+Mostrar isso na UI como:
+
+"Próximo bônus em nível X"
+
+----------------------------------------
+[3] MELHORAR SISTEMA DE FASES DO ESCRITÓRIO
+----------------------------------------
+
+Cada fase deve mostrar benefícios reais:
+
+Fase 1 – Fundação
+- limite básico
+
+Fase 2 – Expansão
+- permite múltiplos projetos simultâneos
+
+Fase 3 – Profissional
+- bônus global leve em produção
+
+Fase 4 – Corporativo
+- bônus geral em todas áreas
+
+Exibir esses bônus na interface.
+
+----------------------------------------
+[4] ADICIONAR IDENTIDADE ESTRATÉGICA
+----------------------------------------
+
+Adicionar modo de foco do escritório:
+
+- Equilibrado (padrão)
+- Qualidade (boost em Design)
+- Velocidade (boost em Desenvolvimento)
+- Lucro (boost em Operações)
+
+Apenas alterar multiplicadores leves (máx 10%).
+
+----------------------------------------
+[5] AJUSTAR CUSTO DE MANUTENÇÃO
+----------------------------------------
+
+Escalar custo com base na era:
+
+1970–1980 → baixo impacto
+1990–2000 → médio
+2010+ → alto
+
+Garantir que custo seja relevante no início e equilibrado depois.
+
+----------------------------------------
+[6] MELHORAR FEEDBACK VISUAL
+----------------------------------------
+
+Adicionar:
+
+- barras mais claras de progresso
+- cores indicando eficiência (verde, amarelo, vermelho)
+- tooltip ou texto curto explicando cada setor
+
+----------------------------------------
+[7] NÃO QUEBRAR SISTEMAS EXISTENTES
+----------------------------------------
+
+Garantir compatibilidade com:
+
+- saves
+- economia atual
+- progressão de jogadores
+- sistema de jogos e consoles
+
+----------------------------------------
+FIM DO PROMPT

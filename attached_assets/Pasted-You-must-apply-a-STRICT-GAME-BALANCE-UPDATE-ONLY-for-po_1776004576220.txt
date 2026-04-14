@@ -1,0 +1,87 @@
+You must apply a STRICT GAME BALANCE UPDATE ONLY for post-launch game revenue and lifecycle.
+
+HARD RULES:
+- DO NOT redesign UI
+- DO NOT change research, office, market, console, save/load, or unrelated systems
+- DO NOT refactor unrelated code
+- ONLY rebalance post-launch game performance based on final score
+- Keep build stable and safe
+
+GOAL:
+Create a realistic and satisfying balance for released games based on final score from 20/100 to 100/100.
+
+REQUIRED QUALITY TIERS:
+- 20–39 = 1 star
+- 40–54 = 2 stars
+- 55–69 = 3 stars
+- 70–84 = 4 stars
+- 85–100 = 5 stars
+
+BALANCE TARGETS:
+
+1 STAR (20–39)
+- very weak launch
+- very short lifespan
+- total revenue around 0.2x to 0.5x development cost
+
+2 STARS (40–54)
+- weak/underperforming
+- short lifespan
+- total revenue around 0.6x to 1.2x development cost
+
+3 STARS (55–69)
+- average/sustainable
+- medium lifespan
+- total revenue around 1.2x to 2.5x development cost
+
+4 STARS (70–84)
+- strong launch
+- good lifespan
+- total revenue around 2.5x to 6x development cost
+
+5 STARS (85–100)
+- hit/successful
+- long lifespan
+- total revenue around 6x to 20x development cost depending on era
+
+IMPLEMENTATION REQUIREMENTS:
+
+1. Rebalance launch strength and monthly revenue scaling using final score
+2. High-score games must clearly outperform medium-score games
+3. 4-star games must generate meaningful profit
+4. 5-star games must feel like real hits
+5. 1- and 2-star games must feel disappointing but not always totally useless
+6. Keep era-based market scaling intact
+7. Use the score itself (20–100), not only the star bucket, for smooth scaling
+8. Rebalance product lifespan by score:
+   - low score = shorter
+   - high score = longer
+
+RECOMMENDED CURVE:
+- 20 -> 0.20
+- 30 -> 0.35
+- 40 -> 0.60
+- 50 -> 0.90
+- 60 -> 1.40
+- 70 -> 2.20
+- 80 -> 3.60
+- 90 -> 6.00
+- 100 -> 9.00
+
+LIFESPAN TARGET:
+- 20–39 => 2–6 months
+- 40–54 => 4–10 months
+- 55–69 => 8–16 months
+- 70–84 => 12–24 months
+- 85–100 => 18–36 months
+
+IMPORTANT:
+- Do not make the early game absurdly easy
+- Do not remove the importance of marketing/hype/genre/platform fit
+- Just make score matter much more realistically
+
+AFTER COMPLETION:
+- list exactly which file(s) were modified
+- explain how post-launch revenue scaling now works
+- explain how lifespan now works
+- confirm no unrelated systems were changed

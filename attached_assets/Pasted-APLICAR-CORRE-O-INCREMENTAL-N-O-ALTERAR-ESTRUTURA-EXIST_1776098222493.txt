@@ -1,0 +1,161 @@
+APLICAR CORREÇÃO INCREMENTAL — NÃO ALTERAR ESTRUTURA EXISTENTE
+NÃO REMOVER SISTEMAS ATUAIS
+CORRIGIR APENAS A LÓGICA DE NOTA PÓS-LANÇAMENTO, BUGS E OTIMIZAÇÃO
+
+----------------------------------------
+[1] PROBLEMA A CORRIGIR
+----------------------------------------
+
+Atualmente a nota do jogo pode despencar de forma exagerada após o lançamento.
+
+Exemplo incorreto:
+- jogo lança com 65/100
+- depois cai para 31/100 ou 20/100
+
+Esse comportamento deve ser removido.
+
+A nota NÃO pode colapsar de forma extrema sem lógica clara.
+
+----------------------------------------
+[2] SEPARAR NOTA BASE DE PENALIDADE TEMPORÁRIA
+----------------------------------------
+
+Criar distinção entre:
+
+- baseRating = qualidade real do jogo
+- launchPenalty = penalidade temporária por bugs, falta de polimento ou problemas de lançamento
+
+A nota exibida no lançamento deve ser:
+
+visibleRating = baseRating - launchPenalty
+
+IMPORTANTE:
+- a baseRating não deve ser destruída
+- apenas a penalidade temporária pode reduzir a nota visível
+
+----------------------------------------
+[3] LIMITAR PENALIDADE DE LANÇAMENTO
+----------------------------------------
+
+A penalidade de bugs/polimento deve ser moderada.
+
+Regras:
+- jogos comuns: penalidade pequena a média
+- jogos bem desenvolvidos: penalidade mínima
+- jogos com estrutura ruim: penalidade maior, mas ainda controlada
+
+NUNCA permitir quedas absurdas como:
+- 65 → 31
+- 80 → 40
+sem evento crítico real
+
+Faixa sugerida:
+- penalidade leve: 0 a 4 pontos
+- penalidade média: 5 a 10 pontos
+- penalidade forte: 11 a 15 pontos no máximo em casos ruins
+
+----------------------------------------
+[4] CORREÇÃO DE BUGS DEVE RECUPERAR NOTA
+----------------------------------------
+
+Quando o jogador usar ação de corrigir bugs:
+
+- remover grande parte da launchPenalty
+- recuperar nota visível de forma lógica
+
+Exemplo:
+- baseRating = 65
+- launchPenalty = 8
+- nota visível = 57
+- corrigir bugs remove 5 ou 6 pontos de penalidade
+- nota sobe para 62 ou 63
+
+----------------------------------------
+[5] OTIMIZAÇÃO DEVE MELHORAR AINDA MAIS
+----------------------------------------
+
+Quando o jogador usar otimização:
+
+- remover mais uma parte da penalidade restante
+- ou aplicar pequeno bônus de polimento
+
+Exemplo:
+- após corrigir bugs, nota 63
+- otimização leva para 67 ou 69
+
+Se o jogo e a empresa forem muito bons:
+- pode passar levemente da nota inicial visível
+- mas sem exagero
+
+----------------------------------------
+[6] EVOLUÇÃO DA EMPRESA DEVE REDUZIR PROBLEMAS FUTUROS
+----------------------------------------
+
+Melhorias em:
+- escritório
+- equipe
+- pesquisas
+- tecnologia
+- estrutura da empresa
+
+devem reduzir naturalmente a launchPenalty de jogos futuros.
+
+Objetivo:
+- early game = mais chance de sair com bugs
+- mid game = mais estabilidade
+- late game = jogos saem mais polidos
+
+----------------------------------------
+[7] JOGOS DE ALTA QUALIDADE DEVEM SER MAIS ESTÁVEIS
+----------------------------------------
+
+Se o jogo já tiver nota alta:
+
+- a perda inicial deve ser mínima
+- correção de bugs e otimização devem estabilizar ou melhorar levemente a nota
+
+Exemplo desejado:
+- jogo sai 85
+- cai para 83
+- otimiza e sobe para 88 ou 90
+
+----------------------------------------
+[8] EVITAR OSCILAÇÃO EXAGERADA
+----------------------------------------
+
+Após lançamento:
+- a nota não deve oscilar violentamente
+- mudanças devem ser pequenas e justificadas
+- usar curva suave e previsível
+
+----------------------------------------
+[9] NÃO ALTERAR OUTRAS ÁREAS
+----------------------------------------
+
+NÃO modificar:
+- sistema financeiro
+- sistema de IA
+- sistema de eventos
+- sistema de marketing
+- sistema de vendas base
+
+APENAS corrigir:
+- nota pós-lançamento
+- penalidade de bugs/polimento
+- recuperação via correção e otimização
+- influência da evolução da empresa na qualidade final
+
+----------------------------------------
+[10] APÓS A CORREÇÃO
+----------------------------------------
+
+Confirmar:
+- como a nota base foi separada da penalidade temporária
+- qual é a faixa máxima de queda agora
+- como correção de bugs recupera nota
+- como otimização melhora a nota
+- como pesquisas e estrutura reduzem bugs nos jogos futuros
+
+----------------------------------------
+FIM DA CORREÇÃO
+NÃO MODIFICAR OUTRAS ÁREAS

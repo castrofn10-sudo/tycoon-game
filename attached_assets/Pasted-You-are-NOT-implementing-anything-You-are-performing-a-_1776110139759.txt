@@ -1,0 +1,110 @@
+You are NOT implementing anything.
+
+You are performing a SAFE CODE AUDIT.
+
+DO NOT modify files.
+DO NOT refactor.
+DO NOT optimize.
+DO NOT rewrite logic.
+
+Your ONLY job is to SEARCH and VALIDATE the current implementation.
+
+----------------------------------
+
+GOAL:
+Verify that the custom founder system was implemented correctly and safely.
+
+----------------------------------
+
+STEP 1 — FIND USAGES
+
+Search for:
+
+- marketingEfficiency
+- combinedCampaignMult
+- FounderModifiers
+- getFounderModifiers
+- founderAttrs
+- createInitialGameState
+
+----------------------------------
+
+STEP 2 — VALIDATE LOGIC
+
+1. marketingEfficiency
+
+Confirm:
+- It is used as a small decimal (e.g. 0.01 = 1%)
+- NOT values like 1, 2, etc.
+
+----------------------------------
+
+2. combinedCampaignMult
+
+Confirm the final formula is EXACTLY:
+
+researchBonuses.campaignMult *
+empBonuses.campaignMult *
+charBonuses.campaignMult *
+eraBonuses.campaignMult *
+(1 + fm.marketingEfficiency)
+
+Check:
+- No duplicated declarations
+- No missing multipliers
+- No syntax issues
+
+----------------------------------
+
+3. FounderModifiers
+
+Confirm:
+
+type FounderModifiers includes:
+- productQuality
+- researchSpeed
+- marketingEfficiency
+
+----------------------------------
+
+4. getFounderModifiers
+
+Confirm:
+- It is a PURE function
+- No side effects
+- Returns SMALL values (max ~0.02)
+
+----------------------------------
+
+5. founderAttrs flow
+
+Confirm:
+
+- Exists in SaveSlot
+- Passed into createInitialGameState
+- Used to compute FounderModifiers ONCE at game start
+
+----------------------------------
+
+STEP 3 — SAFETY CHECK
+
+Confirm:
+
+- No loops were added using founderModifiers
+- No continuous updates per tick
+- No global system was modified
+
+----------------------------------
+
+STEP 4 — OUTPUT
+
+Return ONLY:
+
+1. ✅ What is correct
+2. ⚠️ What is risky (if any)
+3. ❌ What is broken (if any)
+
+DO NOT suggest improvements.
+DO NOT rewrite code.
+
+Only audit and report.

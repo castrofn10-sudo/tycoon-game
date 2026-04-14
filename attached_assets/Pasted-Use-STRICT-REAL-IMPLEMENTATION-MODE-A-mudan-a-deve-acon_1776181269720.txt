@@ -1,0 +1,160 @@
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+FEATURE IMPLEMENTATION MODE — ESTÚDIO DO ANO + AJUSTE DE FREQUÊNCIA DAS IAS
+
+OBJETIVO:
+Implementar no MegaCorp Tycoon V1:
+1) um prêmio anual de “Estúdio do Ano”
+2) uma lógica mais realista para frequência de lançamentos das empresas rivais/IA, reduzindo spam de jogos e consoles
+
+REGRAS:
+- implementar em código real e refletir no runtime
+- não considerar concluído se existir apenas em texto, UI ou constante sem uso
+- não quebrar saves existentes
+- não alterar UI geral além do necessário para exibir o novo prêmio/efeitos
+- não mexer na lógica central fora do escopo
+- manter tipagem TypeScript correta
+- mudanças mínimas, mas completas
+
+PARTE 1 — PRÊMIO “ESTÚDIO DO ANO”
+
+Adicionar um prêmio anual chamado:
+- Estúdio do Ano
+
+Esse prêmio deve ser calculado com base em uma pontuação anual consolidada por empresa, usando dados reais do jogo.
+
+FONTE DE VERDADE:
+Usar os dados anuais reais já consolidados no pipeline de:
+- rankings anuais de jogos
+- rankings anuais de consoles
+- premiações gerais
+- premiações por categoria
+- receita anual
+- crescimento de fãs
+- reputação anual
+- fracassos relevantes, se existirem
+
+REGRA DE PONTUAÇÃO:
+Criar um sistema de score anual por empresa com pesos claros.
+
+SUGESTÃO DE PESOS:
+- jogo no topo de vendas anual: +20
+- jogo no topo de crítica anual: +20
+- console mais vendido do ano: +25
+- console mais aclamado do ano: +25
+- cada prêmio por categoria vencido: +10
+- crescimento forte de fãs: +5 a +15
+- receita anual elevada: +5 a +20
+- reputação alta: +5 a +15
+
+PENALIDADES:
+- jogo fracassado/flop relevante: -5 a -15
+- prejuízo anual: -10 a -20
+- queda forte de reputação: -5 a -15
+- problemas graves recorrentes, se houver sistema correspondente: -5 a -15
+
+REGRAS IMPORTANTES:
+- o vencedor deve ser a empresa com maior pontuação anual total
+- jogador e IAs/rivais devem concorrer igualmente
+- não criar vencedor fake fora dos dados reais
+- se houver empate, usar desempate coerente nesta ordem:
+  1. maior receita anual
+  2. mais prêmios gerais
+  3. melhor reputação
+  4. maior crescimento de fãs
+
+RESULTADO ESPERADO:
+- no fechamento anual, o jogo determina legitimamente o “Estúdio do Ano”
+- a notícia/premiação anual deve refletir esse resultado de forma coerente com o estilo já existente
+
+PARTE 2 — REDUZIR FREQUÊNCIA DE LANÇAMENTO DAS IAS
+
+OBJETIVO:
+Fazer com que as empresas rivais/IA lancem jogos e consoles de forma mais realista e menos exagerada.
+
+REGRA PARA CONSOLES:
+- cada IA deve lançar, em média, 1 console a cada 2 a 4 anos
+- implementar cooldown real entre lançamentos de consoles:
+  - mínimo: 24 meses
+  - máximo alvo: 48 meses
+- antes de lançar novo console, a IA deve verificar:
+  - tempo desde o último console
+  - condição financeira mínima
+  - tecnologia/época disponível
+- a chance de lançar deve aumentar conforme o tempo passa após o mínimo de 24 meses
+- evitar spam de consoles no mesmo ano sem justificativa
+
+COMPORTAMENTO ESPERADO PARA CONSOLES:
+- IAs pequenas podem demorar mais
+- IAs grandes podem lançar com mais consistência, mas ainda respeitando o intervalo
+- consoles devem parecer eventos mais especiais e relevantes
+
+REGRA PARA JOGOS:
+- cada IA deve lançar menos jogos por ano
+- meta anual padrão:
+  - empresa pequena: 2 a 4 jogos/ano
+  - empresa média: 3 a 5 jogos/ano
+  - empresa grande: 4 a 6 jogos/ano
+- essa meta deve ser distribuída ao longo do ano, e não lançada de forma artificial em bloco sem critério
+- considerar:
+  - tamanho da empresa
+  - condição financeira
+  - capacidade de produção
+  - eventuais penalidades por crise
+
+COMPORTAMENTO ESPERADO PARA JOGOS:
+- menos spam de títulos
+- ranking anual mais crível
+- mais valor por lançamento
+- concorrência ainda forte, mas não artificial
+
+PARTE 3 — IMPLEMENTAÇÃO TÉCNICA
+
+IDENTIFICAR E AJUSTAR:
+- onde a IA agenda/cria lançamentos de jogos
+- onde a IA agenda/cria lançamentos de consoles
+- onde ficam registrados:
+  - último lançamento de console por empresa
+  - total de jogos lançados no ano por empresa
+  - estado anual das empresas
+- onde é calculado o fechamento anual para encaixar “Estúdio do Ano”
+
+IMPLEMENTAR DADOS NECESSÁRIOS:
+- lastConsoleReleaseYear ou lastConsoleReleaseMonth por empresa
+- annualGameReleaseCount por empresa
+- annualStudioScore por empresa
+- qualquer helper necessário para cálculo anual
+
+GARANTIR:
+- compatibilidade com saves existentes
+- se dados novos não existirem em saves antigos, inicializar de forma segura
+- não duplicar pipeline anual
+- usar o sistema real já existente sempre que possível
+
+PARTE 4 — VALIDAÇÃO OBRIGATÓRIA EM RUNTIME
+
+VALIDAR:
+1. um ano em que o jogador vence Estúdio do Ano
+2. um ano em que uma rival vence Estúdio do Ano
+3. uma IA pequena não spamma consoles
+4. uma IA grande ainda lança consoles, mas respeitando o cooldown
+5. o número de jogos lançados por IA por ano fica dentro de uma faixa crível
+6. notícias/rankings/premiações continuam consistentes após essas mudanças
+
+NÃO CONSIDERAR CONCLUÍDO SE:
+- só existir texto novo sem lógica real
+- o prêmio Estúdio do Ano não sair dos dados anuais reais
+- as IAs continuarem lançando consoles/jogos em frequência exagerada
+- a mudança não for perceptível jogando
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+1) arquivos alterados
+2) onde foi implementada a lógica de pontuação do Estúdio do Ano
+3) quais critérios/pesos foram usados
+4) como o desempate foi tratado
+5) onde foi implementado o cooldown de consoles das IAs
+6) como a meta anual de jogos das IAs foi aplicada
+7) como foi validado que tudo funciona no runtime
+8) confirmar que não ficou só em texto/arquivo sem efeito real no jogo

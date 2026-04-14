@@ -1,0 +1,83 @@
+Expand the competitor market system so rival companies grow, decline, fail, and become acquirable over time.
+
+Requirements:
+
+1. Make rival companies evolve every month in a realistic way.
+Each company should dynamically update:
+- cash
+- monthly revenue
+- monthly profit/loss
+- reputation
+- innovation
+- market share
+- market value
+
+2. Add a market value system.
+Each rival company must have a calculated market value based on:
+- cash
+- annual revenue
+- reputation
+- innovation
+- market share
+
+Use a reasonable formula and keep it balanced.
+
+3. Make rivals able to grow or decline.
+Their finances and strength should change over time based on:
+- product quality
+- launches
+- innovation
+- market trends
+- attacks/news
+- reputation
+- market share
+
+4. Add company crisis and bankruptcy progression.
+If a company stays financially weak for too long:
+- enter crisis state
+- lose value
+- risk bankruptcy
+- eventually fail if not recovered
+
+5. Add acquisition system.
+If the player has enough money, they should be able to attempt to buy a company.
+Acquisition logic should consider:
+- target company market value
+- target company financial health
+- target company aggressiveness
+- player money
+- player reputation
+- random negotiation factor
+
+6. Add the ability to buy bankrupt companies at a discount.
+When a company fails:
+- player can buy it or its assets
+- acquisition price should be lower than full market value
+- buying should affect market share and maybe innovation/reputation
+
+7. Allow all companies in the market to potentially become purchasable if:
+- player has enough money
+- target company is willing to sell
+- conditions are met
+
+8. Keep it balanced.
+- Large healthy companies should not sell easily
+- Weak companies should be more open to acquisition
+- Very strong player companies should be able to dominate the market over time
+
+9. Add UI support where appropriate.
+On the market/company screen, show:
+- market value
+- financial health
+- acquisition availability
+- estimated buyout cost
+- status (healthy / pressured / crisis / bankrupt)
+
+10. Do not break existing save/load systems.
+Persist all new company fields safely.
+
+11. Explain clearly:
+- which files were changed
+- what new fields were added to companies
+- how market value is calculated
+- how acquisition and bankruptcy work

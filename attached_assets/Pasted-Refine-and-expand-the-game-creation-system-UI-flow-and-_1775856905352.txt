@@ -1,0 +1,233 @@
+Refine and expand the game creation system, UI flow, and Doc commentary system.
+
+IMPORTANT:
+- DO NOT remove or modify existing categories
+- ONLY ADD new categories
+- Improve UX with a step-by-step creation flow
+- Keep UI clean, mobile-friendly, and intuitive
+- DO NOT remove existing Doc lines, only ADD new ones
+
+====================================
+1. GAME CREATION FLOW (MULTI-STEP UI)
+====================================
+
+Replace the current "New Game" creation layout with a structured tab/step system.
+
+GOAL:
+Make the process organized, clean, and easy to follow on mobile.
+
+------------------------------------
+STEP STRUCTURE (TABS INSIDE SAME SCREEN)
+------------------------------------
+
+Step 1 → Categories
+Step 2 → Target Audience & Age Rating
+Step 3 → Platforms & Consoles
+
+------------------------------------
+STEP 1 – CATEGORY SELECTION
+------------------------------------
+
+- Create a dedicated tab ONLY for game categories
+- Allow selecting:
+  - Single category
+  - OR multiple categories (up to 3 max)
+
+- UI must:
+  - Be scrollable or grid-based
+  - Avoid overcrowding
+  - Show selected categories clearly
+
+- Add all new categories (see section 2)
+
+------------------------------------
+STEP 2 – TARGET AUDIENCE & RATING
+------------------------------------
+
+- Separate tab for:
+  - Target audience:
+    - Kids
+    - Teens
+    - Adults
+    - All Ages
+  - Age rating (classification)
+
+- UI must:
+  - Be simple
+  - Easy to tap on mobile
+  - Visually clean
+
+------------------------------------
+STEP 3 – PLATFORMS & CONSOLES
+------------------------------------
+
+- Final tab for selecting platforms:
+  - Player’s own consoles
+  - Rival consoles (if contracts exist)
+
+- Show:
+  - Installed base
+  - Popularity
+  - Revenue share (if external)
+
+- Keep layout clean and easy to select
+
+------------------------------------
+NAVIGATION RULES
+------------------------------------
+
+- Add:
+  - "Next" button
+  - "Back" button
+- Prevent skipping steps without selection
+- Show current step indicator (1/3, 2/3, 3/3)
+
+====================================
+2. ADD NEW GAME CATEGORIES (EXPANSION)
+====================================
+
+DO NOT remove existing categories.
+
+Add NEW categories:
+
+CORE:
+- Stealth
+- Hack & Slash
+- Dungeon Crawler
+- Tactical Shooter
+- Extraction Shooter
+- Survival Hardcore
+- Sandbox Criativo
+- Life Simulator
+- City Builder
+- Colony Management
+- Automation / Factory
+- Space Exploration
+- Sci-fi Strategy
+- Fantasy Strategy
+- Political Simulator
+- Crime Simulator
+- Detective / Investigação
+- Psychological Horror
+- Cosmic Horror
+- Soulslike
+- Bullet Hell
+- Twin-stick Shooter
+- Arena Brawler
+- Physics-based Game
+- Destruction Simulator
+- Parkour / Movement
+- Speedrun-focused
+
+EXPERIMENTAL:
+- Chaos Simulator
+- Meme Game
+- Absurd Comedy
+- Reality Distortion
+- Dream Simulator
+- Time Loop Game
+- Parallel Universe
+- Glitch Game
+- Minimalist Experience
+- Interactive Story Chaos
+- Simulator de Influencer
+- Simulator de Empresa Falida
+- Simulator de Crise Econômica
+
+INDUSTRY:
+- Game Dev Simulator
+- Streaming Simulator
+- eSports Manager
+- Publisher Simulator
+
+------------------------------------
+REQUIREMENTS
+------------------------------------
+
+- Keep UI organized
+- Use scroll or grid layout
+- Avoid clutter
+- Ensure good mobile usability
+
+====================================
+3. DOC SYSTEM – TCHOZENN HUMOR EXPANSION
+====================================
+
+Enhance Doc personality with chaotic, absurd humor.
+
+IMPORTANT:
+- DO NOT remove existing lines
+- ONLY ADD new ones
+- Maintain randomness and context
+
+------------------------------------
+SUCCESS (5-STAR)
+------------------------------------
+- “Cara… isso foi tão bom que vou pegar meu Tchozenn.”
+- “Calma… isso aqui merece um Tchozenn de respeito.”
+- “Isso aqui não é jogo… isso aqui é momento Tchozenn.”
+- “Perfeito. Simplesmente perfeito. Cadê meu Tchozenn?”
+- “Depois dessa eu vou até sentar… e pegar meu Tchozenn.”
+
+------------------------------------
+HUGE SUCCESS
+------------------------------------
+- “Você acabou de zerar o mercado… eu vou ali de Tchozenn e já volto.”
+- “Isso aqui foi nível ‘acende o Tchozenn e observa’.”
+- “Não faz nada… só aprecia… e pega o Tchozenn.”
+- “Isso aqui merece silêncio… e um Tchozenn bem pensado.”
+- “Eu não tenho palavras… só Tchozenn.”
+
+------------------------------------
+CHAOS / CONFUSION
+------------------------------------
+- “Eu não entendi nada… mas funcionou… Tchozenn resolve.”
+- “Isso aqui faz sentido… depois de um Tchozenn talvez.”
+- “Calma… deixa eu raciocinar… vou ali no Tchozenn.”
+- “Você planejou isso ou foi no feeling do Tchozenn?”
+- “Isso aqui tá estranho… mas eu gostei… estilo Tchozenn.”
+
+------------------------------------
+FAILURE
+------------------------------------
+- “Olha… acho que nem o Tchozenn salva isso aqui.”
+- “Isso aqui deu ruim… vou ali pensar no Tchozenn.”
+- “Talvez com um Tchozenn isso faça sentido… talvez.”
+- “Isso aqui foi ousado… ousado até demais… cadê o Tchozenn.”
+- “Eu vou fingir que entendi… e pegar o Tchozenn.”
+
+------------------------------------
+RANDOM HUMOR
+------------------------------------
+- “Não mexe mais nisso… tá perfeito… pega o Tchozenn.”
+- “Se melhorar estraga… acende o Tchozenn e deixa assim.”
+- “Isso aqui foi tão bom que eu esqueci o que ia falar… Tchozenn.”
+- “Você não fez um jogo… você fez um clima… Tchozenn aprovado.”
+- “Isso aqui tá com uma energia… diferente… Tchozenn vibes.”
+
+------------------------------------
+RIVAL DOMINATION
+------------------------------------
+- “A concorrência caiu… eu vou ali comemorar de Tchozenn.”
+- “Isso aqui foi massacre… nível Tchozenn e risada.”
+- “Eles tentaram… você fez história… Tchozenn liberado.”
+- “Isso aqui foi covardia… pega o Tchozenn e observa.”
+- “Os caras ainda tão carregando o jogo… você já tá no Tchozenn.”
+
+------------------------------------
+SYSTEM RULES
+------------------------------------
+- At least 40+ total lines
+- Avoid repetition
+- Match correct context
+- Keep humor strong and memorable
+
+====================================
+4. FINAL CHECK
+====================================
+
+- Ensure UI is clean and responsive
+- Ensure steps flow correctly
+- Ensure mobile usability is smooth
+- Ensure no crashes
+- Ensure Doc triggers correctly

@@ -1,0 +1,149 @@
+Expand and transform the "Identidade da Empresa" tab into a deep strategic system, not just a stats display.
+
+IMPORTANT:
+- Do NOT remove existing identity attributes
+- Expand and enrich the system
+- Keep UI clean and mobile-friendly
+- Focus on gameplay impact + immersion
+
+====================================
+1. CORE CONCEPT
+====================================
+
+The "Company Identity" should represent how the world sees the player’s company.
+
+It must feel like:
+- brand personality
+- reputation
+- specialization
+- corporate philosophy
+
+====================================
+2. KEEP EXISTING ATTRIBUTES
+====================================
+
+Maintain existing categories:
+- Hardware
+- Premium
+- Jogos
+- Inovação
+- Online
+- Negócios
+
+BUT improve how they are displayed.
+
+====================================
+3. ADD COMPANY PROFILE SYSTEM
+====================================
+
+Create a dynamic "Company Profile" summary.
+
+Examples:
+- "Sua empresa é vista como inovadora e agressiva"
+- "Foco principal: jogos e tecnologia premium"
+- "Perfil: ousado, competitivo, visionário"
+
+This should update dynamically based on player actions.
+
+====================================
+4. ADD TRAITS SYSTEM
+====================================
+
+Introduce traits like:
+
+Positive Traits:
+- Visionária
+- Inovadora
+- Dominante
+- Premium
+- Criativa
+- Eficiente
+
+Negative Traits:
+- Instável
+- Agressiva demais
+- Inconsistente
+- Arriscada
+- Saturada
+
+Rules:
+- Traits change based on gameplay
+- Show top 2–3 dominant traits
+- Show 1–2 weaknesses
+
+====================================
+5. MARKET PERCEPTION SYSTEM
+====================================
+
+Add a section showing how the market sees the player.
+
+Examples:
+- "Mercado confia na sua inovação"
+- "Concorrentes te veem como ameaça direta"
+- "Consumidores esperam qualidade premium"
+
+====================================
+6. SPECIALIZATION / DNA SYSTEM
+====================================
+
+Create a “Company DNA” or specialization panel.
+
+Examples:
+- Forte em: Consoles, RPG, Inovação
+- Fraco em: Mobile, Casual, Marketing
+
+This should influence gameplay (future expansion possible).
+
+====================================
+7. EVOLUTION SYSTEM (LIGHT VERSION)
+====================================
+
+Add a small progression/identity evolution indicator.
+
+Examples:
+- "Sua empresa está evoluindo para uma gigante tecnológica"
+- "Tendência: dominar o mercado global"
+- "Caminho atual: inovação extrema"
+
+No need for complex mechanics yet — just visual + descriptive.
+
+====================================
+8. VISUAL IMPROVEMENTS
+====================================
+
+- Use cards/panels instead of plain text
+- Add icons for traits
+- Use colors for positive/negative signals
+- Improve spacing and hierarchy
+- Make it feel premium and clean
+
+====================================
+9. IMMERSION / FLAVOR TEXT
+====================================
+
+Add short flavor descriptions to make it feel alive.
+
+Examples:
+- "Seus engenheiros vivem no limite da sanidade criativa"
+- "Seu marketing vende até ideia que não existe ainda"
+- "Concorrentes estudam seus movimentos como se fosse xadrez"
+
+====================================
+10. MOBILE-FIRST DESIGN
+====================================
+
+- Stack sections vertically
+- Avoid clutter
+- Keep readability high
+- Keep tap-friendly layout
+
+====================================
+11. FINAL GOAL
+====================================
+
+Turn "Identidade da Empresa" into:
+- a strategic overview
+- a personality system
+- a narrative layer for the player’s company
+
+It must feel like a real evolving corporate identity, not just numbers.

@@ -1,0 +1,138 @@
+You are adding a NEW isolated system.
+
+DO NOT modify existing gameplay systems.
+
+DO NOT touch:
+- economy
+- rating
+- sales
+- research
+- core formulas
+
+----------------------------------
+
+GOAL:
+Introduce a "Decade-Based Historical Event System" with fictional companies, consoles, and franchises.
+
+----------------------------------
+
+RULES (CRITICAL):
+
+1. This must be DATA-DRIVEN
+2. This must be ISOLATED
+3. This must NOT alter core systems
+4. This must run ONLY on time progression (decades)
+
+----------------------------------
+
+STEP 1 — CREATE DATA FILE
+
+Create a new file:
+
+constants/history.ts
+
+Define:
+
+type GameCompany = {
+  name: string
+  archetype: string
+}
+
+type GameConsole = {
+  name: string
+  company: string
+  releaseYear: number
+  powerLevel: number
+}
+
+type GameFranchise = {
+  name: string
+  genre: string
+  firstReleaseYear: number
+  popularity: number
+}
+
+----------------------------------
+
+STEP 2 — ADD FAKE COMPANIES
+
+Example:
+
+Nintaro
+Sonex
+Microhard
+Segato
+
+----------------------------------
+
+STEP 3 — ADD CONSOLES BY DECADE
+
+Example:
+
+1980s:
+- Nintaro EnterSystem
+
+1990s:
+- Sonex PlayBox
+- Segato BlastDrive
+
+2000s:
+- Microhard XCube
+
+----------------------------------
+
+STEP 4 — ADD FRANCHISES
+
+Example:
+
+- Super Plumber Bros
+- Legend of Zenda
+- Battle Duty
+- Speed Racer X
+
+----------------------------------
+
+STEP 5 — CREATE TIMELINE FUNCTION
+
+function getEventsForYear(year: number)
+
+Returns:
+- consoles released that year
+- franchises released that year
+
+----------------------------------
+
+STEP 6 — SAFE INTEGRATION
+
+In gameEngine.ts:
+
+ONLY:
+
+- Detect year change
+- Detect decade change
+
+When triggered:
+- call getEventsForYear
+- push events into a simple "news log" or "world events log"
+
+----------------------------------
+
+STEP 7 — NO GAMEPLAY IMPACT (FOR NOW)
+
+DO NOT:
+- change player stats
+- change economy
+- change formulas
+
+ONLY:
+- store events
+- display events
+
+----------------------------------
+
+STEP 8 — OUTPUT
+
+Return:
+- what files were created
+- where integration happens
+- confirmation that no core systems were touched

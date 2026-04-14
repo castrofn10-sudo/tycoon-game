@@ -1,0 +1,72 @@
+Fix the DOC system so it actually appears in-game again.
+
+STRICT RULES:
+- Do not refactor the project architecture
+- Do not redesign unrelated UI
+- Do not change unrelated gameplay systems
+- Only fix and restore the DOC feature
+- Keep minimal safe changes
+
+GOAL:
+The DOC event/character/system is currently not appearing. Restore it and make it trigger correctly.
+
+REQUIREMENTS:
+
+1. Find why the DOC is not appearing at all.
+- Check trigger conditions
+- Check feature flags/settings (such as docEnabled if present)
+- Check rendering conditions
+- Check state persistence
+- Check whether the DOC event is being created but not displayed
+- Check whether the DOC UI exists but is never triggered
+
+2. Restore DOC appearances in a balanced way.
+DOC should appear in:
+- specific moments when relevant conditions are met
+- and sometimes randomly, but not too frequently
+
+3. Add two trigger modes:
+
+A) Specific/contextual triggers
+DOC should appear when things like these happen:
+- company in crisis
+- low money / financial pressure
+- strong market event
+- major reputation loss
+- important launch outcome
+- special fan/community event
+- competitor pressure
+- major growth milestone
+
+B) Random/rare triggers
+- DOC may also appear randomly with a low chance
+- random appearances should feel special, not spammy
+- use a cooldown so DOC cannot appear too often
+- recommended random cooldown: at least 4 to 8 months between random DOC appearances
+
+4. Ensure DOC actually displays in the UI.
+- If a DOC event is triggered, it must visibly appear
+- Check card/modal/banner rendering
+- Check navigation and visibility conditions
+- Ensure it works on device, not just in preview
+
+5. Keep save/load compatibility.
+- If needed, persist DOC cooldown / last appearance safely
+- Do not break existing saves
+
+6. Keep the current structure intact.
+- Do not remove existing DOC-related code
+- Reuse existing DOC assets/components if they already exist
+- Only repair missing connections and trigger logic
+
+7. Add clear balancing:
+- DOC should not appear every month
+- DOC should not be impossible to see
+- make it feel meaningful and occasional
+
+8. After finishing, explain clearly:
+- which files were changed
+- why DOC was not appearing
+- how the new trigger logic works
+- how the cooldown works
+- where DOC now appears

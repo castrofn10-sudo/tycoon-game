@@ -1,0 +1,179 @@
+Add a new tab called “Estratégia de Marketing” that enhances decision-making WITHOUT modifying any core game logic.
+
+========================
+🔒 HARD RULES (MANDATORY)
+========================
+
+- DO NOT create new backend systems
+- DO NOT modify:
+  - economy system
+  - research system
+  - marketing core logic
+  - save/load system
+  - existing campaign calculations
+- DO NOT introduce new effect types
+- ONLY reuse existing effect fields (sales, fans, reputation, etc.)
+
+Allowed:
+- UI additions
+- local state handling (frontend only)
+- light multipliers applied BEFORE existing effects are processed
+
+========================
+🎯 GOAL
+========================
+
+Introduce strategic decision layers to marketing while keeping the system:
+
+- simple to use
+- realistic
+- balanced
+- non-breaking
+
+========================
+📂 NEW TAB STRUCTURE
+========================
+
+Create a new tab:
+
+Label: “Estratégia”
+Location: inside Marketing screen tabs (next to campanhas/influenciadores)
+
+Sections inside the tab:
+
+1. Posicionamento de Marca
+2. Foco de Campanha
+
+========================
+🧩 SECTION 1: POSICIONAMENTO DE MARCA
+========================
+
+Add selectable options (only one active at a time):
+
+- Premium
+- Casual
+- Hardcore
+- Indie
+- Mainstream
+
+Each option applies SMALL multipliers using existing effect types.
+
+IMPORTANT:
+- Values must be subtle (0.01 ~ 0.03 max)
+- Must NOT stack infinitely
+- Only one can be active
+
+Example mapping (adjust using existing effect keys):
+
+Premium:
+- +0.02 reputation
+- -0.01 fans
+
+Casual:
+- +0.02 fans
+- -0.01 reputation
+
+Hardcore:
+- +0.02 quality/reputation (use closest existing effect)
+- -0.01 sales reach
+
+Indie:
+- +0.01 reputation
+- +0.01 niche fans (map to fans if needed)
+
+Mainstream:
+- +0.03 sales
+- -0.01 reputation
+
+UI:
+- selectable cards
+- highlight active selection
+- short description under each
+
+========================
+🎯 SECTION 2: FOCO DE CAMPANHA
+========================
+
+Allow player to select campaign focus BEFORE launching campaigns.
+
+Options:
+
+- Alcance (Reach)
+- Conversão (Sales)
+- Reputação (Brand)
+
+Each focus slightly shifts effect weights:
+
+Alcance:
+- +0.02 fans
+- -0.01 sales
+
+Conversão:
+- +0.02 sales
+- -0.01 fans
+
+Reputação:
+- +0.02 reputation
+- -0.01 sales
+
+IMPORTANT:
+- Apply as multiplier modifier BEFORE campaign result
+- DO NOT change campaign base values
+- Keep effect subtle
+
+========================
+⚙️ IMPLEMENTATION LOGIC (SAFE)
+========================
+
+When a campaign or influencer effect is calculated:
+
+FinalEffect = BaseEffect
++ PositioningModifier
++ FocusModifier
+
+Constraints:
+
+- Clamp values to safe ranges
+- No exponential stacking
+- Modifiers must remain small
+
+========================
+🖥 UI REQUIREMENTS
+========================
+
+- Clean AAA-style cards
+- Active state clearly visible
+- Tooltips or short explanations:
+
+Examples:
+
+Premium:
+"Foco em qualidade e percepção de marca. Menor alcance, maior valor percebido."
+
+Alcance:
+"Aumenta visibilidade, mas reduz eficiência de conversão."
+
+========================
+🚫 DO NOT TOUCH
+========================
+
+- campaign.ts / campaign logic
+- influencer logic
+- economy balance formulas
+- save structure
+
+========================
+✅ FINAL CHECK
+========================
+
+- No new effect types created
+- No core system modified
+- UI fully functional
+- No TypeScript errors
+- Modifiers applied correctly and safely
+
+Return summary:
+
+- components added
+- modifiers applied
+- confirmation system is stable

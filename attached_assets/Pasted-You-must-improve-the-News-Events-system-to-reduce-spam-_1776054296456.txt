@@ -1,0 +1,68 @@
+You must improve the News & Events system to reduce spam, increase realism, and integrate automatic handling through legal protection, without breaking existing gameplay systems.
+
+HARD RULES:
+- DO NOT change core gameplay systems
+- DO NOT remove existing event mechanics
+- DO NOT break reputation, fans, or economy systems
+- DO NOT create overpowered automation
+- ONLY refine behavior, frequency, and logic
+- Keep everything balanced and realistic
+
+GOAL:
+Make events more meaningful, less frequent, and allow legal protection to automatically handle negative situations.
+
+IMPLEMENTATION:
+
+1. Legal protection automation:
+- If player has active legal protection:
+  - negative events (scandal, toxic workplace, crisis, etc.) should:
+    - be auto-resolved OR
+    - appear as “handled” without requiring player decision
+- Reduce or neutralize penalties depending on level:
+  - Basic: reduce impact
+  - Professional: heavily reduce impact
+  - Elite: fully prevent or auto-resolve
+
+2. Event frequency rebalance:
+- Reduce overall number of events
+- Avoid repetitive spam events
+- Add cooldown between similar events
+
+3. Event quality improvement:
+- Focus on meaningful events:
+  - game launches
+  - console launches
+  - financial success/failure
+  - reputation shifts
+  - market competition
+- Remove low-impact filler events
+
+4. AI company behavior in events:
+- AI companies must:
+  - sometimes succeed
+  - sometimes fail
+  - lose money
+  - gain market share
+  - release bad products occasionally
+- Avoid perfect performance patterns
+
+5. Event diversity (controlled randomness):
+- Add variations such as:
+  - mild hype before launch
+  - unexpected flop
+  - organic success
+  - internal issues
+  - steady growth
+- Keep probabilities balanced and not excessive
+
+6. UI behavior:
+- If event is auto-handled:
+  - show small indicator (optional)
+  - do not interrupt player flow
+- Maintain current visual style
+
+AFTER:
+- confirm event frequency is reduced
+- confirm legal system is working automatically
+- confirm AI companies behave dynamically
+- confirm no core gameplay systems were changed

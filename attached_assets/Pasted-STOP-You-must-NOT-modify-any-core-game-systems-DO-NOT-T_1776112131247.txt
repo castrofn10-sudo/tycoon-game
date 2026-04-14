@@ -1,0 +1,186 @@
+STOP.
+
+You must NOT modify any core game systems.
+
+DO NOT TOUCH:
+- gameEngine.ts core logic
+- economy formulas
+- rating system
+- sales system
+- research system
+- existing balance values
+
+This is a UI + data layer expansion ONLY.
+
+----------------------------------------
+
+GOAL:
+Expand the HOLDINGS system with new categories and annual passive income.
+
+----------------------------------------
+
+RULES (CRITICAL):
+
+1. DO NOT convert any existing system from monthly → annual globally.
+
+2. Holdings income must be:
+- stored as annualIncome
+- internally converted to monthly ONLY when applied:
+    monthly = annualIncome / 12
+
+3. DO NOT break existing holdings.
+
+----------------------------------------
+
+NEW FEATURE:
+
+Create HOLDING CATEGORIES:
+
+- Banking
+- Technology
+- Chip Manufacturing
+- Insurance
+- Marketing
+- Security
+
+----------------------------------------
+
+DATA STRUCTURE (SIMPLE):
+
+Each holding should follow:
+
+{
+  id: string,
+  name: string,
+  category: string,
+  purchaseCost: number,
+  annualIncome?: number,
+  effects?: {
+    crisisReduction?: number,
+    reputationProtection?: number,
+    marketingBoost?: number,
+    bankruptcyProtection?: number
+  },
+  downside?: string
+}
+
+----------------------------------------
+
+EXAMPLES (ADD THESE):
+
+1. BANK
+
+{
+  name: "Apex Global Bank",
+  category: "Banking",
+  purchaseCost: 80000000,
+  annualIncome: 5000000,
+  downside: "High exposure during economic crisis"
+}
+
+2. TECH
+
+{
+  name: "NovaCore Technologies",
+  category: "Technology",
+  purchaseCost: 40000000,
+  effects: {
+    productQuality: 0.01
+  }
+}
+
+3. CHIP
+
+{
+  name: "Silicore Industries",
+  category: "Chip Manufacturing",
+  purchaseCost: 60000000,
+  effects: {
+    researchSpeed: 0.015
+  }
+}
+
+4. INSURANCE
+
+{
+  name: "ShieldGuard Insurance",
+  category: "Insurance",
+  purchaseCost: 30000000,
+  effects: {
+    crisisReduction: 0.25
+  }
+}
+
+5. MARKETING
+
+{
+  name: "Pulse Marketing Group",
+  category: "Marketing",
+  purchaseCost: 35000000,
+  effects: {
+    marketingBoost: 0.02
+  }
+}
+
+6. SECURITY
+
+{
+  name: "IronWall Security",
+  category: "Security",
+  purchaseCost: 25000000,
+  effects: {
+    bankruptcyProtection: 0.2
+  }
+}
+
+----------------------------------------
+
+UI REQUIREMENTS (IMPORTANT):
+
+1. Add category filter tabs inside HOLDINGS screen
+
+2. Show category label on each card
+
+3. Show:
+- "Receita anual: $X"
+- OR effect description
+
+4. DO NOT change layout drastically
+
+----------------------------------------
+
+APPLICATION RULES (SAFE):
+
+- Annual income:
+    add (annualIncome / 12) to monthly balance
+
+- Effects:
+    apply as SMALL modifiers only (max ±2%)
+
+- Apply ONLY if holding is owned
+
+----------------------------------------
+
+LIMITS:
+
+- Max 4 holdings remains unchanged
+
+----------------------------------------
+
+DO NOT:
+
+- Add loops in game engine
+- Add per-tick recalculations
+- Modify existing systems deeply
+
+----------------------------------------
+
+RESULT:
+
+A richer HOLDINGS system with:
+- categories
+- strategic choices
+- annual passive income
+- defensive mechanics
+
+WITHOUT breaking the game.

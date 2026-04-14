@@ -1,0 +1,86 @@
+id="remove-duplicate-bottom-production-sections-v1-BLINDADO"
+
+OBJETIVO:
+Remover do fim da página do menu principal as seções duplicadas de produção que repetem funcionalidades já presentes no topo do menu.
+
+ATENÇÃO:
+NÃO remover os cards principais do bloco PRODUÇÃO no topo.
+NÃO remover a navegação principal de "Meus Jogos" e "Consoles" no início do menu.
+NÃO mexer em lógica do jogo.
+NÃO mexer em velocidade.
+NÃO alterar engine, economia, saves ou navegação.
+
+--------------------------------------------------
+[1] O QUE DEVE SER REMOVIDO
+--------------------------------------------------
+
+Remover APENAS as seções duplicadas que aparecem no final da página do menu principal, como:
+
+- "Meus Consoles" com ação tipo "Criar primeiro console"
+- blocos equivalentes duplicados de jogos/consoles no fim da tela
+
+Esses blocos duplicados do rodapé/final da página devem ser removidos completamente.
+
+--------------------------------------------------
+[2] O QUE DEVE SER MANTIDO
+--------------------------------------------------
+
+Manter INTACTO:
+
+- o bloco PRODUÇÃO no topo do menu
+- os cards principais:
+  - Meus Jogos
+  - Consoles
+- os acessos de criação/navegação existentes nesses cards principais
+
+--------------------------------------------------
+[3] ESCOPO EXATO
+--------------------------------------------------
+
+Atuar SOMENTE em:
+- renderização/layout do menu principal
+- remoção de componentes duplicados no final da página
+
+NÃO tocar:
+- gameEngine
+- contexto global
+- sistema de tempo
+- sistema de criação de jogos
+- sistema de criação de consoles
+- indicadores financeiros
+- barra de velocidade
+
+--------------------------------------------------
+[4] COMPORTAMENTO ESPERADO
+--------------------------------------------------
+
+Depois da alteração:
+
+- o topo do menu continua com Produção
+- Meus Jogos e Consoles continuam funcionando normalmente
+- o final da página não mostra novamente criação de jogos/consoles
+- o scroll fica mais limpo e mais curto
+- não sobra espaço vazio após remoção
+
+--------------------------------------------------
+[5] PROIBIDO
+--------------------------------------------------
+
+PROIBIDO:
+- remover o card "Consoles" do topo
+- remover o card "Meus Jogos" do topo
+- substituir por outro componente
+- esconder apenas visualmente deixando espaço residual
+- alterar textos ou lógica fora da área duplicada
+
+--------------------------------------------------
+[6] VALIDAÇÃO FINAL
+--------------------------------------------------
+
+Confirmar no final:
+
+- quais componentes duplicados do fim da página foram removidos
+- que os cards do topo foram preservados
+- que nenhuma lógica do jogo foi alterada
+
+FIM

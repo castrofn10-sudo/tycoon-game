@@ -1,0 +1,122 @@
+id="menu-system-rework-v1-clean"
+
+OBJETIVO:
+Reorganizar o menu principal para melhorar navegação e clareza, mantendo o jogo desafiador.
+
+IMPORTANTE:
+- NÃO alterar lógica do jogo
+- NÃO mexer em economia
+- NÃO adicionar sistemas automatizados de ajuda
+- NÃO quebrar navegação existente
+
+----------------------------------------
+[1] REORGANIZAÇÃO DO MENU PRINCIPAL
+----------------------------------------
+
+Organizar o menu em 3 blocos:
+
+[PRODUÇÃO]
+- Meus Jogos
+- Consoles
+
+[ESTRATÉGIA]
+- Escritórios
+- Pesquisa
+- Marketing
+
+[DOMÍNIO]
+- Mercado
+- Notícias
+- Métricas
+
+Apenas reorganização visual.
+
+----------------------------------------
+[2] BOTÃO PRINCIPAL DO JOGO (CTA)
+----------------------------------------
+
+Adicionar botão:
+
+"CRIAR NOVO JOGO"
+
+- destaque visual
+- sempre visível
+- posição central ou inferior
+
+----------------------------------------
+[3] DASHBOARD SIMPLES (SEM AJUDA AUTOMÁTICA)
+----------------------------------------
+
+Adicionar no topo:
+
+📊 RESUMO DA EMPRESA
+
+Exibir:
+
+- Receita mensal
+- Gasto mensal
+- Lucro/prejuízo
+
+SEM recomendações automáticas
+SEM sugestões de ação
+
+----------------------------------------
+[4] NOTIFICAÇÕES OTIMIZADAS
+----------------------------------------
+
+Melhorar sistema atual:
+
+- limitar quantidade visível
+- agrupar eventos repetidos
+- mostrar apenas eventos relevantes
+
+SEM interpretação inteligente
+
+----------------------------------------
+[5] BARRA DE VELOCIDADE
+----------------------------------------
+
+Melhorar:
+
+- fixar no rodapé
+- manter 1x / 2x / 3x
+- melhorar visual
+
+----------------------------------------
+[6] HIERARQUIA VISUAL
+----------------------------------------
+
+Ajustar:
+
+- itens principais maiores
+- melhor espaçamento
+- foco visual no que importa
+
+----------------------------------------
+[7] INDICADORES NOS CARDS
+----------------------------------------
+
+Adicionar informações rápidas:
+
+Meus Jogos:
+"2 lançados • 1 em dev"
+
+Mercado:
+"6 rivais ativos"
+
+Marketing:
+"Sem campanha ativa"
+
+----------------------------------------
+[8] NÃO ALTERAR SISTEMAS
+----------------------------------------
+
+Garantir:
+
+- nenhuma mudança na lógica
+- nenhuma automação
+- nenhuma ajuda ao jogador
+- gameplay intacto
+
+----------------------------------------
+FIM DO PROMPT

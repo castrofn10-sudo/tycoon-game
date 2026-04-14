@@ -1,0 +1,134 @@
+APLICAR CORREÇÃO PREVENTIVA — NÃO ALTERAR ESTRUTURA DO JOGO
+NÃO REMOVER SISTEMAS EXISTENTES
+CORRIGIR APENAS RENDERIZAÇÃO, MONTAGEM DE COMPONENTES E TROCA DE TELAS
+
+----------------------------------------
+[1] OBJETIVO
+----------------------------------------
+
+Aplicar uma correção preventiva para evitar erros de renderização como:
+
+- Failed to execute 'insertBefore' on 'Node'
+- commitPlacement
+- insertOrAppendPlacementNode
+
+A correção deve focar apenas em estabilidade de render e navegação,
+sem alterar gameplay, economia, IA ou sistemas do jogo.
+
+----------------------------------------
+[2] CHAVES ÚNICAS EM LISTAS E COMPONENTES DINÂMICOS
+----------------------------------------
+
+Revisar componentes renderizados por lista, tabs, cards e painéis dinâmicos.
+
+Garantir que:
+- cada item renderizado tenha key única, estável e previsível
+- NÃO usar índice puro como key em listas que mudam de ordem ou conteúdo
+- NÃO reutilizar o mesmo key para componentes de tipos diferentes
+
+Aplicar isso especialmente em:
+- notícias e eventos
+- cards de jogos
+- cards de consoles
+- abas de telas
+- painéis condicionais
+
+----------------------------------------
+[3] CORRIGIR RENDER CONDICIONAL
+----------------------------------------
+
+Onde houver renderização condicional como:
+
+- loading / erro / conteúdo
+- bloqueio de versão / app normal
+- tela vazia / tela preenchida
+- modal aberto / fechado
+- aba ativa / aba inativa
+
+Garantir que:
+- a troca entre estados seja limpa
+- o componente anterior seja desmontado corretamente
+- não exista tentativa de inserir nó em estrutura já removida
+
+Evitar árvores inconsistentes entre renderizações seguidas.
+
+----------------------------------------
+[4] PROTEGER TROCAS RÁPIDAS DE ESTADO
+----------------------------------------
+
+Revisar locais com múltiplos setState, navigation, redirects ou efeitos encadeados.
+
+Aplicar proteção para evitar:
+- render duplo desnecessário
+- mudança rápida entre telas
+- atualização simultânea de estados conflitantes
+
+Se necessário:
+- agrupar updates
+- usar guards de estado
+- evitar loops de render
+
+----------------------------------------
+[5] NAVEGAÇÃO E ROTAS
+----------------------------------------
+
+Revisar telas e rotas do Expo Router / navegação.
+
+Garantir que:
+- trocas de tela não tentem reaproveitar estrutura DOM incompatível
+- componentes de página tenham montagem estável
+- redirects, fallbacks e telas de erro não gerem corrida de render
+
+Se houver telas especiais de:
+- erro
+- atualização obrigatória
+- carregamento inicial
+
+Estabilizar a ordem de renderização delas.
+
+----------------------------------------
+[6] COMPATIBILIDADE WEB / PREVIEW
+----------------------------------------
+
+Como prevenção, garantir melhor estabilidade no ambiente web/dev preview.
+
+NÃO usar manipulação direta de DOM se houver alternativa React-safe.
+
+Evitar lógica que dependa de:
+- timing frágil
+- nós DOM presumidos
+- render imperativo fora do ciclo React
+
+----------------------------------------
+[7] NÃO ALTERAR ESTES SISTEMAS
+----------------------------------------
+
+NÃO modificar:
+- gameplay
+- economia
+- IA
+- eventos
+- saves
+- progresso
+- fórmulas de mercado
+- balanceamento
+
+APENAS estabilizar:
+- render
+- listas
+- transições de tela
+- montagem/desmontagem de componentes
+
+----------------------------------------
+[8] APÓS A CORREÇÃO
+----------------------------------------
+
+Confirmar:
+- quais arquivos de UI/render foram ajustados
+- onde havia risco de key/render inconsistente
+- que a correção foi preventiva e não alterou o jogo
+- que preview web e build mobile ficam mais seguros
+
+----------------------------------------
+FIM DA CORREÇÃO
+NÃO MODIFICAR OUTRAS ÁREAS

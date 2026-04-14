@@ -1,0 +1,113 @@
+You must implement a geopolitical shareholder conflict system based on investor country origin.
+
+HARD RULES:
+- DO NOT change UI layout
+- DO NOT remove shareholder system
+- DO NOT break financial systems
+- DO NOT modify unrelated mechanics
+- ONLY extend shareholder logic with conflict behavior
+- Keep system balanced and realistic
+
+GOAL:
+Create internal company conflicts when shareholders from rival countries are present.
+
+----------------------------------------
+PART 1 — SHAREHOLDER COUNTRY
+----------------------------------------
+
+Each shareholder must have:
+- a country of origin
+
+Examples:
+- USA
+- China
+- Russia
+- Japan
+- Brazil
+- others
+
+----------------------------------------
+PART 2 — CONFLICT MATRIX
+----------------------------------------
+
+Define conflict relationships:
+
+High conflict:
+- USA vs China
+- USA vs Russia
+
+Medium conflict:
+- China vs Japan
+- Russia vs Japan
+
+Low conflict:
+- Brazil vs Paraguay
+
+----------------------------------------
+PART 3 — CONFLICT DETECTION
+----------------------------------------
+
+When shareholders from rival countries exist:
+- activate internal conflict state
+
+----------------------------------------
+PART 4 — EFFECTS
+----------------------------------------
+
+Apply random negative effects:
+
+- reduced efficiency
+- project delays
+- reputation loss
+- internal decision conflicts
+
+----------------------------------------
+PART 5 — RANDOM EVENTS
+----------------------------------------
+
+Generate events such as:
+
+- "Internal conflict between shareholders affected decisions"
+- "Political tension impacted company performance"
+- "Investor disagreement delays project"
+
+----------------------------------------
+PART 6 — PLAYER DECISIONS
+----------------------------------------
+
+Allow player actions:
+
+- keep both investors (risk continues)
+- remove one investor
+- attempt negotiation (reduce impact)
+- ignore conflict (may worsen)
+
+----------------------------------------
+PART 7 — BALANCE
+----------------------------------------
+
+Conflicts must not be only negative:
+
+Possible advantages:
+- increased investment
+- access to new markets
+- higher growth potential
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not affect:
+  - core gameplay loop
+  - hiring system
+  - console system
+- Only extend shareholder behavior
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- explain how conflicts are detected
+- explain effect types
+- confirm decision system works
+- confirm balance is maintained

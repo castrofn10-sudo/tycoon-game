@@ -1,0 +1,80 @@
+Refactor the layout of the "Árvore P&D" screen to make research labels clean, minimal, and non-intrusive.
+
+GOAL:
+Transform the current research label strip (e.g. "O Visionário", "Pesquise para desbloquear...") into a lightweight header/legend that NEVER blocks interaction.
+
+====================================
+1. CONVERT LABEL STRIP INTO HEADER
+====================================
+
+- Move all research labels (titles/status text) into a compact header ABOVE the research tree
+- This header must sit directly under the tab bar
+- It should behave like a small informational line, not a UI block
+
+====================================
+2. VISUAL STYLE (IMPORTANT)
+====================================
+
+Make the header minimal and elegant:
+
+- Font size: smaller than normal text
+- Opacity: ~70–80%
+- No background box
+- No borders
+- No card container
+- Inline text only (like a subtitle)
+
+Example style:
+→ subtle, clean, almost like a hint/legend
+
+====================================
+3. REMOVE INTERFERENCE
+====================================
+
+- The header MUST NOT overlap any research cards
+- It MUST NOT block clicks
+- It MUST NOT float over the UI
+
+Apply if needed:
+- pointer-events: none
+- z-index lower than cards
+
+====================================
+4. POSITIONING
+====================================
+
+Structure must be:
+
+[Back Button / Title]
+[Tabs: Árvore P&D | Exclusivos | Melhorias]
+[Small header with labels ← NEW POSITION]
+[Research tree / cards ← FULLY FREE]
+
+Add spacing:
+- margin-bottom between header and cards (8px–12px)
+
+====================================
+5. CLICK PRIORITY
+====================================
+
+- All research cards must have full click priority
+- No invisible layer above them
+- Ensure touch works easily on mobile
+
+====================================
+6. CLEAN RESULT
+====================================
+
+Final UX must feel like:
+
+- Labels = light contextual info
+- Cards = main focus
+- Zero obstruction
+- Smooth and clean layout
+
+DO NOT:
+- recreate large banners
+- add background panels
+- overlap anything again
+
+ONLY refine positioning and hierarchy.

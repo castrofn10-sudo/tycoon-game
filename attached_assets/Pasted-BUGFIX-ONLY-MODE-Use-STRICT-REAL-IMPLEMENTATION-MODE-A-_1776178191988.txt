@@ -1,0 +1,91 @@
+BUGFIX ONLY MODE.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Corrija um erro lógico no MegaCorp Tycoon V1 relacionado à empresa de advogados / assessoria jurídica.
+
+PROBLEMA REAL:
+Mesmo após o jogador contratar a empresa de advogados, continuam aparecendo eventos/notícias que exigem decisão manual do tipo:
+- "Como vais responder?"
+- opções como "Revidar" / "Ignorar"
+- botão "RESPONDER"
+
+Isso quebra a lógica do sistema, porque se o serviço jurídico/assessoria foi contratado e está sendo pago, ele deve assumir automaticamente esse tipo de resposta defensiva/jurídica/PR competitiva.
+
+OBJETIVO:
+Fazer com que, quando a empresa de advogados estiver ativa/contratada, eventos compatíveis sejam resolvidos automaticamente sem exigir ação manual do jogador.
+
+REGRAS IMPORTANTES:
+- BUGFIX ONLY
+- não alterar UI geral além do necessário para refletir automação
+- não mexer na economia central além do custo/efeito já previsto
+- não criar novo sistema complexo
+- não quebrar saves existentes
+- não alterar eventos que realmente precisem continuar manuais, exceto os claramente cobertos pela assessoria jurídica
+- correção mínima e cirúrgica
+
+ESCOPO DO BUG:
+Eventos como:
+- campanha comparativa de rival
+- ataque publicitário/comercial
+- resposta pública defensiva
+- situações de imagem/contestação onde hoje aparecem botões "Revidar" / "Ignorar"
+
+Esses eventos devem ser interceptados pela lógica da empresa de advogados quando ela estiver contratada.
+
+COMPORTAMENTO ESPERADO:
+1) Se empresa de advogados NÃO estiver contratada:
+   - manter comportamento atual manual
+   - mostrar opções e botão de resposta normalmente
+
+2) Se empresa de advogados ESTIVER contratada:
+   - não exigir resposta manual do jogador para eventos cobertos
+   - resolver automaticamente o evento
+   - aplicar o efeito apropriado automaticamente
+   - registrar isso na notícia/evento de forma coerente, por exemplo:
+     "A assessoria jurídica tratou automaticamente da situação."
+     ou equivalente ao estilo do jogo
+
+3) O resultado automático deve respeitar a lógica já existente do jogo:
+   - custo, reputação, fãs, mercado etc. conforme apropriado
+   - sem duplicar penalidade
+   - sem exigir clique adicional
+
+4) Se existir fila de eventos pendentes já gerados:
+   - ao abrir/renderizar, verificar se o jurídico ativo cobre aquele evento
+   - converter para resolvido automático quando aplicável
+   - evitar que continue aparecendo como pendência manual
+
+POSSÍVEIS CAUSAS A VERIFICAR:
+- flag de contratação da empresa de advogados não está sendo consultada no render do evento
+- automação existe no estado mas não no fluxo de decisão
+- evento continua marcado como "requiresResponse" mesmo com serviço ativo
+- tipo/categoria do evento não está sendo classificado corretamente
+- efeito automático não foi implementado
+- UI ainda mostra botões mesmo após resolução automática
+
+IMPLEMENTAÇÃO ESPERADA:
+- identificar onde a contratação da empresa de advogados é armazenada
+- identificar quais tipos de evento ela deve cobrir
+- no momento de gerar/renderizar/processar esses eventos, verificar a contratação
+- se ativa, aplicar resolução automática
+- remover necessidade de ação manual nesses casos
+- manter consistência com saves existentes
+
+VALIDAÇÃO OBRIGATÓRIA:
+Testar este cenário:
+1. contratar empresa de advogados
+2. avançar até surgir evento de campanha comparativa/ataque de rival
+3. verificar que o evento NÃO pede mais decisão manual
+4. verificar que o efeito foi aplicado automaticamente
+5. verificar que não ficaram botões "Revidar", "Ignorar" ou "RESPONDER" nesses casos cobertos
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- qual era a causa exata do bug
+- como a contratação da empresa de advogados passou a ser verificada
+- quais tipos de evento agora são resolvidos automaticamente
+- confirmar que eventos fora desse escopo continuam manuais
+- confirmar que nenhuma outra lógica central foi alterada

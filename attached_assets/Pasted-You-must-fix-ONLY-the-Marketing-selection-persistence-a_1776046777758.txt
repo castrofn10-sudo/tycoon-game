@@ -1,0 +1,63 @@
+You must fix ONLY the Marketing selection persistence and duration behavior in the Marketing screen.
+
+HARD RULES:
+- DO NOT redesign the screen
+- DO NOT change gameplay balance outside this marketing behavior
+- DO NOT modify unrelated systems
+- DO NOT add new mechanics beyond what is requested here
+- ONLY fix marketing option persistence, duration, and active-slot logic
+- Keep build stable and safe
+
+GOAL:
+Make marketing choices behave like real strategic decisions that stay active over time instead of disappearing when the player leaves the screen.
+
+IMPLEMENTATION:
+
+1. Persistence
+- When the player selects a marketing option, it must remain active
+- It must NOT disappear when leaving and returning to the Marketing screen
+- The active option(s) must be saved in game state
+- Must persist correctly through save/load
+
+2. Duration
+- Each selected marketing option must remain active for 2 in-game years
+- After 2 years, it must expire automatically
+- Expired options must free their slot normally
+
+3. Active limit
+- Allow up to 2 active marketing options at the same time total
+- Use option A logic:
+  - maximum of 2 total active options across the whole marketing system
+  - not 2 per category
+
+4. Categories
+- Existing categories can still be used normally
+- The player may combine options across categories, but total active options cannot exceed 2
+- Example:
+  - 1 brand positioning option
+  - 1 campaign focus option
+  = valid
+- Do NOT allow more than 2 active options total
+
+5. UI behavior
+- Show clearly which options are active
+- Show remaining duration if possible without redesigning the whole screen
+- Prevent selecting more than 2 active options
+- Keep the current visual style
+
+6. Expiration behavior
+- When an option expires, remove its active effect normally
+- Do not leave ghost bonuses
+- The player can then activate a new option
+
+7. Safety
+- Do not rebalance the full marketing system
+- Do not touch legal, office, game launch, global map, or revenue systems
+- Add fields safely if needed for compatibility
+
+AFTER:
+- say which files were changed
+- explain how persistence now works
+- explain how the 2-year duration works
+- explain how the 2-active-option limit works
+- confirm nothing else was modified

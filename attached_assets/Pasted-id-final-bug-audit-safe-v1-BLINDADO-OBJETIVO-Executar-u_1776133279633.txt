@@ -1,0 +1,128 @@
+id="final-bug-audit-safe-v1-BLINDADO"
+
+OBJETIVO:
+Executar uma auditoria final de bugs no projeto e corrigir apenas problemas reais encontrados, com alterações mínimas e seguras.
+
+ATENÇÃO MÁXIMA:
+NÃO refatorar o projeto.
+NÃO reestruturar pastas.
+NÃO alterar lógica de gameplay sem necessidade.
+NÃO “melhorar” código que já está funcionando.
+NÃO mexer em economia, vendas, ratings, IA, rankings, notícias, saves ou UI, exceto se houver bug real comprovado.
+
+--------------------------------------------------
+[1] ESCOPO DA AUDITORIA
+--------------------------------------------------
+
+Verificar apenas:
+
+- erros de compilação
+- erros de runtime
+- imports quebrados
+- variáveis/referências inexistentes
+- rotas quebradas
+- componentes que não renderizam
+- warnings críticos que indiquem risco real
+- crashes ao clicar em telas principais
+- inconsistências óbvias após as últimas atualizações
+
+--------------------------------------------------
+[2] TELAS E FLUXOS PRIORITÁRIOS
+--------------------------------------------------
+
+Testar e validar:
+
+- menu principal
+- nova partida
+- meus jogos
+- consoles
+- escritórios
+- equipe
+- pesquisa
+- marketing
+- notícias
+- rankings
+- mercado
+- finanças
+
+Também validar:
+- navegação entre telas
+- abertura e fechamento de telas
+- criação de jogo
+- criação de console
+- virada de mês/ano
+
+--------------------------------------------------
+[3] REGRA DE CORREÇÃO
+--------------------------------------------------
+
+Corrigir SOMENTE:
+
+- bug reproduzível
+- erro de compilação
+- erro de runtime
+- referência quebrada
+- crash de navegação
+- dado não exibido por falha real
+
+Se não houver bug real:
+NÃO alterar nada.
+
+--------------------------------------------------
+[4] PROIBIÇÕES
+--------------------------------------------------
+
+PROIBIDO:
+
+- refatorar componentes “por limpeza”
+- renomear arquivos sem necessidade
+- reescrever gameEngine
+- reescrever contexto global
+- alterar balanceamento
+- mudar layout por gosto
+- alterar textos por estética
+- mexer em sistemas estáveis
+
+--------------------------------------------------
+[5] ESTRATÉGIA DE TRABALHO
+--------------------------------------------------
+
+1. Ler estado atual do projeto
+2. Rodar diagnóstico
+3. Listar bugs reais encontrados
+4. Corrigir apenas o mínimo necessário
+5. Confirmar o que foi corrigido
+6. Confirmar explicitamente o que NÃO foi tocado
+
+--------------------------------------------------
+[6] LIMITE DE ALTERAÇÃO
+--------------------------------------------------
+
+Preferir:
+- correções pequenas
+- alterações locais
+- no máximo os arquivos realmente necessários
+
+Se detectar problema grande:
+PARAR e relatar antes de alterar.
+
+--------------------------------------------------
+[7] SAÍDA OBRIGATÓRIA
+--------------------------------------------------
+
+No final, responder com:
+
+1. Bugs reais encontrados
+2. Arquivos alterados
+3. O que foi corrigido
+4. O que permaneceu intacto
+5. Confirmação se o projeto compila e roda sem novos erros
+
+--------------------------------------------------
+[8] REGRA FINAL
+--------------------------------------------------
+
+Se o projeto estiver estável:
+responder que está estável e NÃO modificar nada.
+
+FIM

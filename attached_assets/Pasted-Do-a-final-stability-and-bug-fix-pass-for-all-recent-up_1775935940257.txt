@@ -1,0 +1,74 @@
+Do a final stability and bug-fix pass for all recent updates, without changing the game logic or structure.
+
+STRICT RULES:
+- Do NOT refactor architecture
+- Do NOT redesign UI
+- Do NOT change gameplay systems or balance
+- Do NOT remove features
+- Do NOT add new features
+- Do NOT rename core functions or files unless required for a bug fix
+- Make only minimal, safe fixes
+
+GOAL:
+Ensure that all recently implemented features work correctly and reliably without errors.
+
+SCOPE:
+Focus only on validating and fixing issues related to recent updates, including:
+- News system (including "Apagar tudo")
+- Rival interactions (including "Revidar")
+- DOC system (appearance and triggers)
+- Financial system / balance screen
+- Event frequency control
+- Buttons and UI interactions
+- State updates and rendering
+- Save/load and persistence
+
+TASKS:
+
+1. Validate all updated systems:
+- Ensure all buttons work correctly (onPress, handlers, effects)
+- Ensure state updates properly reflect in UI
+- Ensure no stale or broken state references
+- Ensure no undefined variables (like previous "year" errors)
+
+2. Fix broken behaviors:
+- Buttons not responding
+- Features not appearing (like DOC)
+- Delete actions not fully working
+- Events triggering incorrectly
+- UI not updating after actions
+
+3. Validate persistence:
+- Ensure data is saved and loaded correctly
+- Ensure deleted items do not return after reload
+- Ensure cooldowns (DOC, events, attacks) persist correctly
+
+4. Validate rendering:
+- Ensure lists refresh properly
+- Ensure no ghost items remain
+- Ensure filters do not break the UI
+
+5. Validate event frequency:
+- Ensure attacks and random events are not too frequent
+- Ensure cooldown logic is working properly
+
+6. Keep everything stable:
+- Do not alter game progression or balancing logic
+- Do not modify financial formulas unless fixing a bug
+- Do not change system design
+
+7. Add safety guards where needed:
+- null/undefined checks
+- safe state handling
+- prevent crashes
+
+FINAL OUTPUT:
+Explain clearly:
+- which files were modified
+- what bugs were found
+- what was causing them
+- what was fixed
+- confirm that no structure or gameplay logic was changed
+
+IMPORTANT:
+If unsure about a change, do nothing instead of making a risky modification.

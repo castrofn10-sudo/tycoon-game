@@ -1,0 +1,110 @@
+You must apply a STRICT and ISOLATED gameplay fairness fix only for game launch score drops and post-launch recovery.
+
+HARD RULES (MANDATORY):
+- DO NOT redesign unrelated UI
+- DO NOT change research trees, office systems, market systems, console systems, save/load, rival systems, or unrelated economy logic
+- DO NOT refactor unrelated files
+- DO NOT change the general game loop
+- ONLY fix unfair launch score drops and add a fair post-launch recovery path
+- Keep build stable and safe
+
+GOAL:
+Prevent absurd score collapses on launch and make post-launch fixes feel fair, strategic, and believable.
+
+CURRENT PROBLEM TO FIX:
+A game can be developed with a high internal score (example: 84/100), but after launch it can collapse unfairly to something like 45/100, even when it shows "Sem insetos".
+This feels random, unfair, and punishes the player too hard.
+
+REQUIRED FIXES:
+
+1. PROTECT HIGH-QUALITY GAMES FROM ABSURD COLLAPSE
+Create a launch protection rule:
+
+- If pre-launch/base score is 75+, final launch score cannot drop by more than 10 points total
+- If pre-launch/base score is 60–74, final launch score cannot drop by more than 12 points total
+- If pre-launch/base score is 45–59, final launch score cannot drop by more than 15 points total
+- Low-quality games below 45 can still be volatile
+
+Examples:
+- 84 can fall to at worst 74, not 45
+- 70 can fall to at worst 58
+- 50 can fall to at worst 35
+
+2. BUG PENALTIES MUST BE FAIR
+Rebalance launch penalties caused by bugs/issues:
+
+- no bugs / “Sem insetos” = zero bug penalty
+- light issues = -2 to -5
+- medium issues = -5 to -9
+- severe issues = -10 to -15 max, and severe cases should be rare
+
+IMPORTANT:
+- A bug-free game must never receive a hidden bug-style penalty
+- Do not fake random disaster when the game is marked as bug-free
+
+3. SPLIT SCORE TYPES CLEARLY IN LOGIC
+Use this structure internally:
+
+- baseQualityScore = true development result before launch penalties
+- launchAdjustedScore = final public/review score after fair modifiers
+
+Do not let random launch modifiers completely overwrite the true quality.
+
+4. ADD POST-LAUNCH RECOVERY SYSTEM
+Add a simple, believable post-launch recovery path for already launched games.
+
+New option in released game card:
+- “Corrigir Problemas” or similar wording
+
+Behavior:
+- costs money
+- takes time (months)
+- can improve public score gradually
+- can improve sales a bit if the game was harmed by issues
+
+Suggested recovery:
+- light fix: +2 to +4
+- medium fix: +4 to +7
+- strong fix: +6 to +10 max total recovery
+
+Restrictions:
+- recovery cannot exceed the original baseQualityScore
+- recovery should not turn a bad game into a masterpiece
+- recovery should feel like repair, not magic
+
+5. OPTIONAL PRE-LAUNCH CHECK (ONLY IF EASY AND SAFE)
+If easy to add without touching unrelated systems:
+Before launch, show a compact “Revisão Pré-Lançamento” preview panel with:
+- projected score range
+- issue level (none / light / medium / severe)
+- 3 actions:
+  - Melhorar
+  - Lançar assim mesmo
+  - Adiar lançamento
+
+IMPORTANT:
+Only add this if it is easy and isolated.
+If not easy, skip it and only do the protection + recovery system.
+
+6. KEEP GAMEPLAY IMMERSIVE
+The system should still reward:
+- better offices
+- better research
+- better staff
+- better decisions
+
+But it should stop punishing strong products with absurd random collapse.
+
+7. DO NOT BREAK BALANCE
+Keep bad games bad.
+Keep medium games risky.
+Keep great games strong.
+Just remove the unfair extreme drop behavior.
+
+AFTER COMPLETION:
+- list exactly which file(s) were modified
+- explain exactly how launch protection now works
+- explain exactly how bug penalties now work
+- explain exactly how post-launch recovery works
+- confirm no unrelated systems were changed
+- confirm build is clean

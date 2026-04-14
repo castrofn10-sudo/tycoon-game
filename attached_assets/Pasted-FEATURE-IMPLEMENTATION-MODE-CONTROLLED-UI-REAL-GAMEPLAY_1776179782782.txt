@@ -1,0 +1,123 @@
+FEATURE IMPLEMENTATION MODE — CONTROLLED UI + REAL GAMEPLAY INTEGRATION.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Implementar melhorias no sistema de Pesquisa & Desenvolvimento do MegaCorp Tycoon V1 com foco em:
+1) melhorar navegação mobile
+2) conectar pesquisas concluídas a desbloqueios reais no jogo
+
+OBJETIVOS:
+
+A) ALTERAR A NAVEGAÇÃO DOS SETORES DE PESQUISA
+- mover as abas principais de setores de pesquisa do topo horizontal para uma barra lateral vertical
+- manter boa usabilidade em mobile
+- evitar nomes cortados/truncados excessivamente
+- preservar o visual geral do jogo
+- manter os contadores de progresso por setor
+
+Setores esperados incluem exemplos como:
+- Silicon
+- Game Engines
+- Áudio
+- Negócio
+- Online
+- Inovação
+- Tecnologia
+- Hardware
+- Jogos
+
+LAYOUT ESPERADO:
+- coluna lateral esquerda com setores principais
+- área principal à direita com o conteúdo do setor selecionado
+- subtabs A/B/C continuam no topo da área principal do setor
+- árvore/cards continuam na área principal
+- não quebrar responsividade
+
+B) CONECTAR PESQUISAS A DESBLOQUEIOS REAIS
+Toda pesquisa concluída deve poder liberar funcionalidades reais em sistemas do jogo, principalmente:
+- construção de consoles
+- criação de jogos
+- recursos online
+- melhorias tecnológicas
+- negócios/distribuição quando aplicável
+
+REGRA CENTRAL:
+Pesquisas relacionadas a consoles devem liberar opções reais no menu de construção de consoles.
+
+EXEMPLOS:
+- CPU / arquitetura / GPU / mídia / bateria / cooling / áudio / portabilidade:
+  devem aparecer como opções no construtor de consoles quando pesquisadas
+- pesquisas de online:
+  devem liberar recursos online reais no desenvolvimento de jogos/plataformas quando aplicável
+- pesquisas de engines/gameplay:
+  devem liberar recursos jogáveis coerentes para criação de jogos
+- pesquisas de negócio:
+  devem liberar opções de mercado, distribuição, contratos, loja digital, etc., se já houver sistema correspondente
+
+C) LIBERAÇÃO POR ÉPOCA
+Implementar corretamente a lógica de disponibilidade por ano/época:
+- antes do ano exigido: pesquisa bloqueada
+- ao alcançar o ano exigido: pesquisa fica disponível
+- após concluir: desbloqueio real é concedido
+
+A disponibilidade deve respeitar:
+- ano mínimo da pesquisa
+- pré-requisitos da árvore, se existirem
+- estado salvo atual do jogador
+
+REGRAS IMPORTANTES:
+- não quebrar saves existentes
+- não apagar progresso já pesquisado
+- não alterar economia central sem necessidade
+- não refatorar sistemas não relacionados
+- manter mudanças cirúrgicas e consistentes
+- não criar dados fake
+- usar o estado real de pesquisas concluídas como fonte de verdade
+
+IMPLEMENTAÇÃO ESPERADA:
+
+1. IDENTIFICAR O MODELO DE DADOS DAS PESQUISAS
+- localizar onde cada pesquisa está definida
+- adicionar metadados de desbloqueio se necessário, por exemplo:
+  - unlockType
+  - unlockTarget
+  - unlockValue
+  - requiredYear
+  - prerequisites
+
+2. CRIAR/USAR UMA FONTE DE VERDADE DE DESBLOQUEIOS
+- quando uma pesquisa for concluída, registrar o desbloqueio no estado global do jogador/empresa
+- não depender apenas da UI da pesquisa
+
+3. INTEGRAR COM O CONSTRUTOR DE CONSOLES
+- no menu de construção de consoles, só exibir componentes/opções que já foram pesquisados ou liberados por padrão
+- componentes pesquisados devem aparecer automaticamente ao serem desbloqueados
+
+4. INTEGRAR COM OUTROS SISTEMAS EXISTENTES QUANDO APLICÁVEL
+- criação de jogos
+- recursos online
+- negócios/distribuição
+- features especiais
+
+5. AJUSTAR UI DO MENU DE PESQUISA
+- trocar abas horizontais principais por navegação lateral
+- manter seleção visual clara
+- evitar nomes truncados desnecessários
+- garantir boa rolagem se houver muitos setores
+
+VALIDAÇÃO OBRIGATÓRIA:
+- abrir o menu de pesquisa no mobile e verificar que os setores principais não ficam mais cortados como antes
+- concluir uma pesquisa de console e confirmar que ela aparece no construtor de consoles
+- avançar o ano e verificar que pesquisas de épocas futuras só liberam quando o ano correto chegar
+- confirmar que pesquisas antigas já concluídas continuam válidas
+- confirmar que saves existentes continuam funcionando
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- como a navegação lateral foi implementada
+- como os desbloqueios de pesquisa foram conectados ao gameplay real
+- quais sistemas já passaram a consumir esses desbloqueios
+- como a liberação por época foi validada
+- confirmar que o save existente foi preservado

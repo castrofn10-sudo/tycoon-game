@@ -1,0 +1,208 @@
+You must apply a HIGH-END AAA VISUAL UPGRADE to the Research & Development screen.
+
+STRICT RULES (MANDATORY):
+- DO NOT change any gameplay logic, economy, research effects, unlock rules, or progression systems.
+- DO NOT modify backend logic (research, combos, saves, employees, etc).
+- DO NOT alter balancing or timings.
+- ONLY improve UI, UX, visual hierarchy, and immersion.
+- Keep code safe, modular, and minimal.
+
+GOAL:
+Transform the Research screen into a AAA-quality experience:
+- Clean
+- Immersive
+- Highly readable
+- Visually satisfying
+- Feels like a premium strategy/tycoon game
+
+----------------------------------------
+1. GLOBAL VISUAL STYLE (CORE)
+----------------------------------------
+
+- Apply a DARK PREMIUM UI:
+  Background: deep navy/black gradient (not flat)
+  Cards: subtle glass effect (blur + low opacity)
+  Borders: soft glow based on category color
+  Shadows: soft elevation (not heavy)
+
+- Add subtle animated background:
+  - Slow moving particles or lines (very low opacity)
+  - Should feel "tech / innovation lab"
+
+----------------------------------------
+2. CATEGORY HEADER REDESIGN
+----------------------------------------
+
+Replace current tabs with AAA-style top bar:
+
+Each category should include:
+- Icon (large, minimal)
+- Name (bold)
+- Progress bar (thin, animated)
+- Completion counter (e.g. 5/12)
+
+Active category:
+- Slight glow
+- Bottom accent line (animated)
+- Smooth transition when switching
+
+----------------------------------------
+3. TREE LAYOUT (BIGGEST UPGRADE)
+----------------------------------------
+
+Transform grid into a structured tech tree:
+
+- Nodes connected with soft animated lines
+- Clear vertical progression flow
+- Columns represent paths (A / B / C)
+
+Connections:
+- Locked → faint
+- Available → visible
+- Active → animated pulse
+- Completed → solid + glow
+
+Add smooth scroll with easing
+
+----------------------------------------
+4. NODE CARD REDESIGN (AAA QUALITY)
+----------------------------------------
+
+Each node becomes a premium interactive card:
+
+Structure:
+- Top: Icon + Title
+- Middle: Effect highlight (bold, readable)
+- Bottom: Time + Cost (clean footer)
+
+Visual states:
+
+AVAILABLE:
+- Slight glow
+- Hover animation (scale 1.03)
+
+ACTIVE:
+- Animated border pulse
+- Progress bar filling smoothly
+- Subtle moving light effect
+
+COMPLETED:
+- Green accent glow
+- Checkmark icon fade-in
+
+LOCKED:
+- Desaturated
+- Frosted overlay
+- Lock icon centered
+
+YEAR-LOCKED:
+- Amber accent
+- Small calendar icon
+
+----------------------------------------
+5. COMBO SYSTEM (AAA PRESENTATION)
+----------------------------------------
+
+Transform combos into SPECIAL PROJECTS:
+
+- Separate section visually (not just below)
+- Title: “Advanced Research Projects”
+
+Each combo card:
+- Larger than normal nodes
+- Gold / purple gradient border
+- Unique icon (fusion symbol)
+
+Inside card:
+- Combined tech icons connected visually
+- Synergy description highlighted
+- Time clearly marked: "3x Research Effort"
+
+Unlock animation:
+- When combo becomes available:
+  → slight glow pulse
+  → soft sound trigger (if exists)
+
+----------------------------------------
+6. MICRO-INTERACTIONS (IMMERSION)
+----------------------------------------
+
+Add subtle animations:
+
+- Hover:
+  - slight scale + glow
+- Click:
+  - quick press feedback
+- Unlock:
+  - fade + glow burst
+- Progress:
+  - smooth animated fill (no jumps)
+
+----------------------------------------
+7. FEEDBACK SYSTEM (CRITICAL AAA TOUCH)
+----------------------------------------
+
+When research completes:
+
+- Small popup (top corner):
+  ✔ "Research Completed"
+  + name
+  + bonus summary
+
+- Combo completion:
+  → bigger visual impact
+  → slight screen glow pulse
+
+----------------------------------------
+8. TOOLTIPS (SMART UX)
+----------------------------------------
+
+On hover/tap:
+
+Show clean tooltip:
+- Full description
+- Exact bonuses
+- Prerequisites
+- Time calculation
+
+----------------------------------------
+9. NAVIGATION IMPROVEMENT
+----------------------------------------
+
+- Add "Focus mode":
+  → zoom into selected branch
+- Add mini-map (optional, simple):
+  → shows tree overview
+
+----------------------------------------
+10. PERFORMANCE SAFETY
+----------------------------------------
+
+- All animations must be lightweight
+- No heavy libraries
+- Keep FPS stable
+- No re-render loops
+
+----------------------------------------
+11. DO NOT TOUCH:
+----------------------------------------
+
+- Research values
+- Economy
+- Combo formulas
+- Unlock logic
+- Save system
+- Multiplayer/online
+- Any external systems
+
+----------------------------------------
+AFTER IMPLEMENTATION:
+----------------------------------------
+
+Provide:
+- List of modified files
+- Summary of UI changes
+- Confirmation no gameplay logic was touched
+- Performance notes
+
+If any change risks breaking logic → DO NOT APPLY.

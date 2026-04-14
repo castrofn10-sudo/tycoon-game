@@ -1,0 +1,91 @@
+Fix and improve the "New Game Project" multi-step creation flow (wizard).
+
+CRITICAL ISSUE:
+In Step 1 ("Escolha os Gêneros"), the user can select genres but cannot proceed.
+The "Next" action is not accessible or not enabled correctly, blocking progression.
+
+====================================
+1. FIX STEP 1 PROGRESSION LOGIC
+====================================
+
+- Ensure selected genres are correctly stored in state
+- Validation rules:
+  - 0 selected → Next disabled
+  - 1 to 3 selected → Next enabled
+  - More than allowed → block or show feedback
+
+- Once valid selection is made, user MUST be able to proceed to next step
+
+====================================
+2. ADD FIXED NAVIGATION (MANDATORY)
+====================================
+
+Create a fixed/sticky footer inside the modal/wizard:
+
+Footer must contain:
+- Back button (Voltar)
+- Next button (Próximo)
+
+Rules:
+- Footer must ALWAYS be visible
+- Must NOT depend on scrolling
+- Must work on mobile screens
+- Next button only enabled when validation passes
+
+====================================
+3. FIX SCROLL BEHAVIOR
+====================================
+
+- Genre list should scroll independently if needed
+- Modal must not trap or hide controls
+- Prevent bottom cutoff of UI
+- Ensure user never loses access to navigation
+
+====================================
+4. MOBILE-FIRST USABILITY
+====================================
+
+- Keep step indicator visible (1/4, 2/4, etc.)
+- Keep selected genres counter visible
+- Ensure touch areas are large enough
+- Avoid UI overflow or hidden elements
+
+====================================
+5. PRESERVE STEP STRUCTURE
+====================================
+
+Keep this flow intact:
+
+Step 1: Genres selection  
+Step 2: Target audience + age rating  
+Step 3: Platforms + consoles  
+Step 4 (if exists): final confirmation  
+
+- Do NOT remove steps
+- Only fix progression and usability
+
+====================================
+6. EXTRA UX IMPROVEMENTS
+====================================
+
+- Highlight selected genres clearly
+- Add subtle feedback when selecting (visual state change)
+- Show "X/3 selecionados" clearly
+- Prevent confusion about selection limit
+
+====================================
+7. FINAL VALIDATION
+====================================
+
+After implementing:
+- Selecting genres must update state correctly
+- "Next" button must activate properly
+- User must move to Step 2 without issues
+- Works on desktop and mobile
+- No hidden buttons or blocked flow
+
+====================================
+GOAL
+====================================
+
+Make the game creation flow smooth, intuitive, and impossible to get stuck.

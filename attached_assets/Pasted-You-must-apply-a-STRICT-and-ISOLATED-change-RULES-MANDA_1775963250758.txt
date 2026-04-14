@@ -1,0 +1,82 @@
+You must apply a STRICT and ISOLATED change.
+
+RULES (MANDATORY):
+- Modify ONLY the Research & Development system to add research combinations/synergies.
+- DO NOT refactor unrelated systems.
+- DO NOT redesign unrelated UI outside the research screen.
+- DO NOT change economy, sales, awards, rivals, consoles, save/load, online, or market systems.
+- DO NOT alter existing research node effects, costs, unlock years, or progression rules.
+- Keep minimal safe changes only.
+
+TASK:
+Add a research combination / synergy system where combinations are treated as FULL RESEARCH PROJECTS with proportional time cost.
+
+GOALS:
+- Make research more strategic and realistic
+- Prevent exploit of instant multi-benefits
+- Keep balance aligned with real-world development effort
+
+WHAT TO IMPLEMENT:
+
+1. COMBINATION SYSTEM
+- Combos unlock when required research nodes are completed
+- Once unlocked, combo becomes a NEW research option (not automatic)
+
+2. COMBO AS A REAL RESEARCH PROJECT
+- Combos must be researched manually (like any other research node)
+- They appear visually as special nodes (e.g. purple/gold border)
+
+3. TIME SCALING (CORE RULE)
+- Combo research time must scale based on number of components:
+
+Formula:
+comboTime = baseResearchTime × numberOfRequiredNodes
+
+Examples:
+- 2-node combo → 2x base time
+- 3-node combo → 3x base time
+- 4-node combo → 4x base time
+
+Optional refinement (recommended):
+comboTime = baseTime × nodes × 1.1 (slight penalty for integration complexity)
+
+4. COST SCALING (OPTIONAL BUT RECOMMENDED)
+- Combo cost can scale similarly:
+
+comboCost = sum(nodeCosts) × 1.1
+
+5. NO DOUBLE BENEFITS
+- Base nodes keep their original effects
+- Combo adds an EXTRA synergy bonus only
+
+6. UI (RESEARCH SCREEN ONLY)
+- Combo nodes must show:
+  - Required technologies (icons or list)
+  - Longer duration indicator (ex: "3x research time")
+  - Unique visual identity (color or glow)
+
+7. PROGRESSION
+- Combo follows normal research system:
+  - Can be queued
+  - Can be paused
+  - Uses normal research progression
+
+8. SAVE / LOAD SAFETY
+- Persist combo unlock state and research progress
+
+9. LIMITED INITIAL IMPLEMENTATION
+- Add only 6–10 combos for stability
+
+10. DO NOT TOUCH UNRELATED SYSTEMS
+- no changes to economy
+- no changes to sales formulas outside combo bonus
+- no changes to rivals
+- no changes to console system
+
+AFTER COMPLETION:
+- List modified files
+- List all combos created
+- Show time calculation logic
+- Confirm no unrelated systems were modified
+
+If any change is outside this scope, do not make it.

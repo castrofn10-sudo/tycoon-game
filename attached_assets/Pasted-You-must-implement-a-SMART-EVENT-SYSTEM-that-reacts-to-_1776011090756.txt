@@ -1,0 +1,134 @@
+You must implement a SMART EVENT SYSTEM that reacts to actual player decisions and game state.
+
+HARD RULES:
+- DO NOT redesign UI significantly
+- DO NOT change revenue formulas
+- DO NOT change finalScore logic
+- DO NOT change save/load structure unless strictly necessary
+- DO NOT refactor unrelated systems
+- ONLY improve how events are triggered and contextualized
+- Keep build stable and safe
+
+GOAL:
+Make in-game events feel logical, contextual, and immersive instead of random or unfair.
+
+IMPLEMENTATION:
+
+1. EVENT VALIDATION LAYER
+Before any event triggers, validate if it makes sense based on real conditions.
+
+Events must use actual game state such as:
+- finalScore
+- predictedScore (if pre-launch review exists)
+- bugs level
+- hype level
+- marketing intensity
+- player reputation
+- recent product performance
+- office/research level if relevant
+- company financial pressure if relevant
+
+2. EVENT CATEGORIES
+Classify events into categories:
+
+A) NEGATIVE_PR
+Examples:
+- false advertising
+- public backlash
+- trust loss
+
+Trigger only if:
+- hype was too high compared to finalScore
+- bugs are medium/severe
+- player ignored pre-launch improvements
+- reputation is already fragile
+
+B) POSITIVE_PR
+Examples:
+- surprise success
+- strong reviews
+- viral popularity
+
+Trigger only if:
+- finalScore is high
+- bugs are low/none
+- hype and delivery are aligned
+- sales are strong
+
+C) TECH
+Examples:
+- technical criticism
+- compatibility issues
+- hardware bottlenecks
+
+Trigger only if:
+- bugs are present
+- poor hardware fit exists
+- rushed launch happened
+
+D) MARKET
+Examples:
+- market slowdown
+- trend shift
+- competitor pressure
+- genre boom
+
+Trigger only if:
+- current year/era supports it
+- market state justifies it
+- competition exists
+
+E) INTERNAL
+Examples:
+- team fatigue
+- production friction
+- management strain
+
+Trigger only if:
+- workload is high
+- too many projects are active
+- company expansion is under pressure
+
+3. FAIRNESS RULES
+- A bug-free high-quality game must NOT receive bug-style negative events
+- A strong game with score >= 80 and no bugs must be protected from unfair negative PR events
+- Low hype should block false advertising style events
+- Positive and negative event types should not conflict in the same launch moment unless explicitly justified
+
+4. COOLDOWNS
+Prevent spam:
+- Same event cannot repeat for 12–24 in-game months
+- Same category should have cooldown protection
+- Major negative events should be rare
+
+5. EVENT MESSAGES
+Keep existing event UI if possible, but improve contextual text.
+Messages should mention WHY the event happened.
+
+Examples:
+- "Strong marketing created expectations your launch could not fully match."
+- "Technical instability reduced public confidence."
+- "Positive word-of-mouth amplified your strong launch."
+
+6. PRE-LAUNCH + POST-LAUNCH CONNECTION
+If a pre-launch warning existed and the player ignored it:
+- allow contextual event follow-up after launch
+
+If pre-launch review was good and launch succeeded:
+- allow reinforcing positive event
+
+7. NO RANDOM PUNISHMENT
+Do not allow large negative events without supporting conditions.
+
+8. KEEP SYSTEMS SEPARATED
+- Events can react to score/bugs/hype
+- Events must NOT alter the protected launch fairness system
+- Events must NOT rewrite score logic
+
+AFTER COMPLETION:
+- list exactly which file(s) were modified
+- explain how event validation now works
+- explain cooldown logic
+- explain how events now use real game conditions
+- confirm no unrelated systems were changed
+- confirm build is clean

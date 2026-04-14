@@ -1,0 +1,103 @@
+You must apply a STRICT and ISOLATED change.
+
+RULES (MANDATORY):
+- Modify ONLY what is explicitly requested.
+- DO NOT refactor unrelated systems.
+- DO NOT redesign unrelated UI.
+- DO NOT change awards, DOC, news, or finance screens unless required by this task.
+- DO NOT add random new mechanics outside this scope.
+- Keep minimal safe structural changes.
+
+TASK:
+Upgrade the fictional rival companies system so the market feels alive, competitive, and strategic.
+
+GOALS:
+- Rival companies must actually evolve over time
+- Rival companies must develop games and consoles in a believable way
+- Rival companies must gain and lose market share
+- Rival companies can become weak, enter crisis, fail, and be bought
+- Player can attempt to buy companies even before bankruptcy
+- The player must improve and evolve their own company to compete properly
+
+REQUIREMENTS:
+
+1. Rival company evolution
+- Make rival companies update over time with meaningful progression in:
+  - innovation
+  - reputation
+  - money/cash
+  - market share
+  - product quality
+- Rivals should not feel static
+
+2. Rival product development
+- Rivals must be able to release games and consoles in a more believable way
+- Their products should vary in quality and success
+- Stronger rivals should sometimes outperform the player
+- Weak rivals should sometimes fail badly
+
+3. Market competition
+- Market share should shift based on actual rival success and player success
+- Better products should help companies gain market share
+- Failed products should hurt companies
+- Competition should feel like a real market dispute
+
+4. Crisis and bankruptcy
+- Rival companies can enter crisis if they perform poorly for too long
+- Crisis should reduce their strength/value
+- If they stay weak long enough, they can go bankrupt
+- Bankruptcy must not happen too fast or too randomly
+
+5. Acquisition system
+- Add the ability for the player to attempt to buy a rival company
+- A company can be bought:
+  - after bankruptcy (cheap / distressed acquisition)
+  - during crisis (discounted / hard negotiation)
+  - while healthy (expensive / low chance of acceptance)
+
+6. Buyout decision logic
+- Rival willingness to sell should depend on:
+  - financial condition
+  - market share
+  - aggressiveness
+  - reputation
+  - innovation
+  - player strength
+  - player available cash
+- Strong healthy rivals should not sell easily
+- Weak or bankrupt rivals should be much easier to acquire
+
+7. Market value / buyout price
+- Add a simple but believable company valuation
+- Buyout price should depend on:
+  - cash
+  - market share
+  - innovation
+  - reputation
+  - recent performance
+- Bankrupt companies should be cheaper
+
+8. Strategic pressure
+- Make the system encourage the player to think carefully
+- The player should need to improve office/research/company strength to compete well
+- Rival companies should not be decorative; they should be meaningful threats
+
+9. UI support
+- In the market/company screen, show useful rival info such as:
+  - market status
+  - financial status (healthy / pressured / crisis / bankrupt)
+  - estimated valuation or acquisition availability
+- Keep UI changes minimal and consistent
+
+10. Save/load compatibility
+- Persist all new rival fields safely
+- Do not break existing saves
+
+AFTER COMPLETION:
+- List exactly which files were modified
+- Explain exactly what was added to rival companies
+- Explain how bankruptcy works
+- Explain how buying companies works
+- Confirm no unrelated systems were changed
+
+If a change is outside this scope, do not make it.

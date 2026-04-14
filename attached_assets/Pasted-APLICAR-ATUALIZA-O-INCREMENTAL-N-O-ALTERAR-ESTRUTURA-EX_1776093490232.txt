@@ -1,0 +1,97 @@
+APLICAR ATUALIZAÇÃO INCREMENTAL — NÃO ALTERAR ESTRUTURA EXISTENTE
+NÃO REMOVER SISTEMAS ATUAIS
+APENAS AJUSTAR TEMPOS E BALANCEAMENTO DE DESENVOLVIMENTO
+
+----------------------------------------
+[1] AJUSTE DE TEMPO DE DESENVOLVIMENTO DO JOGADOR
+----------------------------------------
+
+Substituir tempos atuais de desenvolvimento por faixas mais fluidas e realistas:
+
+Indie:
+- mínimo 4 meses
+- máximo 8 meses
+
+AA:
+- mínimo 8 meses
+- máximo 12 meses
+
+AAA:
+- mínimo 12 meses
+- máximo 20 meses
+
+----------------------------------------
+[2] REGRA DE VARIAÇÃO INTERNA
+----------------------------------------
+
+O tempo final do projeto deve variar dentro da faixa com base em fatores já existentes no jogo:
+
+- tamanho da equipe
+- qualidade da equipe
+- gênero/complexidade do projeto
+- quantidade de gêneros
+- penalidades já existentes
+- bônus já existentes
+
+IMPORTANTE:
+- NÃO criar novo sistema de cálculo do zero
+- APENAS recalibrar o tempo final para respeitar essas novas faixas
+
+----------------------------------------
+[3] COMPLEXIDADE AINDA DEVE IMPORTAR
+----------------------------------------
+
+Projetos mais complexos ainda devem demorar mais.
+
+Exemplos:
+- 1 gênero = base normal
+- 2 gêneros = pequeno aumento
+- 3 gêneros = aumento relevante
+
+Mas:
+- NÃO deixar o tempo explodir exageradamente
+- manter tudo dentro de uma progressão jogável
+
+----------------------------------------
+[4] PESQUISA NÃO DEVE QUEBRAR O TEMPO
+----------------------------------------
+
+Pesquisas e melhorias podem ajudar indiretamente no desenvolvimento,
+mas NÃO devem reduzir o tempo a níveis absurdos.
+
+Regras:
+- pesquisa melhora consistência e qualidade
+- equipe melhora produtividade
+- tempo mínimo deve continuar respeitado
+
+Exemplo:
+- um AAA nunca deve virar projeto de poucos meses
+- um Indie nunca deve ficar preso em duração absurda sem motivo forte
+
+----------------------------------------
+[5] IA E JOGADOR DEVEM FICAR COERENTES
+----------------------------------------
+
+Confirmar que os tempos do jogador ficam coerentes com a nova regra da IA já ajustada.
+
+Objetivo:
+- evitar sensação de injustiça
+- evitar IA lançando muito mais rápido que o player
+- manter o mercado competitivo, mas justo
+
+----------------------------------------
+[6] SEGURANÇA
+----------------------------------------
+
+NÃO modificar:
+- sistema de reputação
+- sistema financeiro
+- sistema de marketing
+- sistema de console
+- sistema de eventos
+
+APENAS recalibrar tempos e pacing de desenvolvimento
+
+----------------------------------------
+FIM DA PARTE 2
+NÃO MODIFICAR OUTRAS ÁREAS

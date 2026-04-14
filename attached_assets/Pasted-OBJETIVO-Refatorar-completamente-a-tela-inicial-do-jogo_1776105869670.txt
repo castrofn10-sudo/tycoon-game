@@ -1,0 +1,150 @@
+OBJETIVO:
+Refatorar completamente a tela inicial do jogo para um estilo limpo, direto e profissional, removendo excesso de texto e separando o tutorial.
+
+IMPORTANTE:
+- NÃO quebrar nenhuma lógica existente do jogo
+- NÃO alterar sistemas de save/load
+- NÃO alterar navegação já existente
+- Apenas melhorar UI/UX da tela inicial e fluxo de início
+
+--------------------------------------------------
+
+1. LIMPAR TELA INICIAL
+
+REMOVER completamente:
+- Texto longo explicativo ("Você está prestes a fundar...")
+- Bloco "Seu objetivo"
+- Lista de ações (Pesquisar, Lançar, Expandir, Dominar)
+- Qualquer parágrafo descritivo
+
+A tela inicial deve ficar MINIMALISTA.
+
+--------------------------------------------------
+
+2. NOVA ESTRUTURA DA TELA INICIAL
+
+Layout final:
+
+TOPO:
+- Nome: MEGACORP
+- Subtítulo pequeno: "Tycoon • 1972 → ∞"
+
+CENTRO:
+- Botão principal grande:
+  "Novo Jogo"
+
+- Botão secundário:
+  "Continuar"
+
+- Botão opcional menor:
+  "Tutorial"
+
+FUNDO:
+- Manter background atual
+- Manter partículas leves (sem aumentar peso)
+
+--------------------------------------------------
+
+3. ESTILO DOS BOTÕES
+
+Novo Jogo:
+- Cor principal (azul ou gradiente já usado)
+- Destaque visual leve (glow suave)
+- Maior que os outros
+
+Continuar:
+- Cor neutra
+- Menor destaque
+
+Tutorial:
+- Botão discreto
+- Pode ser outline ou cinza
+
+--------------------------------------------------
+
+4. FLUXO AO CLICAR "NOVO JOGO"
+
+ANTES de iniciar o jogo:
+
+Abrir um modal simples:
+
+Título:
+"Quer aprender a jogar?"
+
+Botões:
+- "Sim, tutorial"
+- "Pular"
+
+--------------------------------------------------
+
+5. SISTEMA DE TUTORIAL
+
+Se jogador clicar "Sim, tutorial":
+
+Criar sequência simples (3 a 5 passos no máximo):
+
+Exemplo:
+
+Passo 1:
+"Você começa com uma pequena empresa."
+
+Passo 2:
+"Desenvolva jogos e ganhe dinheiro."
+
+Passo 3:
+"Invista em tecnologia para crescer."
+
+Passo 4:
+"Expanda para dominar o mercado."
+
+Botão:
+"Entendi"
+
+Após isso:
+→ iniciar jogo normalmente
+
+--------------------------------------------------
+
+6. SE JOGADOR CLICAR "PULAR"
+
+- Iniciar jogo direto
+- Sem qualquer explicação
+
+--------------------------------------------------
+
+7. PERFORMANCE
+
+- NÃO adicionar animações pesadas
+- NÃO adicionar bibliotecas novas
+- Apenas UI leve
+
+--------------------------------------------------
+
+8. ORGANIZAÇÃO
+
+Separar em componentes:
+
+- StartScreen
+- TutorialModal
+- TutorialSteps
+
+--------------------------------------------------
+
+9. RESULTADO ESPERADO
+
+- Tela inicial rápida
+- Visual limpo
+- Jogador entra no jogo em 1 clique
+- Tutorial opcional, não obrigatório
+
+--------------------------------------------------
+
+10. NÃO FAZER
+
+- Não adicionar textos longos novamente
+- Não misturar tutorial com tela inicial
+- Não criar telas extras desnecessárias
+
+--------------------------------------------------
+
+FIM DO PROMPT

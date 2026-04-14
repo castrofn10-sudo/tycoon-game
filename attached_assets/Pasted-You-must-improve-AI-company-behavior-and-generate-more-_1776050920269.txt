@@ -1,0 +1,97 @@
+You must improve AI company behavior and generate more immersive fictional company and console names.
+
+HARD RULES:
+- DO NOT use real company names exactly
+- DO NOT break existing AI systems
+- DO NOT modify player progression
+- DO NOT change core gameplay mechanics
+- ONLY enhance AI behavior and naming system
+- Keep system stable and realistic
+
+GOAL:
+Create a more dynamic and immersive market with evolving companies and believable fictional names.
+
+----------------------------------------
+PART 1 — FICTIONAL COMPANY NAMES
+----------------------------------------
+
+- Generate company names inspired by real-world companies
+- Slightly modify names (3–4 letters difference)
+- Names must feel familiar but not identical
+
+Examples:
+- Nintendo → Nintaro
+- Sony → Soryn
+- Ubisoft → Ubigame
+- EA → EonArts
+
+----------------------------------------
+PART 2 — CONSOLE NAMES
+----------------------------------------
+
+- Apply same logic to console naming
+- Create names inspired by real consoles but altered
+
+Examples:
+- PlayStation → PlaySphere
+- Xbox → XCube
+- Switch → Switcha
+
+----------------------------------------
+PART 3 — AI COMPANY DYNAMICS
+----------------------------------------
+
+AI companies must evolve over time:
+
+- Can grow if making good decisions
+- Can decline if making poor decisions
+- Can overtake other companies in ranking
+
+----------------------------------------
+PART 4 — DECISION VARIATION
+----------------------------------------
+
+AI behavior must include:
+
+- smart investments
+- poor investments
+- risky strategies
+- inconsistent performance
+
+----------------------------------------
+PART 5 — MARKET COMPETITION
+----------------------------------------
+
+- Rankings must change over time
+- No company should remain permanently dominant
+- Companies can:
+  - rise
+  - fall
+  - recover
+
+----------------------------------------
+PART 6 — BALANCE
+----------------------------------------
+
+- Do not make AI perfect
+- Allow mistakes and failures
+- Keep system unpredictable but fair
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not modify:
+  - legal system
+  - marketing system
+  - console mechanics
+- Only extend AI and naming behavior
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- explain how names are generated
+- explain how AI growth/decline works
+- confirm ranking changes dynamically
+- confirm no existing systems were broken

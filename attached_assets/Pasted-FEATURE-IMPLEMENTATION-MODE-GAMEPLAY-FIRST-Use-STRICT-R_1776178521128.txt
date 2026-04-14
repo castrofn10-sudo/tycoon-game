@@ -1,0 +1,81 @@
+FEATURE IMPLEMENTATION MODE — GAMEPLAY FIRST.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Implementar primeiro a integração real entre Pesquisa & Desenvolvimento e o construtor de consoles no MegaCorp Tycoon V1.
+
+OBJETIVO PRINCIPAL:
+Toda pesquisa de hardware/tecnologia/silicon/game engines/áudio que for relevante para consoles deve gerar desbloqueios reais no menu de construção de consoles.
+
+NESTA ETAPA, FOQUE APENAS EM GAMEPLAY E DADOS.
+NÃO mudar ainda a UI do menu de pesquisa para lateral.
+Primeiro fazer a lógica funcionar de verdade.
+
+ESCOPO DESTA FASE:
+1) identificar pesquisas que devem afetar construção de consoles
+2) registrar desbloqueios reais no estado global da empresa
+3) fazer o construtor de consoles consumir esses desbloqueios
+4) respeitar liberação por época/ano
+5) preservar saves existentes
+
+REGRA CENTRAL:
+Pesquisa concluída = opção real liberada no construtor de consoles.
+
+EXEMPLOS DE PESQUISAS QUE DEVEM VIRAR DESBLOQUEIO REAL:
+- CPU 8-bit / 16-bit / 32-bit / 64-bit
+- GPU / gráficos / renderização
+- cartucho / CD-ROM / mídia
+- áudio mono / estéreo / surround
+- bateria / cooling / portabilidade
+- online/hardware/infra quando aplicável a console
+- qualquer outra pesquisa claramente ligada a peça, feature ou capacidade de console
+
+COMPORTAMENTO ESPERADO:
+- antes da pesquisa: opção não disponível no construtor
+- após pesquisa concluída: opção aparece automaticamente
+- se exigir ano mínimo, só pode pesquisar/liberar quando a época correta chegar
+- se já estiver pesquisado no save atual, deve aparecer como desbloqueado sem resetar progresso
+
+IMPLEMENTAÇÃO TÉCNICA:
+1. localizar o modelo de dados de pesquisas
+2. adicionar ou usar metadados por pesquisa:
+   - unlockType
+   - unlockTarget
+   - unlockValue
+   - requiredYear
+   - prerequisites
+3. criar/usar uma fonte de verdade global de desbloqueios
+4. ao concluir pesquisa, registrar o unlock
+5. no construtor de consoles, filtrar/renderizar opções com base nesses unlocks
+6. manter compatibilidade com saves antigos:
+   - se uma pesquisa já consta como concluída, o unlock correspondente deve ser reconstruído automaticamente ao carregar o save, se necessário
+
+REGRAS IMPORTANTES:
+- não quebrar o criador de consoles atual
+- não mudar economia central
+- não mexer em rankings/saves/menu principal/notícias
+- não inventar componente fake sem ligação com pesquisa real
+- fazer implementação mínima e consistente
+- não alterar ainda a interface de pesquisa para lateral nesta etapa
+
+VALIDAÇÃO OBRIGATÓRIA:
+Testar ao menos:
+1. uma pesquisa de CPU
+2. uma pesquisa de mídia/cartucho/CD
+3. uma pesquisa de áudio
+4. uma pesquisa de hardware adicional
+
+Em cada caso verificar:
+- antes da conclusão: item indisponível
+- depois da conclusão: item disponível no construtor
+- save continua funcionando
+- ano/época é respeitado
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- quais pesquisas já foram conectadas ao construtor de consoles
+- como os desbloqueios são armazenados
+- como saves existentes foram preservados
+- o que ainda falta integrar depois

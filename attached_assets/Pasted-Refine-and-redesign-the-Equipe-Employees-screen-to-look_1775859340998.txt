@@ -1,0 +1,126 @@
+Refine and redesign the "Equipe" / Employees screen to look more polished, premium, and game-like.
+
+IMPORTANT:
+- Do NOT break hiring logic
+- Do NOT remove current roles
+- Focus on UI/UX redesign and layout improvement
+- Mobile-first design
+- Make it feel like a real management/tycoon game, not a prototype
+
+====================================
+1. MAIN GOAL
+====================================
+
+The Employees/Team screen currently looks too empty, basic, and unfinished.
+It needs a full visual repagination with a more professional and game-like structure.
+
+====================================
+2. TOP SUMMARY REDESIGN
+====================================
+
+Current top summary is too stretched and plain.
+
+Tasks:
+- Redesign the top stats area into compact premium summary cards
+- Show clearly:
+  - Current employees / max capacity
+  - Salaries per month
+  - Rating bonus
+  - Sales bonus
+- Make each stat feel like its own visual card or clean segmented panel
+- Improve spacing, hierarchy, and readability
+- Reduce the sense of empty wasted space
+
+====================================
+3. ROLE TAB / FILTER REDESIGN
+====================================
+
+Current role buttons (Engineer, Designer, Marketing, Sales, Researcher) look too basic.
+
+Tasks:
+- Redesign the role selector with a cleaner tycoon/management-game style
+- Make the tabs feel premium and intentional
+- Improve active/inactive visual states
+- Increase touch area for mobile
+- Keep icons and labels aligned and clean
+- Avoid the current "cheap/prototype" look
+
+====================================
+4. MAIN EMPLOYEE PANEL REDESIGN
+====================================
+
+The current center panel feels empty and visually weak.
+
+Tasks:
+- Redesign the employee overview card for the selected role
+- Show:
+  - Role icon
+  - Role name
+  - Role effect/bonus
+  - Current amount hired in that role
+  - Short flavor/status message
+- If no employee is hired, show a cleaner empty state
+  Example:
+  - "Nenhum engenheiro contratado ainda"
+  - plus a cleaner icon and styled empty-state card
+- Make the whole section feel intentional, not blank
+
+====================================
+5. HIRING AREA REDESIGN
+====================================
+
+The "Contratar" area should feel more like a management game shop/recruitment panel.
+
+Tasks:
+- Improve hiring cards layout
+- Make each employee tier card more attractive and game-like
+- Highlight:
+  - tier (Junior, Senior, Principal, etc.)
+  - salary
+  - bonus/effect
+  - hire button
+- Better spacing between cards
+- Better card contrast and visual hierarchy
+- Keep it mobile-friendly and easy to browse
+
+====================================
+6. VISUAL STYLE
+====================================
+
+Apply a stronger premium game UI style:
+- Cleaner card layering
+- Better shadows / borders / highlights
+- Better spacing and rhythm
+- More polished typography hierarchy
+- Less empty blue blocks
+- More intentional composition
+
+The result should feel closer to a real released tycoon game UI.
+
+====================================
+7. MOBILE-FIRST IMPROVEMENTS
+====================================
+
+- Ensure no area feels too stretched horizontally
+- Reduce awkward empty spaces
+- Make touch targets larger
+- Ensure cards stack or scroll nicely on smaller screens
+- Improve readability on mobile
+
+====================================
+8. KEEP FUNCTIONALITY
+====================================
+
+- Do NOT remove current employee roles
+- Do NOT remove existing hire system
+- Do NOT change business logic unless needed for display improvement
+- This is primarily a UI/UX repagination and polish pass
+
+====================================
+9. FINAL CHECK
+====================================
+
+After redesigning:
+- test the Employees screen on mobile layout
+- ensure it looks cleaner, more premium, and more like a real game
+- ensure the screen feels polished, not abandoned or prototype-like

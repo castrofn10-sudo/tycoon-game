@@ -1,0 +1,97 @@
+You must perform a FINAL POLISH PASS across the entire game.
+
+HARD RULES:
+- DO NOT change core gameplay systems
+- DO NOT rebalance economy or progression
+- DO NOT add new features
+- DO NOT break existing UI structure
+- ONLY improve clarity, consistency, and usability
+
+GOAL:
+Make the game feel polished, clear, smooth, and professional.
+
+IMPLEMENTATION:
+
+1. TEXT & CLARITY FIXES
+
+- Fix all broken or cut texts
+- Standardize language (keep consistent tone in Portuguese)
+- Improve readability of descriptions
+- Remove duplicated or confusing phrases
+
+Examples:
+- Shorter sentences
+- Clear cause → effect explanations
+
+---
+
+2. BUTTONS & NAVIGATION
+
+- Ensure every screen has a working "back" option
+- Fix unresponsive buttons
+- Make clickable areas clear and consistent
+- Prevent accidental clicks
+
+---
+
+3. UI CONSISTENCY
+
+- Align spacing, padding, and margins
+- Standardize colors by category (P&D, Marketing, Executivo, etc.)
+- Ensure progress bars display correctly
+- Fix overlapping elements
+
+---
+
+4. DATA DISPLAY
+
+- Standardize how values are shown:
+  - Money → $XK / $XM
+  - Percentages → consistent format
+- Avoid excessively large or unrealistic numbers in UI
+- Ensure all stats update in real-time correctly
+
+---
+
+5. EVENT & FEEDBACK READABILITY
+
+- Make event messages easy to understand
+- Highlight impact clearly:
+  - positive (green)
+  - negative (red)
+  - warning (yellow)
+- Avoid overwhelming the player with too much text
+
+---
+
+6. MOBILE OPTIMIZATION (IMPORTANT)
+
+- Ensure UI scales correctly on small screens
+- Fix text overflow
+- Adjust buttons for touch interaction
+- Keep layout readable without zoom
+
+---
+
+7. MICRO-INTERACTIONS
+
+- Add subtle feedback:
+  - button press effects
+  - hover/selection highlight (if applicable)
+- Improve responsiveness feeling
+
+---
+
+8. BUG FIXING (LIGHT)
+
+- Fix visual bugs only
+- Fix UI glitches
+- Do NOT alter gameplay logic
+
+---
+
+AFTER:
+
+- List all improvements made
+- Confirm no gameplay systems were changed
+- Confirm performance remains stable

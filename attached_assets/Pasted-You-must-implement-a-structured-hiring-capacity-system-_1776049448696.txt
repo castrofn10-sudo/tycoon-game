@@ -1,0 +1,101 @@
+You must implement a structured hiring capacity system based on office size and branch expansion.
+
+HARD RULES:
+- DO NOT change UI layout
+- DO NOT break hiring system
+- DO NOT remove existing team roles
+- DO NOT affect salary or bonus systems
+- ONLY control hiring limits and capacity rules
+
+GOAL:
+Create a realistic hiring progression system tied to company growth.
+
+----------------------------------------
+PART 1 — BASE LIMIT
+----------------------------------------
+
+Set initial hiring limit:
+
+- Max employees = 10
+
+This applies when:
+- no branches exist
+- no office upgrades applied
+
+----------------------------------------
+PART 2 — BRANCH EXPANSION SYSTEM
+----------------------------------------
+
+Each "Sales Office Branch" adds:
+
++3 employees to TOTAL company capacity
+
+Examples:
+
+0 branches → 10 employees
+1 branch → 13 employees
+2 branches → 16 employees
+3 branches → 19 employees
+
+----------------------------------------
+PART 3 — OFFICE UPGRADE SYSTEM
+----------------------------------------
+
+Each office upgrade adds:
+
++1 employee PER SECTOR
+
+Example sectors:
+- Development
+- Marketing
+- Legal
+- Others if they exist
+
+This increases internal capacity but must respect total cap.
+
+----------------------------------------
+PART 4 — HIRING VALIDATION
+----------------------------------------
+
+Before hiring:
+
+1. Check total employees
+2. Compare with total capacity
+3. If limit reached:
+   - block hiring
+   - show message:
+     "Expand your company to hire more employees"
+
+----------------------------------------
+PART 5 — UI FEEDBACK
+----------------------------------------
+
+Display current capacity:
+
+Example:
+"Employees: 10 / 13"
+
+Update dynamically when:
+- hiring
+- firing
+- opening branch
+- upgrading office
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not affect:
+  - bonuses
+  - salaries
+  - production systems
+  - marketing systems
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- confirm base limit is active
+- confirm branches increase capacity
+- confirm upgrades increase per-sector capacity
+- confirm hiring is properly blocked when limit reached

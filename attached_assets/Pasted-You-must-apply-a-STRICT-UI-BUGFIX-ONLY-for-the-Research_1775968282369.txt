@@ -1,0 +1,137 @@
+You must apply a STRICT UI BUGFIX ONLY for the Research & Development screen.
+
+========================================
+HARD RULES (MANDATORY)
+========================================
+
+- DO NOT change gameplay logic
+- DO NOT change research effects
+- DO NOT change unlock years
+- DO NOT change combo logic
+- DO NOT change backend logic
+- DO NOT refactor unrelated screens
+- ONLY fix layout, layering, spacing, and touch interaction issues on the Research screen
+- Keep the build stable and minimal
+
+========================================
+GOAL
+========================================
+
+Fix the recurring real UI problems on the Pesquisa & Desenvolvimento screen:
+
+1. top labels / names are cut off or overlap
+2. tabs/buttons become partially hidden behind the floating header/info area
+3. some clickable buttons are visually behind another layer
+4. switching tabs is hard because hit areas are blocked
+5. horizontal header content does not respect mobile width
+
+This must be fixed properly on mobile.
+
+========================================
+BUGFIX SCOPE
+========================================
+
+Only modify the Research screen UI and styles needed for these issues.
+
+Target file(s):
+- app/game/research.tsx
+- only add/update style objects or local layout wrappers if strictly necessary
+
+========================================
+REQUIRED FIXES
+========================================
+
+1. FIX TOP OVERLAP
+- Ensure the active status/info strip never overlaps the category/path buttons below it
+- Add proper vertical spacing/marginBottom between:
+  - top tabs row
+  - active info strip
+  - path/category buttons
+- Reserve real height for the active info strip instead of letting it float over content
+
+2. FIX Z-INDEX / ELEVATION / POINTER LAYERS
+- Ensure all top navigation buttons and path selectors stay above decorative layers
+- Any floating info/banner must NOT block touches on the controls below unless intended
+- Use:
+  - pointerEvents="none" for decorative overlays
+  - proper zIndex/elevation ordering for interactive controls
+- Buttons must always be tappable
+
+3. FIX TEXT TRUNCATION
+- Long labels like:
+  - “O Visionário...”
+  - tab names
+  - category names
+must display correctly
+
+Apply:
+- maxWidth rules
+- numberOfLines where appropriate
+- ellipsizeMode="tail"
+- flexible row layout
+- prevent text from pushing other controls outside the screen
+
+4. FIX HORIZONTAL MOBILE LAYOUT
+- The upper rows must adapt correctly on narrow screens
+- Prevent chips/buttons from being rendered partially under another layer
+- If needed:
+  - allow horizontal scroll where appropriate
+  - or wrap rows safely
+- Do NOT allow buttons to sit behind the info strip
+
+5. FIX SAFE TOUCH AREAS
+- Increase tappable area for top tabs and path buttons
+- Use proper padding/minHeight
+- Avoid tiny hitboxes
+
+6. FIX HEADER STACKING ORDER
+Create a clear vertical order:
+
+A. Main section tabs
+B. Active research/info strip
+C. Path/category selector row
+D. Grid content
+
+These must not visually collide
+
+========================================
+VISUAL RULES
+========================================
+
+- Keep the current premium visual style
+- Do NOT redesign the screen
+- This is a bugfix pass, not a visual overhaul
+- Preserve the existing color language and theme
+
+========================================
+IMPLEMENTATION NOTES
+========================================
+
+Use safe React Native layout fixes such as:
+- wrapper containers with fixed spacing
+- position: "relative" where needed
+- only use absolute positioning if strictly necessary
+- avoid overlapping absolute layers for interactive rows
+- ensure ScrollView contentContainerStyle includes enough top/bottom spacing
+
+If there is a floating status/summary component, move it into normal document flow if that prevents overlap.
+
+========================================
+FINAL CHECK
+========================================
+
+After the fix, confirm:
+
+1. no text is hidden behind another row
+2. path/category buttons are fully clickable
+3. no overlay blocks touches
+4. top info strip no longer sits on top of buttons
+5. mobile layout is stable
+6. no gameplay logic was changed
+7. build remains clean
+
+Return exactly:
+- which file(s) were modified
+- what layout issue caused the overlap
+- how z-index/touch was fixed
+- confirmation that only UI bugfixes were applied

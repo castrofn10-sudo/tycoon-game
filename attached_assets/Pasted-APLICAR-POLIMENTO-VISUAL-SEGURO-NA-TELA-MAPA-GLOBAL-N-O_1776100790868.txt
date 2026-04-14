@@ -1,0 +1,166 @@
+APLICAR POLIMENTO VISUAL SEGURO NA TELA "MAPA GLOBAL"
+
+NÃO ALTERAR LÓGICA DO JOGO
+NÃO ALTERAR SISTEMA DE EXPANSÃO
+NÃO ALTERAR DESBLOQUEIOS
+NÃO ALTERAR CUSTOS, FILIAIS, OPERAÇÕES OU INCIDENTES
+APENAS MELHORAR O LAYOUT, ESPAÇAMENTO E HIERARQUIA VISUAL
+
+----------------------------------------
+[1] OBJETIVO
+----------------------------------------
+
+Deixar a tela "Mapa Global" mais limpa, moderna, legível e agradável de usar, com aparência mais profissional e mais parecida com interface de jogo premium.
+
+----------------------------------------
+[2] TOPO — CARDS DE RESUMO
+----------------------------------------
+
+Melhorar os cards de resumo do topo:
+
+- reduzir altura geral
+- alinhar melhor os ícones e valores
+- aumentar respiro horizontal entre os cards
+- deixar os números mais legíveis
+- reduzir sensação de blocos pesados
+
+NÃO alterar os dados mostrados
+APENAS melhorar visual e proporção
+
+----------------------------------------
+[3] ABAS PRINCIPAIS
+----------------------------------------
+
+Melhorar as abas:
+- Mapa
+- Operações
+- Incidentes
+
+Regras:
+- aba ativa com destaque mais claro
+- espaçamento horizontal melhor
+- tipografia mais legível
+- linha ativa ou glow leve na aba selecionada
+- sem animações pesadas
+
+----------------------------------------
+[4] FILTROS DE REGIÃO
+----------------------------------------
+
+Melhorar os filtros horizontais:
+- Todos
+- América do Norte
+- América do Sul
+- Europa
+- etc.
+
+Aplicar:
+- visual de chips limpos
+- altura levemente menor
+- melhor padding interno
+- scroll horizontal suave
+- melhor distinção entre ativo e inativo
+
+Evitar:
+- chips muito altos
+- bordas pesadas demais
+- excesso de brilho
+
+----------------------------------------
+[5] CARDS DAS REGIÕES
+----------------------------------------
+
+Melhorar visual dos cards de regiões:
+
+- reduzir levemente a altura
+- melhorar alinhamento do ícone
+- nome da região com mais destaque
+- linha secundária menor e mais limpa
+- seta da direita mais discreta
+- espaçamento vertical mais elegante entre cards
+
+Manter:
+- cor de identidade de cada região
+- estrutura atual
+- clique atual
+
+----------------------------------------
+[6] MELHORAR TEXTO SECUNDÁRIO
+----------------------------------------
+
+Tornar a linha secundária mais fácil de ler.
+
+Exemplo de estilo:
+- "3 países · 1 aberto · 0 filiais"
+
+Objetivo:
+- leitura mais rápida
+- menos poluição textual
+- mesma informação, só mais limpa
+
+----------------------------------------
+[7] HIERARQUIA VISUAL
+----------------------------------------
+
+Organizar a ordem visual da tela para que fique clara:
+
+1. título
+2. resumo do topo
+3. abas principais
+4. filtros
+5. lista de regiões
+
+Garantir separação visual clara entre cada bloco com margens consistentes
+
+----------------------------------------
+[8] PERFORMANCE
+----------------------------------------
+
+NÃO adicionar:
+- animações pesadas
+- sombras excessivas
+- blur forte
+- efeitos que prejudiquem celular
+
+Se houver animação:
+- apenas microtransições leves
+- sem impacto de performance
+
+----------------------------------------
+[9] RESPONSIVIDADE
+----------------------------------------
+
+Garantir que a tela fique boa em celular:
+
+- sem sobreposição
+- sem cortes
+- sem texto espremido
+- com scroll funcionando corretamente
+
+----------------------------------------
+[10] SEGURANÇA
+----------------------------------------
+
+NÃO modificar:
+- lógica do mapa
+- sistema de países
+- sistema de filiais
+- operações
+- incidentes
+- economia
+- saves
+
+APENAS polir o layout da tela
+
+----------------------------------------
+[11] APÓS A ATUALIZAÇÃO
+----------------------------------------
+
+Informar:
+- quais arquivos visuais foram ajustados
+- o que foi melhorado no layout
+- confirmar que nenhuma lógica do mapa foi alterada
+- confirmar que a tela ficou mais limpa, leve e estável
+
+----------------------------------------
+FIM

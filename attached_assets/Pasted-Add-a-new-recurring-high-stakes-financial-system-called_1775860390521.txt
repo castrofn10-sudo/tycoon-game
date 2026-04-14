@@ -1,0 +1,192 @@
+Add a new recurring high-stakes financial system called:
+
+"Investidor Sombrio" (Shadow Investor)
+
+GOAL:
+Create a dramatic bailout mechanic that can save the player during financial collapse, but always creates long-term consequences and future tension.
+
+IMPORTANT:
+- Keep this system rare
+- Do not make it feel unfair
+- It must only appear in serious crises
+- Make it memorable and strategic
+- Keep UI mobile-friendly
+
+====================================
+1. TRIGGER CONDITIONS
+====================================
+
+The Shadow Investor event should only be eligible when ALL or MOST of these are true:
+
+- Company balance is negative (red)
+- Player has no active loan available OR loan limit reached
+- Player has no major active product/project likely to generate enough income soon
+- Monthly cash flow is very weak or negative
+- Bankruptcy risk is high
+
+This should feel like a true "last chance" rescue.
+
+====================================
+2. FIRST EVENT – SHADOW OFFER
+====================================
+
+Create a dramatic event:
+
+Title:
+"Proposta Anônima"
+
+Tone:
+Mysterious, tense, corporate, dangerous
+
+Example flavor:
+- "Uma entidade desconhecida entrou em contato."
+- "Nenhum nome. Nenhum rosto. Só números."
+- "Eles sabem que sua empresa está à beira do colapso."
+- "A ajuda chegou... mas não gratuitamente."
+
+Player options:
+A) Aceitar ajuda
+B) Recusar proposta
+
+====================================
+3. IF PLAYER ACCEPTS
+====================================
+
+Immediate bailout effect:
+- Clear debt OR inject a strong emergency bailout
+- Prevent immediate bankruptcy
+- Stabilize the company temporarily
+
+Then secretly or explicitly create a shadow contract.
+
+Randomly assign one of these consequences:
+
+------------------------------------
+A) TAKE SHARES / EQUITY DEAL
+------------------------------------
+- Investor takes 10% to 30% of the company
+- Apply long-term effect:
+  - reduce future profits by a percentage
+  - reduce net earnings slightly every cycle
+  - optionally reduce company control in future systems
+
+------------------------------------
+B) DEBT COLLECTION + 30% INTEREST
+------------------------------------
+- Investor records the bailout as hidden debt
+- When the company becomes financially healthy again:
+  - automatically trigger collection event
+  - charge original bailout + 30%
+
+------------------------------------
+C) PERFORMANCE DEMAND CONTRACT
+------------------------------------
+- Investor demands aggressive performance
+- For a period of time:
+  - if company underperforms, extra penalties apply
+  - if company performs well, penalty is lighter
+
+====================================
+4. IF PLAYER REFUSES
+====================================
+
+- No bailout
+- Company remains in danger
+- Bankruptcy risk increases
+- Add dramatic feedback text
+
+====================================
+5. FOLLOW-UP EVENT SYSTEM
+====================================
+
+The Shadow Investor must not disappear forever.
+
+Later, when the company improves financially, trigger a return event.
+
+Titles:
+- "Eles Voltaram"
+- "A Conta Chegou"
+- "Cobrança Silenciosa"
+- "Contrato Executado"
+
+Depending on the original deal:
+- take profits / shares
+- collect debt + 30%
+- impose performance penalty
+- demand payout at inconvenient timing
+
+====================================
+6. RECURRING NARRATIVE PRESENCE
+====================================
+
+The Shadow Investor can return more than once across a long save.
+
+Rules:
+- very low frequency
+- only during major financial arcs
+- should feel like a looming corporate force
+
+Possible narrative identity:
+- unknown investment fund
+- hidden rival holding group
+- silent financial predator
+- faceless corporate syndicate
+
+Keep identity mysterious.
+
+====================================
+7. UI / PRESENTATION
+====================================
+
+Make these events visually distinct:
+- darker warning style
+- premium dramatic card
+- stronger event framing
+- memorable wording
+
+It should feel different from normal incidents.
+
+====================================
+8. BALANCE RULES
+====================================
+
+- Do NOT let this become exploitable
+- Do NOT let player use it as free money
+- Consequences must matter
+- It should be a desperate survival choice
+
+Recommended:
+- cooldown before another appearance
+- stronger consequence if used repeatedly
+
+====================================
+9. FLAVOR TEXT / IMMERSION
+====================================
+
+Add atmospheric flavor lines like:
+- "Nenhum nome. Nenhum rosto. Só uma proposta."
+- "Eles não investem em empresas. Eles compram destinos."
+- "O dinheiro entrou em segundos. O preço virá depois."
+- "Você foi salvo. Talvez esse tenha sido o erro."
+- "Algumas dívidas não ficam no balanço. Ficam na sombra."
+
+====================================
+10. GAMEPLAY IMPACT
+====================================
+
+This system should add:
+- tension
+- strategy
+- narrative depth
+- fear of easy rescue
+- memorable corporate storytelling
+
+====================================
+11. FINAL CHECK
+====================================
+
+After implementation:
+- ensure event only appears in true crisis
+- ensure consequences trigger correctly later
+- ensure no crashes
+- ensure the mechanic feels rare, dramatic, and interesting

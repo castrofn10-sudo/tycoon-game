@@ -1,0 +1,250 @@
+Add a new tab inside the Mercado screen, next to “Contratos”, called:
+
+“Aquisições”
+
+This tab must allow the player to:
+- view companies available for acquisition
+- negotiate purchase offers
+- acquire bankrupt companies
+- attempt hostile or friendly buyouts
+- see estimated real market value before buying
+
+========================================
+STRICT RULES (MANDATORY)
+========================================
+
+- DO NOT break existing market, contracts, economy, save/load, or rival systems
+- DO NOT refactor unrelated screens
+- DO NOT change existing tab behavior
+- Add this as a modular, isolated extension
+- Keep code safe and minimal
+- Preserve build stability
+- If new values are needed, derive them from existing rival/company data
+
+Allowed:
+- new UI tab
+- new derived valuation function
+- new acquisition panel
+- safe local/state integration
+- light use of already existing rival data
+
+========================================
+GOAL
+========================================
+
+Create a realistic “Aquisições” tab where the player can:
+
+1. buy bankrupt companies at distressed prices
+2. negotiate with weak companies in crisis
+3. attempt to acquire healthy companies at full market value
+4. see whether a company is open to negotiation
+5. understand why a company is expensive or cheap
+
+This must feel like a real business acquisition system.
+
+========================================
+TAB NAME
+========================================
+
+New tab label:
+“Aquisições”
+
+Place it next to:
+- Visão Geral
+- Contratos
+
+========================================
+SECTION 1 — LIST OF TARGET COMPANIES
+========================================
+
+Show a list of rival companies with these fields:
+
+- company name
+- last console / flagship product
+- market share
+- financial status:
+  - Saudável
+  - Pressionada
+  - Em crise
+  - Falida
+- estimated market value
+- negotiation openness:
+  - Baixa
+  - Média
+  - Alta
+- acquisition type:
+  - Friendly offer
+  - Strategic offer
+  - Distressed acquisition
+  - Hostile offer
+
+Use clean card layout similar to existing Mercado cards.
+
+========================================
+SECTION 2 — REALISTIC COMPANY VALUATION
+========================================
+
+Add a derived valuation function using existing rival/company data only.
+
+Valuation should consider:
+- available cash
+- market share
+- innovation
+- reputation
+- recent strength / weakness
+- if bankrupt, apply distressed discount
+
+Example logic:
+estimatedValue =
+baseValueFromMarketShare
++ reputationWeight
++ innovationWeight
++ cashWeight
+
+Then modify by status:
+
+- healthy: full value or premium
+- pressured: slight discount
+- crisis: medium discount
+- bankrupt: heavy discount
+
+IMPORTANT:
+- Use believable values
+- Avoid absurdly cheap acquisitions unless company is bankrupt
+- Healthy leaders should be expensive
+
+========================================
+SECTION 3 — NEGOTIATION SYSTEM
+========================================
+
+Each company card should have:
+
+Button:
+“Negociar”
+
+When opened, show offer panel with:
+- estimated market value
+- your proposed offer
+- chance of acceptance
+- acquisition style
+
+Acquisition styles:
+
+1. Friendly offer
+   - better with healthy companies
+   - requires near/full valuation
+
+2. Strategic offer
+   - medium chance
+   - works best on pressured companies
+
+3. Distressed acquisition
+   - only available for crisis/bankrupt companies
+   - discounted
+
+4. Hostile offer
+   - difficult
+   - may hurt reputation slightly
+   - works only if player is much stronger
+
+========================================
+SECTION 4 — ACCEPTANCE LOGIC
+========================================
+
+Chance to accept should depend on:
+
+- company financial condition
+- company market share
+- company reputation
+- company innovation
+- player available cash
+- player strength relative to rival
+- offer amount versus estimated valuation
+
+Rules:
+- bankrupt companies: high chance
+- crisis companies: medium/high chance
+- healthy companies: low chance unless offer is very strong
+- dominant rivals should reject cheap offers
+
+Show acceptance as:
+- xx% aceitar
+
+========================================
+SECTION 5 — BANKRUPT COMPANY ACQUISITION
+========================================
+
+If a company is bankrupt:
+
+- highlight card visually
+- show tag: “Oportunidade”
+- enable distressed acquisition
+- cheaper than full value
+- higher acceptance chance
+
+These acquisitions should feel rewarding but not free.
+
+========================================
+SECTION 6 — AFTER PURCHASE
+========================================
+
+When a company is acquired:
+
+- move it to player-owned companies list
+- mark as “Subsidiária”
+- remove it from rival acquisition list
+
+Create a simple owned companies section:
+“Empresas Adquiridas”
+
+For each acquired company show:
+- name
+- type
+- monthly maintenance cost
+- passive strategic benefit
+
+Benefits must be light and believable, such as:
+- +1% fans growth
+- +2% campaign efficiency
+- -2% production cost
+- +1% reputation stability
+
+Do NOT make bonuses overpowered.
+
+========================================
+SECTION 7 — UI / UX
+========================================
+
+Use the same premium dark style already used in Mercado:
+- glass cards
+- status badges
+- market percentage highlight
+- clean spacing
+- expandable negotiation panel
+
+Suggested badge colors:
+- Saudável = green
+- Pressionada = amber
+- Em crise = orange/red
+- Falida = red
+
+========================================
+SECTION 8 — SAFETY
+========================================
+
+- Keep save/load compatibility
+- Do not overwrite existing rival logic
+- Only extend market screen safely
+- No unrelated files changed unless strictly needed
+- Build must remain clean
+
+========================================
+FINAL CHECK
+========================================
+
+After implementation, return:
+1. exactly which files were modified
+2. how market valuation is calculated
+3. how acceptance chance is calculated
+4. how bankrupt acquisitions work
+5. confirmation that no unrelated systems were changed

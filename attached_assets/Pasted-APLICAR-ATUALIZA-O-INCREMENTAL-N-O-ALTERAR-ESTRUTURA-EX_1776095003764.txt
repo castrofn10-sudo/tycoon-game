@@ -1,0 +1,141 @@
+APLICAR ATUALIZAÇÃO INCREMENTAL — NÃO ALTERAR ESTRUTURA EXISTENTE
+NÃO REMOVER SISTEMAS ATUAIS
+APENAS AJUSTAR LÓGICA DE LONGEVIDADE E RECEITA DOS JOGOS
+
+----------------------------------------
+[1] AJUSTE DE LONGEVIDADE POR QUALIDADE
+----------------------------------------
+
+Atualizar regra de decaimento:
+
+Se nota do jogo >= 84:
+
+- NÃO iniciar queda automática imediata
+- manter popularidade estável por longo período
+- só iniciar queda quando existir concorrência relevante
+
+----------------------------------------
+
+Se nota entre 70 e 83:
+
+- comportamento padrão
+- leve queda gradual ao longo do tempo
+
+----------------------------------------
+
+Se nota < 70:
+
+- queda rápida de popularidade e receita
+
+----------------------------------------
+[2] CONDIÇÃO DE QUEDA POR CONCORRÊNCIA
+----------------------------------------
+
+Jogos de alta qualidade (>=84) só começam a perder força quando:
+
+- outro jogo for lançado com nota igual ou superior
+OU
+- houver múltiplos jogos competindo no mesmo gênero
+
+----------------------------------------
+
+Regras:
+
+- queda deve ser gradual (não instantânea)
+- quanto maior a diferença de nota do concorrente, maior a pressão
+
+----------------------------------------
+[3] RECEITA BASEADA EM POPULARIDADE
+----------------------------------------
+
+A receita deve seguir diretamente a popularidade:
+
+- alta popularidade → receita estável
+- queda leve → receita acompanha suavemente
+- queda forte → receita reduz proporcionalmente
+
+----------------------------------------
+
+IMPORTANTE:
+
+- remover quedas bruscas de receita
+- aplicar curva suave de redução
+- evitar “despencar do nada”
+
+----------------------------------------
+[4] SISTEMA DE MANUTENÇÃO DE VIDA DO JOGO
+----------------------------------------
+
+Permitir ao jogador prolongar a vida do jogo com ações:
+
+1. Marketing
+→ aumenta popularidade temporariamente
+
+2. Atualizações / melhorias
+→ estabiliza queda
+→ pequena recuperação
+
+3. DLC / expansões
+→ aumenta receita
+→ aumenta vida útil
+
+----------------------------------------
+
+Regras:
+
+- cada ação tem efeito moderado (não exagerado)
+- efeitos acumulativos limitados (evitar quebrar o jogo)
+
+----------------------------------------
+[5] INFLUÊNCIA DA REPUTAÇÃO DA EMPRESA
+----------------------------------------
+
+Empresas com maior reputação:
+
+- sofrem menos queda de popularidade
+- mantêm receita mais estável
+- têm maior impacto de marketing
+
+----------------------------------------
+
+Exemplo:
+
+Reputação alta:
+→ queda lenta
+→ marketing mais eficiente
+
+Reputação baixa:
+→ queda mais rápida
+→ menor retenção de público
+
+----------------------------------------
+[6] EQUILÍBRIO FINAL
+----------------------------------------
+
+Garantir:
+
+- jogos bons permanecem relevantes por mais tempo
+- jogos ruins desaparecem rápido
+- concorrência define o fim do ciclo
+- jogador pode reagir estrategicamente
+
+----------------------------------------
+[7] SEGURANÇA
+----------------------------------------
+
+NÃO modificar:
+
+- sistema financeiro base
+- sistema de IA
+- sistema de eventos
+- sistema de pesquisa
+
+APENAS ajustar:
+
+- longevidade do jogo
+- comportamento da receita
+- influência de marketing e reputação
+
+----------------------------------------
+FIM DA PARTE 4.1
+NÃO MODIFICAR OUTRAS ÁREAS

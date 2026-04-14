@@ -1,0 +1,254 @@
+STOP.
+
+Do NOT refactor the competitor system.
+Do NOT rewrite company AI.
+Do NOT change global economy formulas.
+Do NOT alter ranking algorithms deeply.
+
+This must be implemented as a LIGHTWEIGHT, DATA-DRIVEN historical layer.
+
+---
+
+GOAL:
+
+Introduce a HISTORICAL RIVAL RELEASE SYSTEM where fictional rival companies inspired by real gaming history launch consoles, games, and franchises across decades.
+
+---
+
+STRICT RULES:
+
+1. Use FICTIONAL names only
+2. Data-driven system only
+3. Low-frequency events only
+4. No popups
+5. Notifications/news feed only
+6. No deep core-system rewrite
+
+---
+
+STEP 1 — CREATE DATA FILE
+
+Create a new file:
+
+constants/rival_history.ts
+
+Define types:
+
+type RivalCompany = {
+id: string
+name: string
+archetype: string
+}
+
+type RivalConsoleRelease = {
+id: string
+companyId: string
+consoleName: string
+year: number
+powerTier: number
+marketBuzz: number
+}
+
+type RivalFranchiseRelease = {
+id: string
+companyId: string
+franchiseName: string
+genre: string
+year: number
+qualityRange: [number, number]
+popularity: number
+}
+
+---
+
+STEP 2 — ADD FICTIONAL RIVAL COMPANIES
+
+Add companies inspired by real history, but clearly fictional:
+
+- Nintaro
+- Sonex
+- Microhard
+- Segato
+- Capkron
+- Konex
+- Ubigame
+- EonArts
+
+---
+
+STEP 3 — ADD HISTORICAL CONSOLE RELEASES
+
+Examples:
+
+1983:
+
+- Nintaro FunSystem
+
+1988:
+
+- Segato MegaBlaze
+
+1994:
+
+- Sonex PlayZone
+
+2001:
+
+- Microhard XSphere
+
+2006:
+
+- Nintaro MotionCube
+
+2013:
+
+- Sonex PlayZone 4
+- Microhard XSphere One
+
+2017:
+
+- Nintaro SwitchUp
+
+Each release must contain:
+
+- year
+- powerTier
+- marketBuzz
+
+---
+
+STEP 4 — ADD HISTORICAL FRANCHISES
+
+Examples:
+
+- Super Plumber Bros
+- Legend of Zenda
+- Speed Hog
+- Battle Duty
+- Metal Guard
+- Final Legend
+- Street Brawl
+- Monster Tamer
+
+Each release should include:
+
+- company
+- year
+- genre
+- quality range
+- popularity
+
+---
+
+STEP 5 — YEAR-BASED RELEASE CHECK
+
+Create helper functions:
+
+getRivalConsoleReleasesForYear(year)
+getRivalFranchiseReleasesForYear(year)
+
+These functions return only releases matching the current year.
+
+---
+
+STEP 6 — SAFE INTEGRATION
+
+At year progression:
+
+- check if any rival console releases happen this year
+- check if any rival franchise releases happen this year
+
+If yes:
+
+- send them to the news/notification feed only
+
+DO NOT create popups.
+
+---
+
+STEP 7 — LIGHT GAMEPLAY IMPACT (VERY SMALL)
+
+Only after release is registered, apply SMALL market pressure effects:
+
+For console releases:
+
+- competitor market share +0.5% to +2.0% max
+- only if marketBuzz is high
+
+For franchise releases:
+
+- temporary genre popularity boost
+- small fan gain for rival company
+
+IMPORTANT:
+
+- max one small effect per release
+- do not alter global formulas deeply
+- no stacking explosions
+
+---
+
+STEP 8 — NO SPAM
+
+If many releases exist in one year:
+
+- combine them into one or two news items
+- do not flood the notification feed
+
+Example:
+"Nintaro launches FunSystem while Segato prepares new action franchise"
+
+---
+
+STEP 9 — REALISM RULES
+
+Releases must feel historically grounded by decade:
+
+1980s:
+
+- simpler consoles
+- arcade/platform games
+
+1990s:
+
+- stronger franchises
+- console wars
+
+2000s:
+
+- shooter/action boom
+- 3D expansion
+
+2010s:
+
+- online-heavy franchises
+- hybrid consoles
+- blockbuster launches
+
+---
+
+STEP 10 — NO CORE REWRITE
+
+Do NOT:
+
+- rewrite AI decision-making
+- replace existing rival company system
+- override ranking systems
+- add loops over all companies every tick
+
+Only:
+
+- inject historical releases at year change
+- send events to notification feed
+- apply small isolated effects
+
+---
+
+OUTPUT REQUIRED:
+
+Return:
+
+1. files created
+2. functions added
+3. where year integration happens
+4. confirmation that core systems were not rewritten

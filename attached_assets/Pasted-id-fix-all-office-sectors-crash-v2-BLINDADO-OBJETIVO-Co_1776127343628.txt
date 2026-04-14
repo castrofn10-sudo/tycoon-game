@@ -1,0 +1,135 @@
+id="fix-all-office-sectors-crash-v2-BLINDADO"
+
+OBJETIVO:
+Corrigir o crash ao contratar equipe causado por:
+ReferenceError: ALL_OFFICE_SECTORS is not defined
+
+ATENÇÃO:
+Esta é uma correção CRÍTICA.
+NÃO alterar lógica do jogo.
+NÃO rebalancear nada.
+NÃO modificar sistemas existentes.
+APENAS corrigir referência inexistente com segurança total.
+
+----------------------------------------
+[1] MAPEAMENTO COMPLETO
+----------------------------------------
+
+Buscar em TODO o projeto:
+
+ALL_OFFICE_SECTORS
+
+Listar todos os arquivos e pontos de uso:
+- componentes
+- telas
+- handlers (onPress, onAction)
+- funções auxiliares
+
+----------------------------------------
+[2] DETECÇÃO DA ORIGEM
+----------------------------------------
+
+Verificar se existe definição válida:
+
+export const ALL_OFFICE_SECTORS
+
+Cenários possíveis:
+
+(A) EXISTE:
+→ corrigir apenas imports
+
+(B) NÃO EXISTE:
+→ identificar variável equivalente já existente no sistema
+→ exemplos possíveis:
+   - OFFICE_SECTORS
+   - AVAILABLE_SECTORS
+   - GAME_SECTORS
+
+→ usar APENAS variável já existente
+→ NÃO criar estrutura nova sem contexto
+
+----------------------------------------
+[3] CORREÇÃO SEGURA (SEM IMPACTO)
+----------------------------------------
+
+Para cada uso:
+
+ANTES:
+ALL_OFFICE_SECTORS
+
+DEPOIS:
+(variável correta existente)
+
+----------------------------------------
+[4] IMPORTAÇÃO OBRIGATÓRIA
+----------------------------------------
+
+Garantir que TODOS os arquivos que usam a variável tenham import válido:
+
+Exemplo:
+import { OFFICE_SECTORS } from '@/constants/...'
+
+----------------------------------------
+[5] PROTEÇÃO ANTI-CRASH (OBRIGATÓRIO)
+----------------------------------------
+
+Para qualquer uso com map, filter ou acesso:
+
+ANTES:
+ALL_OFFICE_SECTORS.map(...)
+
+DEPOIS:
+(Array.isArray(ALL_OFFICE_SECTORS) ? ALL_OFFICE_SECTORS : []).map(...)
+
+OU:
+(ALL_OFFICE_SECTORS ?? []).map(...)
+
+----------------------------------------
+[6] BLOQUEIO DE ERRO EM TEMPO DE EXECUÇÃO
+----------------------------------------
+
+Se variável ainda for indefinida:
+
+NÃO permitir crash
+
+Adicionar fallback silencioso:
+
+const safeSectors = Array.isArray(ALL_OFFICE_SECTORS) ? ALL_OFFICE_SECTORS : []
+
+----------------------------------------
+[7] NÃO PERMITIDO
+----------------------------------------
+
+PROIBIDO:
+- alterar economia
+- alterar valores
+- alterar IA
+- alterar balanceamento
+- alterar UI visual
+- alterar fluxo do jogo
+- criar novos sistemas
+- refatorar arquivos inteiros
+
+----------------------------------------
+[8] VALIDAÇÃO FINAL
+----------------------------------------
+
+Confirmar:
+
+✔ botão de contratar funciona
+✔ lista de setores aparece corretamente
+✔ nenhum crash ocorre
+✔ navegação continua intacta
+✔ jogo mantém comportamento original
+
+----------------------------------------
+[9] RESULTADO ESPERADO
+----------------------------------------
+
+- erro eliminado
+- estabilidade garantida
+- zero impacto colateral
+- sistema intacto
+
+----------------------------------------
+FIM

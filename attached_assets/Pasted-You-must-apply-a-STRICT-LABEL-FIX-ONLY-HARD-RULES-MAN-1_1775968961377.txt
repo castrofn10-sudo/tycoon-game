@@ -1,0 +1,91 @@
+You must apply a STRICT LABEL FIX ONLY.
+
+========================================
+HARD RULES (MANDATORY)
+========================================
+
+- DO NOT change gameplay logic
+- DO NOT change layout
+- DO NOT refactor systems
+- DO NOT modify economy, research, office logic, market, saves, or progression
+- ONLY fix the incorrect visible label/text currently showing as:
+  "poucos"
+
+This is a pure text mapping / label bugfix.
+
+========================================
+GOAL
+========================================
+
+Find every place where the UI is incorrectly showing the label:
+
+"poucos"
+
+and replace it with the correct intended label.
+
+IMPORTANT:
+- If this label refers to the Office system/tab/section, the correct visible text must be:
+  "Escritório"
+- If this label refers to the operations/department card, use the correct intended label based on the original section meaning
+- Do NOT guess blindly:
+  trace where "poucos" is coming from and fix the real source of the wrong string
+
+========================================
+BUG SCOPE
+========================================
+
+The incorrect label appears in at least:
+1. Office screen tab/button
+2. Main dashboard/home card
+
+This suggests:
+- wrong label mapping
+- wrong translation key
+- wrong fallback text
+- or accidental reused variable
+
+========================================
+REQUIRED ACTIONS
+========================================
+
+1. Search the codebase for:
+- "poucos"
+- label maps
+- tab labels
+- office labels
+- dashboard card labels
+- fallback strings
+
+2. Fix the actual source of the bad label
+
+3. Ensure:
+- Office tab/button shows "Escritório"
+- Dashboard card shows the correct intended section name
+- No visible UI anywhere still shows "poucos"
+
+4. If needed:
+- correct duplicated label mapping
+- correct wrong object key/value
+- correct fallback label
+- correct text derived from section name
+
+========================================
+SAFETY RULES
+========================================
+
+- Do NOT rename unrelated identifiers unless required for the visible bug
+- Do NOT alter any business logic
+- Do NOT change styling
+- Do NOT touch unrelated screens
+
+========================================
+FINAL CHECK
+========================================
+
+After the fix, confirm:
+
+1. which file(s) contained the wrong label source
+2. why "poucos" was appearing
+3. where it was replaced
+4. that no unrelated logic was changed
+5. that build remains clean

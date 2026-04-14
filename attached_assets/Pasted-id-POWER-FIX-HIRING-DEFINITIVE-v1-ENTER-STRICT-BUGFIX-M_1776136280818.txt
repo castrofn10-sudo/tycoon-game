@@ -1,0 +1,88 @@
+id="POWER-FIX-HIRING-DEFINITIVE-v1"
+
+ENTER STRICT BUGFIX MODE.
+
+OBJECTIVE:
+Fix the employee hiring bug completely and ONLY this bug.
+
+CONFIRMED BUG:
+When hiring an employee:
+- money is deducted
+- employee is NOT actually added/shown correctly
+
+This bug is still happening in real gameplay.
+
+---------------------------------------
+HARD LOCK
+---------------------------------------
+
+DO NOT TOUCH:
+- menu UI
+- app/game/index.tsx
+- rankings
+- news
+- economy formulas
+- gameEngine unrelated logic
+- saves structure unless strictly required
+- labels/texts
+
+ONLY touch the minimum code required for the hiring pipeline.
+
+---------------------------------------
+REQUIRED DEBUG PATH
+---------------------------------------
+
+Audit the FULL hiring flow for all team categories:
+
+1. UI click / alert confirm
+2. hireEmployee / bulkHireEmployee call
+3. validation
+4. money deduction
+5. employee creation
+6. team state insertion
+7. state persistence
+8. UI render after state change
+
+---------------------------------------
+MANDATORY FIX RULES
+---------------------------------------
+
+1. Money must NEVER be deducted unless employee is successfully added.
+2. Employee must appear immediately after hiring.
+3. Employee must still exist after leaving and re-entering the screen.
+4. Fix ALL hiring categories, not just one.
+5. If there is any failure path, abort without charging money.
+
+---------------------------------------
+IMPLEMENTATION REQUIREMENTS
+---------------------------------------
+
+- find the real root cause, not a guess
+- if stale closure is only part of the issue, continue until full flow works
+- ensure immutable state update for employees/team arrays
+- ensure the render depends on the updated state source
+- ensure no overwrite happens after hire
+- ensure alerts/onPress callbacks use current valid state
+
+---------------------------------------
+MANDATORY VALIDATION
+---------------------------------------
+
+You must verify after patch:
+
+- hire 1 employee from each category works
+- money decreases correctly
+- employee count increases correctly
+- hired employee appears in Equipe
+- leaving/reopening the screen still shows the employee
+- no new TypeScript/runtime errors
+
+---------------------------------------
+OUTPUT FORMAT
+---------------------------------------
+
+Return ONLY:
+1. files modified
+2. root cause found
+3. exact fix applied
+4. confirmation that real hiring was validated end-to-end

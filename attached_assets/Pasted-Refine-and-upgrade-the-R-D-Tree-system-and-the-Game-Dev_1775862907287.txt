@@ -1,0 +1,180 @@
+Refine and upgrade the R&D Tree system and the Game Development Time system.
+
+IMPORTANT:
+- Do NOT break existing systems
+- Keep mobile-friendly UI
+- Focus on polish, clarity, and gameplay improvement
+- Avoid overcomplication
+
+====================================
+1. R&D TREE – PREMIUM VISUAL UPGRADE
+====================================
+
+GOAL:
+Transform the "Árvore P&D" into a premium, modern tech tree with clean visuals and better usability.
+
+STRUCTURE:
+[Top Navigation / Title]
+[Tabs: Árvore P&D | Exclusivos | Melhorias]
+[Lightweight info line (subtle, non-blocking)]
+[Research Tree Grid]
+
+------------------------------------
+VISUAL IMPROVEMENTS
+------------------------------------
+
+- Improve card design:
+  - smoother borders
+  - subtle glow for available research
+  - darker/muted style for locked items
+  - highlight selected/available options
+
+- Improve spacing:
+  - consistent gaps between cards
+  - better column alignment
+  - avoid crowding
+
+- Improve readability:
+  - stronger titles
+  - clear bonus descriptions
+  - better contrast
+
+------------------------------------
+TREE FEEL (IMPORTANT)
+------------------------------------
+
+- Make it feel like a real tech tree:
+  - visual progression clarity
+  - sense of evolution
+  - grouped categories (Design, Jogos, Negócios, Tech)
+
+- Optional:
+  - subtle visual connection feeling between nodes (no heavy lines required)
+  - progression feedback when unlocking
+
+------------------------------------
+HEADER / INFO LINE FIX
+------------------------------------
+
+- Keep the top info (like "Visionário", progress, etc.)
+- BUT:
+  - make it minimal (small font, ~70% opacity)
+  - no background box
+  - no card container
+  - no borders
+
+CRITICAL:
+- pointer-events: none
+- must NEVER block clicks
+- must NOT overlap cards
+
+------------------------------------
+INTERACTION FIX
+------------------------------------
+
+- Ensure ALL research cards are:
+  - fully visible
+  - fully clickable
+  - easy to tap on mobile
+
+- Remove any:
+  - overlay
+  - absolute positioned blockers
+  - high z-index layers above cards
+
+====================================
+2. GAME DEVELOPMENT TIME – DYNAMIC SYSTEM
+====================================
+
+GOAL:
+Make development time depend on genre combinations instead of fixed values.
+
+------------------------------------
+BASE SYSTEM
+------------------------------------
+
+Base time: 3–4 months
+
+Each genre has a complexity weight:
+
+LOW (fast):
+- Puzzle
+- Casual
+- Indie
+- Arcade
+- Experimental
+
+MEDIUM:
+- Ação
+- Plataforma
+- Corrida
+- Esportes
+- Shooter
+
+HIGH:
+- RPG
+- Mundo Aberto
+- Estratégia
+- Simulação
+- Survival
+- City Builder
+- Management
+
+VERY HIGH:
+- Sandbox complexo
+- Life Simulator avançado
+- Sistemas profundos
+
+------------------------------------
+TIME CALCULATION
+------------------------------------
+
+- Combine weights of selected genres
+- Add modifiers based on complexity
+- Apply synergy:
+
+Compatible genres:
+→ slight time reduction
+
+Complex combinations:
+→ increase time
+
+Experimental mixes:
+→ small randomness factor
+
+------------------------------------
+EXAMPLES
+------------------------------------
+
+- Puzzle + Casual → ~4–6 months
+- Ação + Plataforma → ~6–8 months
+- RPG + Mundo Aberto → ~10–14 months
+- Estratégia + Simulação → ~8–12 months
+
+------------------------------------
+LIMITS (VERY IMPORTANT)
+------------------------------------
+
+- Minimum time: 4 months
+- Maximum time: 14–16 months
+- NEVER exceed 18 months
+- Avoid slow gameplay
+
+------------------------------------
+OPTIONAL MODIFIERS (if available)
+------------------------------------
+
+- Better team → faster development
+- Higher experience → reduces time
+- Higher ambition → increases time
+
+====================================
+3. FINAL CHECK
+====================================
+
+- R&D Tree must feel clean and premium
+- No UI overlap issues
+- All buttons clickable
+- Mobile usability preserved
+- Development time feels dynamic and fun
+- No crashes or layout breaks

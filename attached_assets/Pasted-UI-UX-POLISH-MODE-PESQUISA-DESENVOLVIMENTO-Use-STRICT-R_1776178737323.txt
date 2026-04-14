@@ -1,0 +1,94 @@
+UI/UX POLISH MODE — PESQUISA & DESENVOLVIMENTO.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Refinar o sistema de Pesquisa & Desenvolvimento do MegaCorp Tycoon V1 com foco em clareza, feedback visual e sensação de progresso.
+
+OBJETIVO:
+Melhorar a experiência do jogador sem alterar a lógica central já implementada.
+
+NÃO alterar:
+- lógica de desbloqueios
+- economia
+- saves
+- integração com consoles
+- sistema de pesquisa em si
+
+APENAS melhorar UI/UX e feedback visual.
+
+IMPLEMENTAR:
+
+1) ESTADOS VISUAIS CLAROS PARA CADA PESQUISA
+
+Cada card deve refletir corretamente um dos estados:
+
+A) BLOQUEADO
+- mostrar ícone de cadeado
+- texto claro:
+  "Disponível em [ano]"
+  ou "Faltam X anos"
+- aparência mais apagada
+
+B) DISPONÍVEL
+- destacar como clicável
+- aparência ativa
+- indicar que pode ser pesquisado agora
+
+C) EM PESQUISA (se aplicável)
+- mostrar progresso atual
+- barra ou indicador visual
+- tempo restante
+
+D) CONCLUÍDO
+- manter visual verde
+- check visível
+- deixar claro que já foi aplicado
+
+2) MOSTRAR O QUE CADA PESQUISA DESBLOQUEIA
+
+Adicionar descrição curta no card:
+
+Exemplo:
+"Desbloqueia:"
+- listar 1 a 3 efeitos principais
+- ex: CPU, áudio, multiplayer, features, etc.
+
+3) MELHORAR TEXTOS CORTADOS
+
+- permitir quebra de linha em títulos
+- evitar truncamento agressivo com "..."
+- manter legibilidade no mobile
+
+4) MELHORAR INDICAÇÃO DE ÉPOCA
+
+Trocar textos genéricos por:
+- "Disponível em 1990"
+- "Faltam X anos"
+- usar o ano atual do jogo para cálculo
+
+5) AJUSTES VISUAIS
+
+- manter consistência de cores
+- melhorar espaçamento interno dos cards
+- garantir que informações importantes não fiquem escondidas
+- manter design premium/mobile-friendly
+
+REGRAS:
+- não alterar estrutura de dados principal
+- não refatorar lógica de pesquisa
+- não criar sistema novo
+- apenas melhorar exibição e feedback
+- mudanças devem ser leves e consistentes
+
+VALIDAÇÃO:
+- verificar todos os estados (bloqueado, disponível, em progresso, concluído)
+- verificar leitura dos títulos
+- verificar que o jogador entende claramente quando pode pesquisar algo
+- verificar que cada pesquisa mostra impacto real
+
+NO FINAL:
+- listar arquivos alterados
+- explicar como os estados visuais foram diferenciados
+- confirmar que nenhuma lógica central foi modificada

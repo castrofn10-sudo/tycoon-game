@@ -1,0 +1,187 @@
+You must implement a new EXECUTIVE MANAGEMENT expansion inside the Office (Escritório) screen.
+
+STRICT RULES (MANDATORY):
+- DO NOT break or modify existing systems (economy, research, saves, progression).
+- DO NOT change existing balance values.
+- ADD new systems in a modular and isolated way.
+- All new features must be SAFE and OPTIONAL (no forced integration).
+- Use local state (useState) for UI logic when possible.
+- If integration is needed, apply LIGHT modifiers only (±1% to ±3% max).
+
+--------------------------------------------------
+1. FIX OFFICE NAME
+--------------------------------------------------
+
+- Replace any incorrect label like "poucos"
+- Restore correct name: "Escritório"
+
+--------------------------------------------------
+2. ADD LEFT SIDE MENU (EXECUTIVE PANEL)
+--------------------------------------------------
+
+Inside Office screen, create a LEFT SIDEBAR with 3 sections:
+
+1. Jurídico
+2. Acionistas
+3. Holdings
+
+UI:
+- Vertical pill menu
+- Icons + label
+- Highlight active section
+- Smooth transition between tabs
+
+--------------------------------------------------
+3. JURÍDICO SYSTEM (AUTO DEFENSE)
+--------------------------------------------------
+
+Create a system where the player can hire legal teams.
+
+3 TIERS:
+
+1. Básico — $25K/month
+   - Reduces negative events impact by ~20%
+   - Slow response time
+
+2. Profissional — $75K/month
+   - Reduces negative impact by ~40%
+   - Medium response time
+
+3. Elite — $150K/month
+   - Reduces negative impact by ~70%
+   - Fast response + small reputation recovery
+
+MECHANICS:
+
+- Passive system (AUTO)
+- When active:
+  - Fake news events reduced
+  - Reputation loss softened
+  - Crisis duration shortened
+
+IMPLEMENTATION:
+
+- Add boolean: hasLegalTeam
+- Add enum: legalTier
+- Add passive modifier function:
+  computeLegalProtection()
+
+IMPORTANT:
+- Effects must be LIGHT and balanced
+- No full immunity
+
+--------------------------------------------------
+4. ACIONISTAS SYSTEM (SHAREHOLDER MEETINGS)
+--------------------------------------------------
+
+Unlock ONLY if player has sold shares.
+
+Add:
+
+"Reunião com Acionistas" button
+
+When clicked:
+→ Opens decision modal with 3 choices:
+
+EXAMPLES:
+
+1. "Distribuir Dividendos"
+   + Small reputation
+   - Cash loss
+
+2. "Reinvestir Lucros"
+   + Long-term growth (small % boost future income)
+   - Short-term dissatisfaction
+
+3. "Prometer Crescimento"
+   + Immediate rep boost
+   - Risk of future penalty if performance drops
+
+MECHANICS:
+
+- Cooldown system (e.g. once every X months)
+- Randomized small outcomes
+
+IMPLEMENTATION:
+
+- local state only
+- No backend changes required
+
+--------------------------------------------------
+5. HOLDINGS SYSTEM (COMPANY CONTROL)
+--------------------------------------------------
+
+Add new section: "Holdings"
+
+FEATURES:
+
+- Player can BUY small companies from market
+- Each company gives PASSIVE BONUS
+
+EXAMPLES:
+
+1. Indie Studio
+   +1% fans growth
+
+2. Marketing Agency
+   +2% campaign efficiency
+
+3. Tech Supplier
+   -2% production cost
+
+RULES:
+
+- Max 3–5 owned companies
+- Each company has:
+  - price
+  - passive effect
+  - small maintenance cost
+
+IMPLEMENTATION:
+
+- Local array: ownedCompanies[]
+- Passive function:
+  computeHoldingsBonus()
+
+IMPORTANT:
+- Effects MUST be small (1–3%)
+- No broken scaling
+
+--------------------------------------------------
+6. UI / UX QUALITY (AAA STYLE)
+--------------------------------------------------
+
+- Maintain DARK PREMIUM style
+- Cards with:
+  - glass effect
+  - subtle glow
+- Add:
+  - status badges (Ativo, Inativo)
+  - monthly cost display
+  - small icons
+
+- Add:
+  - smooth animations (hover, press)
+  - clear hierarchy
+
+--------------------------------------------------
+7. SAFETY CHECK
+--------------------------------------------------
+
+- Build must remain clean
+- No new errors
+- All systems optional
+- No existing logic overwritten
+
+--------------------------------------------------
+GOAL
+--------------------------------------------------
+
+Transform Office into a REAL EXECUTIVE CONTROL CENTER:
+
+- Strategic
+- Realistic
+- Immersive
+- Balanced
+
+Feels like a true business/tycoon management layer.

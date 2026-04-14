@@ -1,0 +1,82 @@
+UI REFINEMENT MODE — PESQUISA & DESENVOLVIMENTO.
+
+Use STRICT REAL IMPLEMENTATION MODE.
+A mudança deve acontecer no código E no runtime.
+Não considerar concluído se não afetar o jogo jogável.
+
+Agora implementar a melhoria visual e de navegação do menu "Pesquisa & Desenvolvimento" no MegaCorp Tycoon V1.
+
+OBJETIVO:
+Trocar as abas principais de setores de pesquisa do topo horizontal para uma navegação lateral vertical, melhorando a leitura no mobile e evitando nomes cortados.
+
+PROBLEMA ATUAL:
+Os nomes dos setores no topo ficam truncados/cortados no mobile, prejudicando leitura e navegação.
+
+META:
+- setores principais na lateral esquerda
+- subtabs A / B / C continuam na área principal
+- cards/árvore de pesquisa continuam à direita
+- manter visual do jogo
+- manter contadores por setor
+- manter responsividade mobile
+
+SETOR PRINCIPAL ESPERADO:
+Exemplos:
+- Silicon
+- Game Engines
+- Áudio
+- Negócio
+- Online
+- Inovação
+- Tecnologia
+- Hardware
+- Jogos
+
+LAYOUT ESPERADO:
+1. topo:
+   - título "Pesquisa & Desenvolvimento"
+   - botão voltar preservado
+
+2. corpo:
+   - coluna lateral esquerda com lista vertical dos setores
+   - área principal à direita com conteúdo do setor selecionado
+   - subtabs A/B/C no topo da área principal
+   - cards de pesquisa abaixo
+
+3. comportamento:
+   - setor selecionado deve ficar visualmente destacado
+   - se houver muitos setores, a lateral pode rolar verticalmente
+   - a área principal continua rolando independentemente
+   - não cortar nomes de forma agressiva
+   - manter o contador/progresso visível ao lado do nome do setor ou badge
+
+REGRAS IMPORTANTES:
+- não alterar a lógica de desbloqueios já implementada
+- não quebrar pesquisas concluídas
+- não mexer em economia, saves, rankings ou outros menus
+- não redesenhar tudo do zero
+- mudança visual focada e consistente
+- manter aparência premium/mobile-friendly
+
+DETALHES DE UX:
+- largura da lateral deve ser suficiente para leitura razoável
+- nomes podem usar elipse apenas quando realmente necessário
+- o setor ativo precisa estar bem claro
+- manter coerência de cores por categoria/setor se já existir
+- não deixar subtabs A/B/C sobrepostas ou apertadas
+
+VALIDAÇÃO OBRIGATÓRIA:
+Testar no mobile:
+1. todos os setores principais aparecem navegáveis
+2. nomes ficam mais legíveis que antes
+3. trocar de setor atualiza corretamente o conteúdo
+4. subtabs A/B/C continuam funcionando
+5. pesquisas continuam clicáveis e corretas
+6. nenhum progresso ou unlock foi perdido
+
+NO FINAL, RESPONDER OBJETIVAMENTE:
+- quais arquivos foram alterados
+- como a navegação lateral foi estruturada
+- como foi preservada a lógica já existente
+- quais ajustes de responsividade foram feitos
+- confirmar que saves e pesquisas concluídas continuam intactos

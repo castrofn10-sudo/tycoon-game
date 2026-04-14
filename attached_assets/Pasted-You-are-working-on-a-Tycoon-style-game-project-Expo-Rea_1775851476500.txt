@@ -1,0 +1,154 @@
+You are working on a Tycoon-style game project (Expo / React / Web Preview already running).
+
+Your task is to IMPROVE, FIX BUGS and OPTIMIZE the entire system based on the following requirements.
+
+⚠️ IMPORTANT:
+- Do NOT break existing functionality
+- Keep the project structure clean
+- Focus on performance (especially mobile)
+- Maintain a modern UI/UX style
+
+-----------------------------------
+🔥 1. PERFORMANCE (HIGH PRIORITY)
+-----------------------------------
+- Optimize screens that have too many elements (especially "Incidents" and "Markets")
+- Reduce unnecessary re-renders
+- Use virtualization or pagination for large lists
+- Improve mobile responsiveness (avoid UI freezing)
+
+-----------------------------------
+🐞 2. BUG FIXES
+-----------------------------------
+
+A) R&D (Pesquisa e Desenvolvimento)
+- Fix missing or invisible titles ("Undefined" or empty names)
+- Ensure all research items display correctly
+
+B) Hiring System (Equipe)
+- Fix logic so hiring is NOT blocked incorrectly
+- Hiring capacity MUST scale with number of subsidiaries (filiais)
+- Example rule:
+  maxEmployees = base + (filiais * multiplier)
+
+C) Game Exit
+- Add "Save before exit" confirmation modal:
+  - Save and Exit
+  - Exit without saving
+  - Cancel
+
+-----------------------------------
+📊 3. INCIDENT SYSTEM IMPROVEMENTS
+-----------------------------------
+
+- Reduce frequency of incidents (they are too frequent)
+- Add FILTER system:
+  - Theft
+  - Vandalism
+  - Strike
+  - Fire
+  - Power outage
+  - Hackers
+  - Fines
+
+- When player loses LARGE amounts of money:
+  Show CLEAR reason:
+  (ex: "Major Theft", "Cyber Attack", "Factory Fire")
+
+-----------------------------------
+🏢 4. COMPANY / TEAM UI IMPROVEMENT
+-----------------------------------
+
+- Redesign "Equipe" screen:
+  - Cleaner layout
+  - Better spacing
+  - Clear roles (Engineer, Designer, Marketing, Sales)
+  - Show salary impact clearly
+
+- Improve hiring cards UI
+
+-----------------------------------
+🎮 5. GAME PRODUCTION SYSTEM
+-----------------------------------
+
+- Separate lists:
+  - Games in development
+  - Released games
+
+- Add:
+  - "Deactivate game" option
+  - Better organization (avoid long messy list)
+
+-----------------------------------
+🌍 6. MARKET & COMPETITION SYSTEM
+-----------------------------------
+
+- Add REAL competition from AI companies:
+  - AI companies must:
+    - Release games
+    - Release consoles
+    - Compete in awards
+
+- Improve award system:
+  - Player should NOT win automatically
+  - Must depend on rating and competition
+
+-----------------------------------
+💰 7. FINANCIAL SYSTEM EXPANSION
+-----------------------------------
+
+Add new options:
+
+A) Acquisitions:
+- Small (<10M)
+- Medium
+- Large (billions)
+
+B) Investments:
+- Movies
+- Shopping centers
+- Football teams
+- Basketball leagues
+- Events
+
+Include:
+- Risk / return system
+
+-----------------------------------
+📱 8. MOBILE UI FIXES
+-----------------------------------
+
+- Fix layout breaking on small screens
+- Ensure text is always visible
+- Improve spacing and responsiveness
+
+-----------------------------------
+🔔 9. NOTIFICATION SYSTEM
+-----------------------------------
+
+- Reduce spam notifications
+- Only show relevant events
+- Group repeated incidents
+
+-----------------------------------
+🌐 10. ONLINE MODE (PREPARE STRUCTURE)
+-----------------------------------
+
+- Prepare system for multiplayer:
+  - Detect real players
+  - Reduce AI companies when players are present
+
+(No need full implementation, just structure ready)
+
+-----------------------------------
+🎯 FINAL TASK
+-----------------------------------
+
+- Clean up code
+- Remove redundancies
+- Ensure everything runs smoothly
+- Maintain scalability for future updates
+
+After finishing:
+- Run the project
+- Confirm no crashes
+- Ensure UI works on mobile and desktop

@@ -1,0 +1,76 @@
+Fix the mobile layout bug in the "Novo Projeto de Jogo" flow.
+
+BUG:
+On Android/mobile, step 1/4 ("Escolha os Gêneros") opens too short and does not expand enough.
+The genre list is hidden/cut off, so the player cannot properly browse and select genres.
+Only the header, one selected chip, and the "Próximo" button are visible.
+
+GOAL:
+Make the game creation modal fully usable on mobile.
+
+REQUIREMENTS:
+
+1. MOBILE MODAL HEIGHT
+- On mobile, the game creation modal/bottom sheet must open much taller
+- Use around 85% to 92% of screen height
+- It must respect safe area, but not stay tiny
+- The content area must be clearly visible
+
+2. SCROLLABLE CONTENT
+- The genres section must be inside a vertical ScrollView
+- User must be able to scroll through all genre chips/categories
+- Scrolling must work smoothly on Android
+- The footer button must not block the genre list
+
+3. STICKY FOOTER
+- Keep the "Próximo: Público & Orçamento" button fixed at the bottom
+- Content scrolls independently above it
+- Add enough bottom padding so last genres are not hidden behind the button
+
+4. BETTER LAYOUT FOR STEP 1
+- Structure:
+  [Header / progress]
+  [Selected genres summary]
+  [Scrollable genre list]
+  [Sticky footer button]
+
+- The selected genres summary should be compact
+- Do not let selected chips consume too much vertical space
+
+5. EXPAND / DRAG BEHAVIOR
+- If using a bottom sheet, allow it to snap to a taller position on mobile
+- Default snap point should already be large enough
+- If dragging is supported, user should be able to expand it easily
+
+6. CHIP GRID / WRAP FIX
+- Genre chips must wrap correctly
+- No clipping
+- No hidden overflow
+- Ensure all categories are visible and selectable
+
+7. DO NOT BREAK DESKTOP
+- Desktop/tablet behavior should remain good
+- Apply this fix mainly for mobile screens
+
+8. SAFE AREA / ANDROID
+- Respect bottom navigation area on Android
+- Add bottom safe padding
+- Ensure modal is not trapped behind gesture/navigation bar
+
+9. VALIDATION
+After fixing, verify these mobile cases:
+- Opening game creation from empty game list
+- Selecting 1 genre
+- Selecting 2 genres
+- Selecting 3 genres
+- Scrolling to the bottom of the genre list
+- Tapping Next successfully
+
+10. OPTIONAL UX IMPROVEMENT
+- Add a small drag handle on top of the modal
+- Add a subtle "scroll for more genres" feeling
+- Keep visual style premium and game-like
+
+IMPORTANT:
+Do not redesign the whole flow.
+Only fix the mobile usability/layout bug so step 1 becomes fully usable.

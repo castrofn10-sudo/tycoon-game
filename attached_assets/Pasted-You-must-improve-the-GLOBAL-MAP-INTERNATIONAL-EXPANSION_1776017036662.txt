@@ -1,0 +1,156 @@
+You must improve the GLOBAL MAP / INTERNATIONAL EXPANSION system with clearer branch purpose and realistic country-specific strategy.
+
+HARD RULES:
+- DO NOT redesign the whole Global Map screen
+- DO NOT break current branch opening logic
+- DO NOT rewrite unrelated economy systems
+- DO NOT affect save/load compatibility
+- DO NOT create absurd bonuses or penalties
+- ONLY improve branch explanation, country strategy, and long-term branch maintenance realism
+- Keep build stable and safe
+
+GOAL:
+Make global expansion feel strategic, readable, and realistic.
+The player must understand:
+- what each branch type does
+- which countries are better for each type of branch
+- why expanding globally is a meaningful long-term decision
+
+IMPLEMENTATION:
+
+1. BRANCH TYPE EXPLANATIONS
+
+When the player selects or inspects a branch type, show a clear explanation panel before confirming.
+
+For each branch type:
+
+A) Development Studio
+- Improves local development capacity
+- Helps regional product adaptation
+- Slightly improves development efficiency for products tied to that market
+- Best used in countries with strong talent/innovation profile
+
+B) Factory
+- Improves manufacturing and supply capacity
+- Helps large-scale production of consoles/products
+- Reduces production bottlenecks in stronger industrial markets
+- Best used in countries with better production efficiency / lower operating burden
+
+C) Sales Office
+- Improves commercial reach
+- Helps local sales and market penetration
+- Strengthens brand presence in that region
+- Best used in countries with bigger consumer markets and stronger commercial value
+
+2. EACH BRANCH OPTION MUST DISPLAY
+
+Inside the branch opening flow, each option must show:
+
+- Initial setup cost
+- Monthly maintenance cost
+- Main benefit
+- Secondary benefit
+- Short strategic explanation
+- Small recommendation based on country profile when relevant
+
+Examples:
+- “Recommended here due to high market size”
+- “High taxes reduce long-term profitability”
+- “Good country for manufacturing”
+
+3. COUNTRY-SPECIFIC ATTRIBUTES
+
+Each country must have strategic attributes visible to the player.
+
+Use simple readable tags such as:
+
+- Market Size: Low / Medium / High
+- Operational Cost: Low / Medium / High
+- Tax Burden: Low / Medium / High
+- Industrial Strength: Low / Medium / High
+- Talent Base: Low / Medium / High
+- Regulation Risk: Low / Medium / High (optional if already supported)
+
+4. HOW COUNTRY ATTRIBUTES AFFECT BRANCH VALUE
+
+Apply these attributes in a moderate and believable way:
+
+- Market Size:
+  affects sales office value and long-term revenue potential
+
+- Operational Cost:
+  affects monthly branch maintenance
+
+- Tax Burden:
+  affects long-term profitability / net return
+
+- Industrial Strength:
+  improves factory usefulness and production efficiency
+
+- Talent Base:
+  improves development studio usefulness
+
+- Regulation Risk:
+  can slightly increase chance of incidents or raise complexity in harder markets
+
+IMPORTANT:
+- effects must be subtle and strategic
+- do NOT create extreme country advantages
+- no country should become useless or overpowered
+
+5. LONG-TERM MAINTENANCE SCALING
+
+Branch monthly costs must scale gradually and realistically over time.
+
+Rules:
+- costs should update moderately with era progression
+- costs should also depend on the selected country’s operational burden
+- stronger / richer markets can justify higher maintenance and stronger return
+- smaller / cheaper markets should remain more affordable but less impactful
+- avoid absurd late-game inflation
+
+6. STRATEGIC DECISION-MAKING
+
+The system must make the player think before expanding.
+
+Examples:
+- A country may be great for sales but expensive to operate
+- Another may be cheaper for factories but weaker for market reach
+- Another may be excellent for R&D but have high taxes
+
+The player should feel:
+- “This country is good for a factory”
+- “This one is better for sales”
+- “This one is costly but strategically powerful”
+
+7. UI / UX REQUIREMENTS
+
+Keep the existing modal/layout structure if possible.
+
+Add a clean explanatory section inside the current flow:
+- readable on mobile
+- no text overflow
+- no hidden critical information
+- use compact cards, tags, or rows when appropriate
+
+When inspecting a country or opening a branch, clearly show:
+- country traits
+- branch role
+- expected long-term burden
+- strategic recommendation
+
+8. SAFETY / COMPATIBILITY
+
+- Do not rewrite the whole map system
+- Do not alter unrelated market systems
+- Do not break save compatibility
+- Only extend country data and branch explanation logic
+- Preserve existing branch opening behavior, just improve clarity and strategic depth
+
+AFTER COMPLETION:
+- list exactly which file(s) were modified
+- explain how each branch type now helps the company
+- explain what country attributes were added
+- explain how maintenance scaling now works
+- confirm no unrelated systems were changed
+- confirm build is clean

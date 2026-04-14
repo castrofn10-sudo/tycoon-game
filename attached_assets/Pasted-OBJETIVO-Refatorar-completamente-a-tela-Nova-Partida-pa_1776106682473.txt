@@ -1,0 +1,162 @@
+OBJETIVO:
+Refatorar completamente a tela "Nova Partida" para um sistema de criação em etapas (step-by-step), reduzindo poluição visual e melhorando a experiência do jogador.
+
+NÃO quebrar lógica existente
+NÃO remover sistemas atuais
+APENAS reorganizar a criação de nova partida e melhorar UX
+
+--------------------------------------------------
+1. ESTRUTURA EM ETAPAS
+--------------------------------------------------
+
+Criar fluxo dividido em 4 etapas:
+
+- Etapa 1: País
+- Etapa 2: Configuração
+- Etapa 3: Empresa e Fundador
+- Etapa 4: Modo de jogo
+
+Adicionar indicador de progresso:
+- 1/4
+- 2/4
+- 3/4
+- 4/4
+
+Adicionar navegação:
+- Voltar
+- Próximo
+
+Na última etapa:
+- Iniciar Partida
+
+--------------------------------------------------
+2. ETAPA 1 — PAÍS
+--------------------------------------------------
+
+Manter grid atual de países
+
+REMOVER:
+- textos explicativos longos
+
+MOSTRAR apenas:
+- nome
+- imposto
+- risco
+- população
+
+Seleção visual clara do país escolhido
+
+--------------------------------------------------
+3. ETAPA 2 — CONFIGURAÇÃO
+--------------------------------------------------
+
+Adicionar seletores simples para:
+
+Capital inicial:
+- Baixo
+- Médio
+- Alto
+
+Dificuldade:
+- Fácil
+- Normal
+- Difícil
+
+Contexto histórico:
+- Clássico
+- Boom Tecnológico
+- Mercado Saturado
+- Crise Econômica
+
+Sem textos longos
+Sem blocos explicativos grandes
+
+--------------------------------------------------
+4. ETAPA 3 — EMPRESA E FUNDADOR
+--------------------------------------------------
+
+Adicionar inputs para:
+
+- Nome da empresa
+- Nome do fundador
+
+Abaixo disso, criar sistema de atributos do fundador
+
+Total de pontos: 10
+
+Atributos:
+- Criatividade
+- Técnica
+- Negócios
+- Marketing
+- Velocidade
+
+REGRA:
+- o jogador não pode criar um fundador perfeito
+- distribuir muitos pontos em uma área deve enfraquecer outra
+- manter trade-offs reais
+- impedir build apelona
+
+Objetivo:
+- criar escolhas estratégicas e equilibradas
+
+--------------------------------------------------
+5. ETAPA 4 — MODO DE JOGO
+--------------------------------------------------
+
+Opções:
+- Modo Livre
+- Com Objetivos
+
+Remover bloco longo de "Condições de vitória"
+
+Se necessário, mostrar apenas descrição curta de 1 linha por opção
+
+--------------------------------------------------
+6. LIMPEZA VISUAL
+--------------------------------------------------
+
+Remover excesso de informação por tela
+
+Cada etapa deve mostrar apenas o necessário
+
+Objetivo:
+- tela mais limpa
+- criação de partida mais fluida
+- menos cansaço visual
+- mais cara de jogo profissional
+
+--------------------------------------------------
+7. PERFORMANCE
+--------------------------------------------------
+
+- não adicionar bibliotecas novas
+- manter UI leve
+- usar transições simples
+- sem efeitos pesados
+
+--------------------------------------------------
+8. NÃO ALTERAR
+--------------------------------------------------
+
+Não modificar:
+- economia do jogo
+- IA
+- saves
+- lógica principal
+- sistemas de eventos
+
+Apenas reorganizar e melhorar o fluxo de criação de nova partida
+
+--------------------------------------------------
+9. RESULTADO ESPERADO
+--------------------------------------------------
+
+- nova partida mais limpa
+- menos poluição visual
+- melhor experiência
+- nome da empresa incluído
+- fundador customizável com equilíbrio real
+- fluxo em etapas simples e intuitivo
+
+FIM

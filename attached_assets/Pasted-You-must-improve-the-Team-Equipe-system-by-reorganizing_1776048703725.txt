@@ -1,0 +1,119 @@
+You must improve the Team (Equipe) system by reorganizing the UI, adding an office upgrade system, and enabling bulk hiring.
+
+HARD RULES:
+- DO NOT change core gameplay mechanics
+- DO NOT remove existing features
+- DO NOT break current team logic
+- DO NOT modify unrelated systems
+- ONLY improve structure, usability, and scaling logic
+- Keep system stable and balanced
+
+GOAL:
+1) Improve UI organization
+2) Add office progression system
+3) Enable hiring multiple employees at once
+
+----------------------------------------
+PART 1 — UI REORGANIZATION
+----------------------------------------
+
+1. Add Side Navigation Menu
+
+Create sections:
+
+- Overview
+- Recruit
+- Office
+- Management
+
+2. Overview
+- Keep existing stats:
+  - total employees
+  - salary cost
+  - rating bonus
+  - sales bonus
+
+3. Recruit
+- Move all hiring options here
+- Keep Junior / Senior / Principal roles
+
+----------------------------------------
+PART 2 — BULK HIRING SYSTEM
+----------------------------------------
+
+1. Add quantity selector when hiring
+
+- Player must be able to:
+  - choose number of hires
+  - confirm hiring in batch
+
+Examples:
+- hire 5 Junior
+- hire 3 Senior
+
+2. Apply correctly:
+- total hiring cost
+- total salary increase
+- team size update
+
+----------------------------------------
+PART 3 — OFFICE SYSTEM
+----------------------------------------
+
+1. Create Office Upgrade System
+
+- Office level affects:
+  - max employee capacity
+  - efficiency (optional bonus)
+
+2. Scaling Cost Logic
+
+Upgrade cost must depend on:
+- current office level
+- number of employees
+
+Rule:
+- more employees = higher upgrade cost
+
+3. Capacity System
+
+- Limit max employees based on office level
+- Prevent hiring beyond capacity
+
+4. Upgrade Behavior
+
+- Upgrading office:
+  - increases employee limit
+  - may improve productivity slightly
+
+----------------------------------------
+PART 4 — UI BEHAVIOR
+----------------------------------------
+
+- Smooth navigation between sections
+- No need for long scrolling
+- Maintain current visual style
+- Keep everything responsive
+
+----------------------------------------
+SAFETY
+----------------------------------------
+
+- Do not modify:
+  - console system
+  - marketing system
+  - financial system core
+
+- Only affect:
+  - team management
+  - hiring logic
+  - office progression
+
+----------------------------------------
+AFTER
+----------------------------------------
+
+- explain how side menu works
+- explain bulk hiring system
+- explain office upgrade scaling
+- confirm no existing systems were broken

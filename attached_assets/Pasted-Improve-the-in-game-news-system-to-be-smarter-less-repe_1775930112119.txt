@@ -1,0 +1,75 @@
+Improve the in-game news system to be smarter, less repetitive, less frequent, and more meaningful.
+
+Requirements:
+
+1. Reduce overall news frequency.
+   - News should feel important, not constant spam.
+   - Avoid generating too many news items every month.
+
+2. Make rival/company attack events much less frequent.
+   - Rival attacks should happen randomly, with larger cooldowns.
+   - Use a randomized cooldown between 4 and 8 months on average.
+   - They must not happen too often or in back-to-back months.
+   - Add a global cooldown so attack-type news feels rare and impactful.
+
+3. Improve news variety and intelligence.
+   Add more meaningful market/world news related to:
+   - stock market movement
+   - company growth
+   - company decline
+   - bankruptcies
+   - acquisitions
+   - console launches
+   - major game launches
+   - market booms and slowdowns
+   - hype waves and consumer trends
+   - reputation shifts
+   - research breakthroughs
+   - investor pressure
+   - fan demand changes
+
+4. News should depend on actual game state.
+   Generate news based on:
+   - company reputation
+   - fans
+   - market share
+   - released products
+   - active consoles
+   - competitor health
+   - bankruptcies
+   - recent launches
+   - stock/investor systems
+   - market phase/year
+
+5. Make the system less repetitive.
+   - Avoid reusing the same message patterns too often.
+   - Use more variation in titles and bodies.
+   - Add multiple templates per category.
+   - Prevent the same category from appearing repeatedly in short intervals.
+
+6. Improve news quality over quantity.
+   - Fewer news items, but each one should feel more interesting and useful.
+   - Important events should be highlighted more clearly.
+   - Minor events should be rarer or grouped.
+
+7. Keep performance good.
+   - Do not create unnecessary news objects every tick.
+   - Only generate news when conditions are truly met.
+   - Avoid heavy loops or excessive random checks.
+
+8. Keep the current save/load and UI system compatible.
+   - Do not break persistence.
+   - Do not break existing NewsItem structure unless safely extended.
+
+9. Add a clean balancing system for news categories:
+   - attack news = rare
+   - market news = occasional
+   - launch news = event-driven
+   - bankruptcy news = event-driven
+   - stock/company movement news = occasional and state-based
+
+10. Explain clearly:
+   - which files were changed
+   - how frequency was reduced
+   - how cooldowns work
+   - how variety was improved
